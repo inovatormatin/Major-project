@@ -1,0 +1,518 @@
+/* Main Image Section starts here*/
+.main-img-section {
+    background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 24rem;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    margin: 0px auto;
+    padding: 20px;
+}
+.main-img-section h2 {
+    
+    margin: 10px 0px;
+    font-weight: bold;
+    color: white;
+}
+.main-img-section p {
+
+    margin: 10px 0px;
+    color: white;
+    font-weight: 100;
+    font-size: 11px;
+}
+/* Main Image Section Ends here */
+
+/* main section about hospital */
+.about-hospital {
+    width: 90%;
+    letter-spacing: 1px;
+    border: 1px slategray solid;
+    background-color: white;
+    margin: 20px auto;
+    display: flex;
+}
+.about-hospital .text {
+    padding: 20px;
+    width: 70%;
+    height: auto;
+}
+
+.hospital-main-text h2 {
+    font-size: 20px;
+    font-family: 'Nexa-bold';
+    font-weight:bold;
+    letter-spacing: 0px;
+    color: #266dafea;
+    margin: 0px 0px 10px 0px;
+}
+
+.hospital-main-text p{
+    font-size: 14px;
+    line-height: 110%;
+    text-align: justify;
+    margin: 0px 0px 20px 0px;
+}
+.add-and-beds {
+    display: flex;
+    align-content: center;
+    width: auto;
+    height: 20px;
+    margin: 10px 0px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.add-and-beds h3 {
+    position: relative;
+    display: flex;
+    width: 50%;
+}
+.add-and-beds i {
+    padding: 0px 5px;
+    height: auto;
+    width: auto;
+    color: #8abdecea;
+}
+/* About hospital main text area ends here */
+
+/* About hospital other text area starts here */
+.hospital-other-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+}
+.heading-with-icon {
+    margin: 10px 0px;
+    width: 100%;
+}
+.fa-chevron-circle-down {
+    float: right;
+}
+.heading-with-icon button {
+    position: relative;
+    background-color: white;
+    color: #105fa8ea;
+    cursor: pointer;
+    padding: 0px;
+    width:100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 2px 0px;
+}
+.heading-with-icon button:hover{
+    color: #06294bea;
+    background-color: rgb(222, 226, 231);
+}
+
+.hospital-other-text .content {
+    padding: 0 18px;
+    max-height: 0;
+    width: auto;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+/* About hospital other text area starts here */
+
+/* about hospital image div - */
+.about-hospital-img {
+    width: 30%;
+    padding: 20px 20px 20px 0px;
+}
+.about-hospital-img img{
+    width: 100%; 
+}
+.about-hospital-img button {
+    width: 100%;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    letter-spacing: 1px;
+    background-color: #081c4d;
+}
+.about-hospital-img button:hover {
+    background-color: #081c4d;
+}
+/* abbout hospital image div ends here */
+/* main section about hospital ends here */
+
+/* Hospital details Page Starts Here */
+
+/* Need Help starts here */
+.need-help-container {
+    background-color: #8abdecea;
+    margin: 20px 0px 0px;
+    height: auto;
+}
+.need-help{
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0px auto;
+}
+
+.need-help h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: max-content;
+    margin: 10px 0px;
+}
+.need-help p {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: wrap;
+    font-weight: lighter;
+    font-size: 14px;
+    
+}
+.need-help button {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    background-color: #081c4d ;
+}
+/*  */
+/* footer starts here */
+footer {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+    box-sizing: border-box;
+}
+footer img {
+    position: absolute;
+    top:20px;
+    right: 0;
+    width: 7rem;
+    height: 2rem;  
+}
+footer .footer-container {
+    height: 60px;
+    display: flex;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+    font-size:13px;
+    align-content: space-around;
+}
+.footer-container p{
+    margin:5px 0px;
+}
+
+footer .footer-links {
+    width: block;
+    width: 100%;
+}
+footer .footer-links a{
+    margin: 0px 5px 0px 0px;
+}
+footer .socialmedia-icons {
+    position: absolute;
+    right: 0;
+    bottom: 20px; 
+    font-size: 18px;
+}
+.socialmedia-icons i {
+    margin:0px 3px;
+}
+.blue-bg {
+    width: 100%;
+    height: 10px;
+    background-color: dodgerblue;
+}
+ /* /* Hospital details Page Starts Here  */
+
+
+ /* Here */
+ /* Tablet  */
+ /* View  */
+ /* starts */
+
+ @media only screen and (min-width:768px) and (max-width:1024px) {
+/* Navbar Css starts Here */
+nav {
+    padding: 10px 20px;
+}
+nav .nav-links,.nav-button {
+    display: none;
+}
+.dropbtn {
+    border: none;
+    cursor: pointer;
+  }
+  
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+  }
+  .show {
+      display: block;}
+/* Navbar Dropdown */
+
+
+
+
+/* Navbar Dropdown ends */
+/*  Nav Bar css Ends here */
+
+/* Main Section Image Area */
+
+.main-img-section h2,.main-img-section p {
+    text-align: center;
+    margin: 15px 0px;
+}
+.hospital-other-text {
+    width: 100%;
+    position: relative;
+}
+.hospital-other-text .content {
+    margin: none;
+    width: 100%;
+    padding: 0px;
+}
+
+/* Main section Image Area ends here */
+
+/* Need Help Section starts here */
+.need-help {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.need-help h2,.need-help p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.need-help-button {
+    margin: 10px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+/* Need Help Section ends here */
+
+
+ /*footer css */ 
+.footer-container p{
+    font-size:12px;
+}
+}
+ /* Here */
+ /* Tablet  */
+ /* View  */
+ /* Ends */
+
+ /* ------------------------------------------------------------------------ */
+
+ 
+ /* Here */
+ /* Mobile  */
+ /* View  */
+ /* starts */
+ @media only screen and (min-width:100px) and (max-width:767px){
+    /* Nav Bar */
+    nav {
+        padding: 10px 20px;
+    }
+    nav .nav-links,.nav-button {
+        display: none;
+    }
+    .dropbtn {
+        border: none;
+        cursor: pointer;
+      }
+      
+    nav .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+    
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+      }
+      .show {
+          display: block;
+        }
+/* Nav Bar Ends here */
+/* Mobile Photo Section */
+.main-img-section h2,.main-img-section p {
+    text-align: center;
+    margin: 15px 0px;
+}
+.hospital-other-text {
+    width: 100%;
+    position: relative;
+}
+.hospital-other-text .content {
+    margin: none;
+    width: 100%;
+    padding: 0px;
+}
+/* Mobile photo section ends here */
+/* Main Section Css starts here */
+
+.about-hospital {
+    position: relative;
+    flex-direction: column-reverse;
+}
+.about-hospital .about-hospital-img {
+    width: 95%;
+    padding: 10px 10px 0px;
+    margin: auto;
+}
+.about-hospital-img img {
+  margin: 0px 0px 5px;
+}
+.about-hospital .text {
+    width: auto;
+}
+.add-and-beds {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+}
+.add-and-beds h3 {
+    width: 100%;
+    display: flex;
+    align-content: center;
+   margin: 5px 0px;
+}
+/* Main Section ends here */
+
+/* Need Help Section starts here */
+
+.need-help {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.need-help-text {
+    width: 90%;
+    position: relative;
+}
+.need-help h2,.need-help p {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.need-help-button {
+    margin: 10px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+/* Need Help Section ends here */
+
+/* Footer Section starts here */
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #081c4d;
+    color: white;
+}
+footer .footer-container {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center ;
+}
+.footer-container .footer-links a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer img {
+    padding: 20px 10px;
+}
+footer img, footer .socialmedia-icons {
+    position: relative;
+}
+footer .socialmedia-icons {
+    width: 100%;
+    display: flex;
+    bottom: 0px;
+    
+    justify-content: center;
+}
+footer p {
+        display:flex ;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+}
+footer a {
+    padding: 10px;
+    color: white;
+}
+.footer-container p {
+    margin: 10px 0px 0px 0px;
+}
+/* Footer Ends here */
+
+
+}

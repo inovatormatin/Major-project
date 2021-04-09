@@ -1,0 +1,560 @@
+.treatment-section-1 {
+    height: 24rem;
+    background-image:linear-gradient(to left, rgba(0,0,0,0),var(--blue)), url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg);
+    background-size: cover;
+    background-position: top; 
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.treatment-sec-1 h2 {
+    font-family: "Nexa-Light";
+    font-weight: 600;
+}
+.treatment-sec-1 p {
+    font-weight: 100;
+}
+/* section 1 ends  */
+
+/* Info section starts here */
+.treatment-section-2 {
+    margin: 30px auto;
+}
+/* div 1 css */
+.info-div-1 {
+    grid-area: main;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.info-div-1 h2 {
+    font-family: "Nexa-bold";
+    font-weight: bolder;
+}
+.info-div-1-container {
+    width: 100%;
+    display: flex;
+    margin:20px 0px
+}
+.info-section-image {
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    border-radius: 2px;
+    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist.jpg);
+}
+.info-section-text {
+    width: 50%;
+    padding: 0px 0px 0px 20px;
+    font-family: "Nexa-light";
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 120%;
+}
+.info-section-text h2 {
+    font-weight: lighter;
+    text-align: left;
+    font-size:16px;
+    font-family: "Nexa-bold";
+    margin-bottom: 15px;
+}
+.info-section-text p {
+    font-family: "Nexa-light";
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 130%;
+}
+.info-section-text li {
+    list-style-type: disc;
+    line-height: none;
+    margin: 12px;
+    font-size: 14px;
+}
+li::marker {
+    color: lightblue;
+}
+/* div 1 ends */
+
+/* div 2 starts */
+.info-div-2 {
+    grid-area: side;
+    padding: 10px;
+}
+.info-div-2 .inner-div {
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.info-div-2 .inner-div h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: "Nexa-bold";
+    letter-spacing: 0px;
+}
+.info-div-2 .inner-div div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(197, 197, 197);
+}
+.info-div-2 .inner-div div p {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.info-div-2 .inner-div div .bold-text {
+    font-family: "Nexa-bold";
+    font-size: 14px;
+}
+/* div 2 ends */
+/* div 3 starts */
+.info-div-3 {
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    margin: 20px 0px;
+}
+.info-div-3 .div {
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  padding: 10px;
+}
+.info-div-3 .div h3 {
+    width: 100%;
+    font-size: 13px;
+    font-family: "Nexa-bold";
+    margin:5px 0px;
+    text-align: center;
+}
+.info-div-3 .div p {
+    text-align: center;
+    margin-top: 5px;
+    line-height: 120%;
+    font-size: 13px;
+}
+.info-div-3 .div i {
+    background-color: lightblue;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+/* div 3 ends */
+.info-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 
+    "main side"
+    "footer ."
+    ;
+  }
+
+
+/* Info section ends here */
+
+/* More Services starts here */
+.more-services {
+    background-color: #8abdecea;
+    margin: 20px 0px 0px;
+    height: auto;
+    width: 100%;
+}
+.more-services-container {
+    width: 90%;
+    margin: 0px auto;
+}
+.more-services-container-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.more-services-container-text i {
+    margin: 0px 5px;
+    color: white;
+}
+.more-services-container h1 {
+    font-size: 25px;
+    font-family: "Nexa-bold";
+    color: white;
+    letter-spacing: 1px;
+    padding: 20px 0px;
+}
+.more-services-container-img {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3 , 1fr);
+    box-sizing: border-box;
+    grid-gap: 10px;
+    border-radius: 10px;
+    padding: 0px 0px 20px;
+}
+.more-services-container-text i:hover {
+    color: gainsboro;
+}
+.services-img {
+    border-radius: 10px;
+    height: 40vh;
+    display: flex;
+    position: relative;
+}
+.services-img h2 {
+    box-sizing: border-box;
+   position: absolute;
+   bottom: 0px;
+   font-family: "Nexa-bold";
+   padding: 15px 0px 15px 20px;
+   width: 100%;
+   background-color: white;
+   border-bottom-left-radius: 10px ;
+   border-bottom-right-radius: 10px;
+}
+.img-1 {
+    background-position: center;
+    background-size: cover;
+    transition: ease 1s;
+    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg);
+}
+.img-2 {
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5s;
+    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg);
+}
+.img-3 {
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5s;
+    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg);
+}
+.img-1:hover {
+    box-shadow: 10px 10px 50px gray;
+   
+    transition: ease 0.5s;
+}
+.img-2:hover {
+    box-shadow: 10px 10px 50px gray;
+    transition: ease 0.5s;
+}
+.img-3:hover {
+    box-shadow: 10px 10px 50px gray;
+    transition: ease 0.5s;
+}
+/* More Services ends here */
+
+
+
+
+
+
+
+
+
+ /* Here */
+ /* Tablet  */
+ /* View  */
+ /* starts */
+
+ @media only screen and (min-width:768px) and (max-width:1024px) {
+/* Navbar Css starts Here */
+nav {
+    padding: 10px 20px;
+}
+nav .nav-links,.nav-button {
+    display: none;
+}
+.dropbtn {
+    border: none;
+    cursor: pointer;
+  }
+  
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+  }
+  .show {
+      display: block;}
+
+/*  Nav Bar css Ends here */
+/* Info Section starts here */
+
+.info-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-areas: 
+    "main"
+    "footer"
+    "side"
+;
+}
+.info-div-2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.info-div-2 .inner-div {
+    width: 90%;
+    margin-right:20px;
+}
+/* Info section ends here */
+/* More Services Section starts here */
+.more-services {
+    margin: 0px;
+}
+.services-img {
+    height: 30vh;
+}
+
+/* More Services Section ends here */
+
+
+ /*footer css */ 
+.footer-container p{
+    font-size:12px;
+}
+ /* Here */
+ /* Tablet  */
+ /* View  */
+ /* Ends */
+
+}
+
+ /* ------------------------------------------------------------------------ */
+
+ 
+ /* Here */
+ /* Mobile  */
+ /* View  */
+ /* starts */
+ @media only screen and (min-width:100px) and (max-width:767px){
+    /* Nav Bar */
+    nav {
+        padding: 10px 20px;
+    }
+    nav .nav-links,.nav-button {
+        display: none;
+    }
+    .dropbtn {
+        border: none;
+        cursor: pointer;
+      }
+      
+    nav .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+    
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+      }
+      .show {
+          display: block;
+        }
+/* Nav Bar Ends here */
+/* Mobile Photo Section */
+.main-img-section h2,.main-img-section p {
+    text-align: center;
+    margin: 15px 0px;
+}
+.hospital-other-text {
+    width: 100%;
+    position: relative;
+}
+.hospital-other-text .content {
+    margin: none;
+    width: 100%;
+    padding: 0px;
+}
+/* Mobile photo section ends here */
+/* Info Section Starts here */
+.info-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-areas: 
+    "main"
+    "footer"
+    "side"
+;
+}
+.info-div-1 {
+    justify-content: center;
+}
+.info-div-1-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px 0px
+}
+.info-section-image {
+    width: 100%;
+    margin: auto;
+}
+.info-section-text {
+    width: 100%;
+    padding: 0px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.info-section-text p {
+    text-align: justify;
+}
+/* info div 2  */
+.info-div-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0px auto;
+    justify-content: space-around;
+}
+.info-div-2 .inner-div {
+    width: 90%;
+    margin-right:20px;
+}
+/* info div 3  */
+.info-div-3 {
+    flex-wrap: wrap;
+}
+.info-div-3 .div {
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+/* Info Section Ends here */
+/* More Services Section starts here */
+.more-services {
+    margin: 0px;
+}
+.services-img {
+    height: 20vh;
+}
+.more-services-container-text {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.more-services-container-text h1{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     margin: 10px;
+     padding: 20px 0px 10px;
+}
+.more-services-container-img {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+}
+.services-img {
+    height: 40vh;
+}
+/* More Services Section ends here */
+
+/* Footer Section starts here */
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #081c4d;
+    color: white;
+}
+footer .footer-container {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center ;
+}
+.footer-container .footer-links a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer img {
+    padding: 20px 10px;
+}
+footer img, footer .socialmedia-icons {
+    position: relative;
+}
+footer .socialmedia-icons {
+    width: 100%;
+    display: flex;
+    bottom: 0px;
+    
+    justify-content: center;
+}
+footer p {
+        display:flex ;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+}
+footer a {
+    padding: 10px;
+    color: white;
+}
+.footer-container p {
+    margin: 10px 0px 0px 0px;
+}
+/* Footer Ends here */
+
+
+
+
+
+
+}

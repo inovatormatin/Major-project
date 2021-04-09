@@ -1,0 +1,893 @@
+ /*<!-- Tvastra Plus starts here ( About ) -->*/
+.Tvastra-Plus-About-BackgroundSection {
+	display: grid;
+	grid-template-rows: 40% 60%;
+	height: 890px;
+}
+.Tvastra-Plus-Plans-Section {
+	position: absolute;
+	margin: 100px 60px;
+	padding: 20px;
+	width: 90%;
+}
+.Tvastra-Plus-Plans-Section-span{
+	font-weight: 400;
+	font-size: 14px;
+	color: white;
+	background: #0097ff;
+	border-radius: 5px;
+	padding: 8px 15px;
+	line-height: 2;
+}
+.Tvastra-Plus-Plans-Section h1{
+	line-height: 2;
+	font-weight: 700;
+	font-size: 37px;
+	color: #160230;
+}
+.Tvastra-Plus-Plans-Section p{
+	line-height: 1;
+	font-weight: 300;
+	font-size: 18px;
+	color: #160230;
+	margin-bottom: 30px; 
+}
+.Tvastra-Plus-Plans {
+	background-color: white;
+	padding: 30px;
+}
+.Tvastra-Plus-Plans h2{
+	text-align: center;
+	font-weight: 600;
+	line-height: 2;
+	font-size: 30px;
+	font-family: "Nexa-Bold"
+}
+.Tvastra-Plus-Plans-p{
+	text-align: center;
+	line-height: 2;
+	font-weight: 300;
+	font-size: 18px;
+	font-family: "Nexa-Bold"
+}
+.plus-plans-categories {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+.plus-plans-categories h3{
+	text-align:center;
+	font-weight: 700;
+	font-size: 20px;
+}
+.Advanced-plan-span {
+	background-color: green;
+    border-radius: 18px;
+    font-size: 12px;
+    color: wheat;
+    padding: 5px 15px;
+    position: absolute;
+    margin: -1% 12%;
+    visibility: hidden;
+}
+.plus-plans-categories-largeHR {
+	opacity: 60%;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+.plus-plans-categories-smallHR {
+	margin-top: 30px;
+	height: 1.2px;
+	width: 85%;
+	border-width: thick;
+	background-color: #00000030;
+	border-style: none;
+}
+
+.Basic-plan:hover, .Advanced-plan:hover, .Comprehensive-plan:hover {
+	background: linear-gradient(180deg, rgba(140,186,237,1) 0%, rgba(255,255,255,1) 100%);
+}
+.Basic-plan:hover .plus-plans-categories-largeHR, .Advanced-plan:hover .plus-plans-categories-largeHR, .Comprehensive-plan:hover .plus-plans-categories-largeHR {
+	opacity: 0;
+}
+.Advanced-plan:hover .Advanced-plan-span{
+	visibility: visible;
+}
+.facylities {
+	padding: 20px;
+	text-align: center;
+}
+.facylities p{
+	font-size: 16px;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+.Basic-plan, .Advanced-plan, .Comprehensive-plan{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.price {
+	text-align : center;
+}
+.price h2{
+	font-size: 25px;
+	font-weight: 800;
+	color: #232323;
+}
+.price span{
+	font-size: 15px;
+	font-weight: 700;
+}
+.price p{
+	color: #0097ff;
+	font-size: 15px;
+	font-weight: 400;
+}
+.price button{
+	background-color: #0097ff;
+	color: white;
+	font-weight: 300;
+	font-size: 14px;
+	border-style: none;
+	border-radius: 3px;
+	padding: 8px 15px; 
+}
+/* effect8 css is taken by internet */
+.effect8
+{
+    position:relative;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+	right:10px;
+	left:auto;
+	transform:skew(8deg) rotate(3deg);
+}
+.Tvastra-Plus-About-ImageSection {
+	grid-row-start: 0;
+	grid-row-start: 1;
+	background-image: linear-gradient(270deg, rgba(140,186,237,0) 0%, rgba(255,255,255,1) 90%),	url(https://brandsite-static.hdfclife.com/media/image/expected-unexcpected.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.Tvastra-Plus-About-EmptyBackgroundSection {
+	background: linear-gradient(180deg, rgba(140,186,237,1) 0%, rgba(255,255,255,1) 100%);
+	grid-row-start: 1;
+	grid-row-start: 2;
+}
+/*<!-- Tvastra Plus ends here ( About ) -->*/
+/* stats css starts here */
+.stats {
+	text-align:center;
+}
+.stats_head h2{
+	font-weight: 600;
+	font-size: 35px;
+	margin: 40px 0px;
+}
+.stats_head p{
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.checked {
+	color: #0097ff;
+}
+.total-rating {
+	padding: 0px 50px;
+	width: 22em;
+}
+.rating-distribution{
+	display: flex;
+	width: 22em;
+}
+.ratings {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    align-items: center;
+	margin: 40px 0px;
+}
+.ratings strong {
+	font-size: 70px;
+	font-weight: 600;
+	color: #0097ff;
+}
+.ratings p{
+	font-weight: 300;
+	color: #0097ff;
+	padding: 15px 0px;
+}
+.rating-distribution label{
+	color: #0097ff;
+	font-size: 20px;
+    padding: 10px;
+    line-height: 1.2
+}
+.rating-distribution meter{
+	font-size: 28px;
+	margin: -2px 5px;
+	width: 250px;
+}
+meter::-webkit-meter-optimum-value {
+	background-color: var(--blue);
+}
+.fa-star {
+	font-size: 10px;
+	margin: 0px; 
+	padding: 0px;
+	width: 10px;
+}
+/* stats css ends here */
+/* Reviews-cards-starts here */
+.Reviews {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 100px;
+}
+.Reviews-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Reviews-cards .fa-users, .Reviews-cards .fa-user-md, .Reviews-cards .fa-pills, .Reviews-cards .fa-portrait{
+	font-size: 45px;
+	margin: 0px;
+	color: #0099ff;
+	padding: 0.1em;
+}
+.Reviews-cards span{
+	color: #0099ff;
+	font-weight: 700;
+	font-size: 1.5em;
+	padding: 0.1em;
+} 
+.Reviews-cards p{
+	color: #0099ff;
+	font-weight: 300;
+	font-size: 1em;
+	padding: 0.3em;
+}
+/* Reviews-cards-ends here */
+
+/* Benifits of Plus membership starts here */
+
+.Benifits-of-Plus-membership {
+	padding: 20px 80px;
+	margin: 0px 0px;
+}
+.membership-header {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 300;
+	padding: 13px 0px;
+}
+.membership-hr {
+	background-color: #6e94ae99;
+	border-style: none;
+	height: 0.3em;
+	width: 22em;
+	border-radius: 2em;
+}
+.sec-1-right{
+	width: 65%;
+}
+.sec-2-right {
+	width: 60%;
+}
+.sec-3-left {
+	width: 60%;
+}
+.sec-4-right {
+	width: 60%;
+}
+.membership-sec1, .membership-sec2, .membership-sec3, .membership-sec4 {
+	display: flex;
+	justify-content: space-around;
+	margin: 15px 0px;
+}
+.membership-sec2, .membership-sec3, .membership-sec4 {
+	align-items: center;
+}
+.membership-sec1 h2, .membership-sec2 h2, .membership-sec3 h2, .membership-sec4 h2{
+	font-size: 35px;
+	font-weight: 700;
+	padding: 40px 0px;
+}
+.star-symbol {
+	color: #6e94ae;
+	font-size: 20px;
+	padding: 0px 10px;
+}
+.membership-point {
+	display: flex;
+	font-weight: 300;
+	font-size: 18px;
+	padding: 10px 0px;
+	line-height: 1.4;
+}
+.hs-onboard{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 33% 33% 33%;
+}
+.hs-size  {
+	width: 170px;
+	height: 100px;
+	border-style: solid;
+    border-width: thin;
+    border-color: #80808069
+}
+.hs1 {
+  	grid-column-start : 1;
+  	grid-column-end : 2;
+  	grid-row-start : 1;
+  	grid-row-end : 2;
+  	background-image: url("https://www.vgc.in/assets/2018/08/Logo-482x316.jpg");
+  	background-size: cover;
+    background-position: center;
+}
+.hs2{
+	grid-column-start : 2;
+  	grid-column-end : 3;
+  	grid-row-start : 1;
+  	grid-row-end : 2;
+  	background-image: url("data:image/png;base64,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");
+  	background-size: cover;
+    background-position: center;
+}
+.hs3{
+	grid-column-start : 1;
+  	grid-column-end : 2;
+  	grid-row-start : 2;
+  	grid-row-end : 3;
+  	background-image: url("https://www.artemishospitals.com/BackEndImages/BlogImage/appreciation-for-dr-anjalil-ArtemisHospitals.jpg");
+  	background-size: cover;
+    background-position: center;
+}
+.hs4{
+	grid-column-start : 2;
+  	grid-column-end : 3;
+  	grid-row-start : 2;
+  	grid-row-end : 3;
+  	background-image: url("https://i.ytimg.com/vi/9uQnlMuhl3c/maxresdefault.jpg");
+  	background-size: cover;
+    background-position: center;
+}
+.hs5{
+	grid-column-start : 1;
+  	grid-column-end : 2;
+  	grid-row-start : 3;
+  	grid-row-end : 4;
+  	background-image: url("http://www.rdplast.in/wp-content/uploads/2018/03/66-Rukmani-Birla-Hospitals.png");
+  	background-size: cover;
+    background-position: center;
+}
+.hs6{
+	grid-column-start : 2;
+  	grid-column-end : 3;
+  	grid-row-start : 3;
+  	grid-row-end : 4;
+  	background-image: url("https://pratikshahospitals.com/content/images/site/pratiksha_hospital_Guwahati_logo.png");
+  	background-size: cover;
+    background-position: center;
+}
+.sec-1-left h3{
+	padding: 40px 0px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+.sec-1-left h4{
+	padding: 20px 0px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1em;
+	color: #6e94ae;
+}
+
+/* sec 2 starts */
+.sec-2-left{
+	background-image: url("https://www.pngitem.com/pimgs/m/347-3474931_video-call-doctor-hd-png-download.png");
+}
+.sec-3-right {
+	background-image: url("https://i.pinimg.com/originals/1e/a4/02/1ea40245fd8b6f39866b9b3685e38c81.jpg");
+}
+.sec-4-left {
+	background-image: url("https://www.verywellhealth.com/thmb/lpFxP_dGmvuus9WtlsRzzMj0LKc=/2122x1415/filters:no_upscale():max_bytes(150000):strip_icc()/105692049-56a6a62a5f9b58b7d0e4246f.jpg");
+}
+.sec-2-left, .sec-3-right, .sec-4-left{
+	width: 20em;
+    height: 20em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.2em;
+}
+/* sec 2 ends */
+/* Benifits of Plus membership ends here */
+
+/*test carosule starts here*/
+.test_gallery {
+	padding: 20px 80px;
+}
+.test_gallery img{
+	width: 3.4em;
+	height: 3.4em;
+}
+.test_gallery h2{
+	padding: 20px 0px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.test_gallery ul{
+	display: flex;
+}
+.test_gallery li{
+	border-radius: 0.5em;
+	margin: 0.4em;
+	height: 12em;
+	width: 19em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    padding: 19px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.test_gallery li strong{
+	font-weight: 700;
+	margin-bottom: 0.8em;
+}
+.test_gallery li p{
+	font-weight: 500;
+}
+/* test carosule ends here */
+
+/* why we love tavastra starts here */
+.why_we_love_avastra {
+	padding: 20px 80px;
+}
+.why_we_love_avastra_heading {
+	display: flex;
+	align-items: center;
+	padding: 2em 0px;
+}
+.why_we_love_avastra_heading span{
+	padding: 2px 15px;
+	margin-left: 0.8em;
+}
+.why_we_love_avastra strong{
+	font-size: 2em;
+	font-weight: 700;
+}
+.why_we_love_avastra ul {
+	display: flex;
+}
+.why_we_love_avastra li{
+	display: grid;
+	grid-template-rows: 70% 30%;
+	width: 100%;
+	height: 20em;
+	line-height: 1.5;
+	margin: 0.2em;
+	padding: 1.2em;
+	box-shadow: 0 4px 8px 0 rgb(0 0 0 / 14%), 0 6px 20px 0 rgb(0 0 0 / 5%);
+}
+.why_we_love_avastra li p{
+	grid-row-start: 1;
+	grid-row-end: 2; 
+}
+.consumer_info {
+	grid-row-start: 2;
+	grid-row-end: 3; 
+	display: flex;
+}
+.consumer_info img{
+	width: 5em;
+	height: 5em;
+}
+.consumer_info div{
+	padding: 5px;
+	display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+.consumer_name {
+	font-weight: 800;
+	font-size: 1.1em;
+	margin-bottom: 8px;
+}
+.plan_type {
+	background-color: #80b3ff9c;
+	color: #1a4c96;
+	border-radius: 0.5em;
+	font-size: 0.8em;
+	padding: 0.5em 0.8em;
+}
+/* why we love tavastra ends here */
+
+/* FAQ starts here */
+.FAQ_section {
+	padding: 20px 80px;
+}
+.FAQ_section h1{
+	font-size: 2.5em;
+	font-weight: 700;
+}
+/* mohit css */
+.tvastraplus-other-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+}
+.FAQ_question {
+    margin: 25px 0px;
+    width: 100%;
+}
+.fa-chevron-circle-down {
+    float: right;
+}
+.FAQ_question button {
+    position: relative;
+    background-color: white;
+    color: #105fa8ea;
+    cursor: pointer;
+    width:100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 10px 0px;
+}
+.FAQ_question button:hover{
+    color: #06294bea;
+    background-color: rgb(222, 226, 231);
+}
+.tvastraplus-other-text .FAQ_ans {
+    padding: 0 18px;
+    max-height: 0;
+    width: auto;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+/* mohit css */
+/* FAQ ends here */
+
+/***************************************************************************************/
+/*										tab view                                       */
+/***************************************************************************************/
+@media only screen and (min-width:768px) and (max-width:1024px) {
+	/* tvastra plus heading section 1 */
+	.Tvastra-Plus-Plans-Section h1 {
+	    font-size: 30px;
+	}
+	.Tvastra-Plus-About-BackgroundSection {
+		height: 850px;
+	}
+	/* plans section */
+	.Tvastra-Plus-Plans-Section {
+	    margin: 50px 50px;
+	}
+	.Tvastra-Plus-Plans h2 {
+	    font-size: 20px;
+	}
+	.Tvastra-Plus-Plans-Section p {
+	    font-size: 13px;
+	}
+	.facylities p {
+	    font-size: 13px;
+	}
+	.plus-plans-categories h3 {
+	    font-size: 17px;
+	}
+	.price h2 {
+	    font-size: 18px;
+	}
+	.price p {
+	    font-size: 11px;
+	}
+	.Advanced-plan-span {
+		display: none;
+	}
+	/**/
+	/* rating section */
+	.stats_head h2 {
+	    margin: 15px 0px;
+	    font-size: 25px;
+	}
+	.stats_head p {
+		font-size: 14px;
+	}
+	.rating-distribution {
+		width: 20em;
+	}
+	.total-rating {
+		width: 14em;
+	}
+	.ratings {
+		margin: 25px 0px;
+	}
+	.Reviews-cards .fa-users, .Reviews-cards .fa-user-md, .Reviews-cards .fa-pills, .Reviews-cards .fa-portrait {
+	    font-size: 30px;
+	}
+	.Reviews-cards span {
+	    font-size: 1.1em;
+	    padding: 0.4em;
+	}
+	.Reviews-cards p {
+	    font-size: 0.7em;
+	    padding: 0.1em
+	}
+	/**/
+	/* benifits of tvastra plus */
+	.membership-sec1 h2, .membership-sec2 h2, .membership-sec3 h2, .membership-sec4 h2 {
+	    font-size: 22px;
+	    padding: 20px 0px;
+	}
+	.hs-size {
+	    width: 130px;
+	    height: 75px;
+	}
+	.sec-1-left h3 {
+	    padding: 30px 0px;
+	    font-size: 1em;
+	}
+	.sec-1-right {
+	    width: 40%;
+	}
+	.membership-point {
+		font-size: 14px;
+	}
+	.sec-2-left, .sec-3-right, .sec-4-left {
+	    width: 15em;
+	    height: 15em;
+	}
+	.sec-2-right, .sec-3-left, .sec-4-right {
+	    width: 47%;
+	}
+	/* test gallery */
+	.test_gallery ul {
+	    flex-wrap: wrap;
+	}
+	.test_gallery li {
+		width: 18em;
+		align-items: center;
+	}
+	/**/
+	/* why we love tvastra plus */
+	.plan_type {
+		font-size: 0.6em;
+	    text-align: center;
+	}
+	.consumer_name {
+	    font-size: 1em;
+	}
+	.consumer_info img {
+	    width: 3em;
+	    height: 3em;
+	}
+	.why_we_love_avastra ul {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.why_we_love_avastra li {
+		width: 47.5%;
+	}
+	/* Faq */
+	.FAQ_section h1 {
+	    font-size: 1.6em;
+	}
+	.FAQ_question button {
+		font-size: 0.6em;
+	}
+	/**/
+}
+/***************************************************************************************/
+/*								     Mobile view                                       */
+/***************************************************************************************/
+@media only screen and (max-width:767px) {
+	html,body{
+	    overflow-x: hidden;
+	}
+	/* Tvastra plus plan section */
+	.Tvastra-Plus-Plans-Section {
+	    text-align: center;
+	}
+	.Tvastra-Plus-Plans-Section {
+	    margin: 30px 18px;
+	    padding: 0px;
+	}
+	.Tvastra-Plus-About-BackgroundSection {
+	    height: 94em;
+	    grid-template-rows: 17% 83%;
+	}
+	.Tvastra-Plus-Plans-Section-span {
+	    padding: 5px 10px;
+	}
+	.Tvastra-Plus-Plans-Section h1 {
+	    line-height: 1.2;
+	    font-size: 22px;
+	    margin-top: .6em;
+	}
+	.Tvastra-Plus-Plans-Section p {
+	    line-height: 1.3;
+	    font-size: 13px;
+	    margin: 15px 0px;
+	}
+	.Tvastra-Plus-Plans {
+	    padding: 15px;
+	}
+	.Tvastra-Plus-Plans h2 {
+	    line-height: 1.3;
+	    font-size: 20px;
+	}
+	.plus-plans-categories {
+	    grid-template-rows: auto auto auto;
+	    grid-template-columns: none;
+	    grid-row-gap: 1em;
+	}
+	.Advanced-plan-span {
+	    margin: -3% -11%;
+	}
+	/* tvastra plus stats */
+	.stats_head h2 {
+	    font-size: 23px;
+	    margin: 20px 0px;
+	}
+	.stats_head p {
+	    font-size: 14px;
+	}
+	.stats {
+		margin: 30px 18px;
+	}
+	.ratings {
+	    margin: 15px 0px;
+	}
+	.rating-distribution {
+	    justify-content: center;
+	}
+	.rating-distribution meter {
+	    width: 215px;
+	}
+	.Reviews {
+	    flex-wrap: wrap;
+        padding: 20px 0px;
+	}
+	.Reviews-cards {
+	    width: 9em;
+	    margin: 0.5em;
+	}
+	.Reviews-cards .fa-users, .Reviews-cards .fa-user-md, .Reviews-cards .fa-pills, .Reviews-cards .fa-portrait {
+	    font-size: 35px;
+	}
+	.Reviews-cards span {
+	    font-size: 1.2em;
+	}
+	.Reviews-cards p {
+	    font-size: 0.8em;
+	}
+	/* Benifits of tvastra plus */
+	.membership-header {
+	    font-size: 15px;
+	}
+	.membership-hr {
+	    height: 0.25em;
+	    width: 15em;
+	}
+	.Benifits-of-Plus-membership {
+	    padding: 20px 18px;
+	}
+	.membership-sec1, .membership-sec2, .membership-sec3, .membership-sec4 {
+	    flex-wrap: wrap;
+	}
+	.membership-sec2, .membership-sec4 {
+		flex-direction: column-reverse;
+	}
+	.sec-2-left, .sec-3-right, .sec-4-left {
+	    border-radius: 0.7em;
+	}
+	.sec-1-right, .sec-2-right, .sec-3-left, .sec-4-right {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	.sec-2-left, .sec-3-right, .sec-4-left {
+	    height: 13em;
+	    background-size: contain;
+	}
+	.membership-hr {
+	    height: 0.25em;
+	    width: 15em;
+	}
+	.membership-sec1 h2, .membership-sec2 h2, .membership-sec3 h2, .membership-sec4 h2 {
+	    font-size: 25px;
+	    text-align: center;
+        padding: 10px 0px;
+	}
+	.membership-point {
+	    font-size: 14px;
+	}
+	/* test gallery */
+	.test_gallery {
+	    padding: 10px 18px;
+	}
+	.test_gallery ul {
+	    flex-wrap: wrap;
+	}
+	.test_gallery li {
+	    align-items: center;
+	    width: 9em;
+	    height: 9em;
+	}
+	.test_gallery img {
+	    width: 3em;
+	    height: 3em;
+	    margin-bottom: 0.9em;
+	}
+	.test_gallery li strong {
+	    font-size: 0.8em;
+	    text-align: center;
+	}
+	/*why we love tvastra plus*/
+	.why_we_love_avastra_heading span {
+	    padding: 0px 10px;
+	    font-weight: 300;
+	}
+	.why_we_love_avastra strong {
+	    font-size: 1.3em;
+	}
+	.why_we_love_avastra ul {
+	    flex-wrap: wrap;
+	}
+	.why_we_love_avastra {
+	    padding: 10px 20px;
+	}
+	.consumer_info img {
+	    width: 3.5em;
+	    height: 3.5em;
+	}
+	.consumer_info div {
+	    margin-left: 0.6em;
+	}
+	.consumer_info div {
+	    margin-left: 0.6em;
+	}
+	.consumer_info {
+	    align-items: center;
+	}
+	.plan_type {
+		padding: 0.3em 0.5em;
+	}
+	.why_we_love_avastra li {
+	    height: 17em;
+	}
+	/* FAQ */
+	.FAQ_section {
+	    padding: 20px 18px;
+	}
+	.FAQ_section h1 {
+	    font-size: 1.3em;
+	}
+	.FAQ_question button {
+	    width: 98%;
+	    font-size: 0.8em;
+	    display: flex;
+   		align-items: center;
+   		justify-content: space-between;
+	}
+}

@@ -1,0 +1,172 @@
+/* Fonts Installation */
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url(/Tvastra/src/client/fonts/Nexa-Bold.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Nexa-Light';
+    src: url(/Tvastra/src/client/fonts/Nexa-Light.otf) format('truetype');
+}
+
+/* Colors */
+:root {
+    --bgblue:#7ab0d4; 
+    --blue:#0173b2;
+    --darkblue:#021433;
+    --gray:#cccccc; 
+    --darkgray:#636668;
+    --bggray:#f3f3f3;
+}
+
+/* -------------------------------- */
+div {
+    font-family: "Nexa-Light";
+    font-size: .8rem;
+}
+
+h1,h2,h3 {
+    font-family: "Nexa-Bold";
+    line-height: 110%;
+    letter-spacing: 1px;
+}
+
+h4,h5,h6 {
+    font-family: "Nexa-Light";
+    line-height: 110%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 25px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 14px;
+}
+p {
+    font-family: "Nexa-Light";
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+i {
+    font-size: 15px;
+}
+a{
+    font-family: "Nexa-Light";
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--darkblue);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+li {
+    font-family: "Nexa-Light";
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--darkblue);
+    list-style-type: none;
+    margin: .3rem 0rem;
+}
+
+input {
+    font-family: "Nexa-Light";
+    font-size: .8rem;
+    padding: .9rem;
+    border: 1px solid var(--gray);
+    border-radius: 3px;
+    color: var(--darkblue);
+    letter-spacing: 1px;
+}
+
+::placeholder {
+    letter-spacing: 1px;
+}
+
+button {
+    padding: .625rem 1.125rem;
+    border: 1px solid var(--darkblue);
+    font-family: "Nexa-Light";
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+select {
+    padding: 0.4rem;
+    font-family: "Nexa-light";
+    border: 1px solid var(--darkblue);
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+select:hover{
+    cursor: pointer;
+}
+
+label {
+    font-family: "Nexa-Light";
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+hr {
+    margin: 0px;
+}
+
+label , span {
+    margin: 0px;
+    font-family: "Nexa-Light";
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0px;
+}
+
+@media only screen and (max-width:1024px)  {
+    header {
+        background-color: white;
+        padding: 10px 0px;
+    }
+    h1,h2,h3 {
+        font-family: "Nexa-Bold";
+        line-height: 110%;
+        letter-spacing: 0px;
+    }
+    a {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 15px;
+    }
+}   
+

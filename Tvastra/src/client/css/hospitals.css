@@ -1,0 +1,259 @@
+.bg-lightgray {
+    background-color: var(--bggray);
+}
+
+.hos-section-1 {
+    height: 24rem;
+    background-image:linear-gradient(to left, rgba(0,0,0,0),var(--blue)), url(https://ikminc.com/wp-content/uploads/2016/11/St-Clair-Hospital-ACC-1-04.27.18-Update-Final-4K.jpg);
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.hos-sec-1 h2 {
+    font-family: "Nexa-Light";
+    font-weight: 600;
+}
+.hos-sec-1 span {
+    font-family: "Nexa-Bold";
+    text-decoration: underline;
+}
+
+/* section 1 ends  */
+
+/* section 2  */
+.hos-section-2 {
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: auto 75%;
+    grid-template-areas: 
+    "head head"
+    "aside main";
+    grid-gap: 10px 20px;
+}
+.section-2-heading {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.section-2-heading h3 {
+    font-family: "Nexa-Light";
+}
+.section-2-heading button {
+    font-family: "Nexa-Bold";
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 0px;
+}
+.section-2-heading span {
+    margin:0px 0px 0px 0.7em;
+}
+.filter-by {
+    grid-area: aside;
+    font-weight: 600;
+}
+.filter-by .container {
+    margin: 20px auto;
+}
+.filter-by i {
+    margin: 0px  0px 0px 0.7em;
+    color: var(--blue);
+}
+.filter-by i:hover {
+    cursor: pointer;
+}
+.filter-by .fa-minus {
+    color: var(--gray);
+}
+.filter-by h5 {
+    background-color: var(--gray);
+    padding: 10px 15px;
+}
+.filter-by .selected-filter {
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.selected-filter span {
+    padding: 7px;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px;
+    border-radius: 20px;
+    border: 1px solid var(--gray);
+}
+.selected-filter i {
+    margin: 0px  0px 0px 0.7em;
+    color: var(--blue);
+}
+/*  */
+.filter-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 15px;
+}
+.filter-title h4 {
+    padding-left:5px ;
+}
+.filter-title span {
+    display: flex;
+}
+.filter-title i {
+    margin: 0px  0px 0px 0.7rem;
+}
+.Fsec input {
+    margin-bottom: 5px;
+}
+.Fsec label {
+    font-size: 12px;
+    margin: 0px 0px 10px 5px;
+}
+.Fsec h6 {
+    margin: 10px 5px;
+    color: var(--blue);
+    letter-spacing: 0px;
+    font-family: "Nexa-Bold";
+    width: fit-content;
+}
+.Fsec h6:hover {
+    cursor: pointer;
+    color: var(--lightblue);
+}
+.filter-hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--gray);
+}
+
+/* section 2  hostor cards */
+.section-2-hos-div {
+    border: 1px solid var(--gray);
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns:70% auto;
+    grid-template-areas: "main image"
+    "button image";
+}
+/* hos card - hos-info  */
+.hos-info {
+    grid-area: main;
+    padding: 20px 30px 0px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hos-name-bar {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    height: 2px;
+    width: 24px;
+    background-color: var(--blue);
+}
+.hos-info i {
+    margin-right: 0.7rem;
+    color: var(--blue);
+}
+.hos-info h3 {
+    width: 100%;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+.hos-info h6 {
+    width: 50%;
+    margin: 10px 0px;
+}
+.hos-info-inner {
+    width: 100%;
+}
+
+.hos-info-inner div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+.hos-info-inner h6 {
+    width: 100%;
+}
+.hos-info-inner span {
+    padding: 7px;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2px;
+    border-radius: 20px;
+    border: 1px solid var(--gray);
+}
+/* hos card - hos-info ends */
+.hos-info-button {
+    grid-area: button;
+    padding: 20px 30px;
+}
+.hos-info-button button {
+    background-color: var(--darkblue);
+    color: white;
+    padding: 15px 50px;
+}
+.section-2-hos-div .image {
+    grid-area: image;
+    background-position: center;
+    background-size: cover;
+}
+.section-2-hos-div .hos0 {
+    background-image: url(https://ahmedabad.apollohospitals.com/wp-content/uploads/2017/09/DSC_2331-864x607.jpg);
+}
+.section-2-hos-div .hos1 {
+    background-image: url(https://d3frl090092vlr.cloudfront.net/Fortis-Hospital-la-shalimar-bagh.jpg);
+}
+.section-2-hos-div .hos2 {
+    background-image: url(https://medsurgeindia.com/wp-content/uploads/2020/02/Rockland-Hospital-Gurgaon.jpg);
+}
+.section-2-hos-div .hos3 {
+    background-image: url(https://www.vaidam.com/sites/default/files/hospitals/primus-super-speciality-hospital-building.jpg);
+}
+/* section 2 ends here */
+
+/* Tablet View */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+.hos-section-1 {
+    height: 18rem;
+}
+
+.filter-by .selected-filter {
+    display: none;
+}
+
+}
+
+@media only screen and (max-width:767px) {
+    .hos-section-2 {
+        grid-template-columns: 100%;
+        grid-gap: 0px;
+        }
+    .filter-by {
+        display: none;
+    }
+    .section-2-hos-div {
+        grid-template-columns: 100%;
+        grid-template-areas: "main"
+        "button"
+        "image";
+    }
+    .section-2-hos-div .image {
+        height: 24rem;
+    }
+    .hos-info h6 {
+        width: auto;
+    }
+    .hos-info-button {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Tvastra/src/client/css/reset.css">
+    <link rel="stylesheet" href="/Tvastra/src/client/css/login.css">
+    <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+    <title>Sign Up</title>
+</head>
+<body>
+    
+    <!-- Header starts here -->
+ <header>
+     <nav>
+         <div class="nav-img">
+             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra">
+         </div>
+         <div class="nav-links">
+             <a href="#">Doctor</a>
+             <a href="#">hospitals</a>
+             <a href="#">Treatment</a>
+             <a href="#">Other Services</a>
+             <a href="#">About</a>
+         </div>
+         <div class="nav-button">
+             <button class="nav-login-button">Login / Sign Up</button>
+         </div>
+         <!-- Content for tablet and Mobile View Only -->
+         <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Doctor</a>
+                <a href="#">hospitals</a>
+                <a href="#">Treatment</a>
+                <a href="#">Other Services</a>
+                <a href="#">About</a>
+                <a href="#">Sign In</a>
+            </div>
+         </div>
+         <!-- Content for tablet view Only till here -->
+
+
+     </nav>
+ </header>
+<section>
+    <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form action="" class="form">
+            <hr>
+            <input type="text" class="name" name="Name" placeholder="Enter Name" required>
+            <input type="email" class="Email" name="Email" placeholder="Enter Email" required>
+            <input type="password" class="password" name="Password" placeholder="Enter Password" required>
+            <input type="text" list="gender" id="Gender" placeholder="Enter your Gender">
+            <datalist id="gender">
+                <option value="M">Male</option>
+                <option value="f">Female</option>
+                <option value="O">Others</option>
+            </datalist>
+
+            <input type="datetime-local" name="date" id="date" placeholder="D.O.B" required>
+            <input type="number" class="phone-number" placeholder="Enter Number" required>
+            <input type="text" class="city" placeholder="Enter City" required>
+            <input type="text" class="state" placeholder="Enter State" required>
+            
+            <input type="text" list="cities" id="city" name="city" placeholder="Enter your Country">
+            <datalist id="cities">
+            <option value="NYC">New York City</option>
+            <option value="Tky">Tokyo</option>
+            <option value="Brcln">Barcelona</option>
+            <option value="MC">Mexico City</option>
+            <option value="Mb">Melbourne</option>
+            <option value="Other">Other</option>  
+        </datalist>
+
+            <button type="submit">SIGN UP</button>
+        </form>
+        <p>Already Registered?</p><a href="../views/signin.html">Sign In</a>
+        
+    </div>
+    <footer>
+        <h2 class="footer">All Rights Reserved. &#169; tvastra 2021</h2>
+    </footer>
+</section>    
+</body>
+<script src="../Dom/script.js"></script>
+</html>

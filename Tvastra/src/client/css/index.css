@@ -1,0 +1,877 @@
+
+.container {
+  width: 90%;
+  margin: 0px auto;
+  box-sizing: border-box;
+}
+
+/* Header and Nav */
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.nav-img img{
+  width: 10rem;
+  height: 2.5rem;
+}
+.nav-links {
+  padding: 0px 5px;
+  width: auto;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links a {
+  margin: 0px 0.5rem;
+}
+.nav-button {
+  height: fit-content;
+}
+nav .dropdown {
+  display: none;
+}
+.nav-quote-button {
+  background-color: var(--darkblue);
+  color: white;
+}
+/* Header and nav end */
+
+/* Section 1 starts here */
+.section-1 {
+  height: 24rem;
+  background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg);
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  align-items: center;
+}
+
+.sec-1 h1 {
+  margin: 20px 0px;
+  font-weight: 100;
+  color: var(--darkblue);
+}
+
+.sec-1 p {
+  color: var(--darkblue);
+  width: 70%;
+}
+
+.sec-1-search {
+  display: flex;
+  margin: 20px 0px;
+}
+.sec-1-search input {
+  font-family: "Nexa-Light";
+  letter-spacing: 1px;
+  color: var(--lightgray);
+}
+.sec-1-search-inner-div {
+  position: relative;
+}
+.sec-1-search-inner-div input {
+  padding-left: 50px;
+}
+.sec-1-search .fas {
+  position: absolute;
+  top: 15px;
+}
+.map-marker {
+  left: 15px;
+}
+.fa-crosshairs {
+  right: 15px;
+  color: var(--lightgray);
+}
+.sec-1-search .search-bar {
+  width: 30%;
+}
+.sec-1-search button {
+  width: 10rem;
+  background-color: var(--darkblue);
+  color: white;
+  border-radius: 0px;
+  
+}
+/* Section 1 ends here */
+
+/* Section 2 starts here */
+.section-2 .text {
+  grid-area: head;
+}
+.section-2 .buttons {
+  grid-area: button;
+}
+.section-2 .image {
+  grid-area: aside;
+}
+.section-2 {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  "head head"
+  "button aside";
+}
+.section-2 .tab-mob-image {
+  display: none;
+}
+.section-2 h1 {
+  margin: 20px 0px;
+}
+.section-2 .text p {
+  margin: 20px 0px 60px;
+}
+.section-2 .buttons {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.section-2 .buttons h2 {
+  padding:35px;
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  margin: 5px 0px;
+  font-weight: 600;
+  border: 1px solid var(--gray);
+  color: var(--gray);
+}
+.section-2 .buttons .one {
+  color: black;
+  border: 2px solid var(--blue);
+  color: var(--darkblue);
+}
+.section-2 .buttons .one span {
+  color: var(--blue);
+}
+.section-2 .buttons span {
+  margin-right: 40px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+.section-2 .image img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.section-2 .image h2 {
+  text-align: center;
+}
+.section-2 .image p {
+  text-align: center;
+}
+/* section 2 end */
+
+/* section 3 starts */
+.section-3 {
+  background-color: var(--darkblue);
+  color: white;
+  padding: 30px 0px;
+}
+.list-of-doctors {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+box-sizing: border-box;
+}
+.DocCard {
+  width: 18rem;
+  box-sizing: border-box;
+  height: auto;
+  margin: 10px 5px 10px 0px;
+}
+/* DocCard Images */
+.D1-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg); }
+.D2-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg); }
+.D3-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg); }
+.D4-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg); }
+.DocCard-img {
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+}
+/* docCard Images */
+.DocCard-text {
+  background-color: white;
+  width: 100%;
+  color: black;
+  padding-top:20px ;
+  position: relative;
+}
+.DocCard-text .name-bar {
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  top: 28px;
+  background-color: var(--blue);
+}
+.DocCard-text h3 {
+  padding-left:30px ;
+}
+.DocCard-text p{
+  display: flex;
+  padding: 0px 30px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin: 15px 0px;
+}
+.DocCard-text .DocCard-footer {
+  width: auto;
+  height: 5px;
+  background-color: var(--blue);
+  border: none;
+}
+.section-3-dots {
+  margin-top: 30px;
+  color: var(--lightgray);
+
+  display: flex;
+  align-items: center;
+}
+.section-3-dots i {
+  margin-right: 5px;
+  font-size: 10px;
+}
+.section-3-dots .dot-active {
+  font-size: 14px;
+  color: var(--blue);
+}
+
+/* Section 3 ends here */
+
+/* Section 4  */
+
+/* Homepage-sec-4 starts here */
+.section-4 {
+  padding: 60px 0px;
+}
+.sec-4-img {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  margin-top: 60px;
+}
+/*dentistry*/
+.T1-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--009.jpg); }
+/*cancer*/
+.T2-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg); }
+/*cardiologic*/
+.T3-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg); }
+/*multi-organ*/
+.T4-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--006.jpg); }
+/*orthopedics*/
+.T5-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg); }
+/*infertility*/
+.T6-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--007.jpg); }
+.dentistry, .cancer, .cardiologic, .multi-organ, .orthopedics, .infertility { 
+  background-position: center;
+  background-size: cover;
+}
+.dentistry { 
+  grid-row-start: 1;
+  grid-row-end: 25;
+}
+.cancer {
+  grid-row-start: 1;
+  grid-row-end: 45;
+}
+.cardiologic {
+  grid-row-start: 1;
+  grid-row-end: 35;
+}
+.multi-organ {
+  grid-row-start: 25;
+  grid-row-end: 80;
+}
+.orthopedics {
+  grid-row-start: 45;
+  grid-row-end: 80;
+}
+.infertility {
+  grid-row-start: 35;
+  grid-row-end: 80;
+}
+.go-to-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.treatment-img-text {
+  color: white;
+  padding: 40px 0px 18px 30px;
+  background: linear-gradient(360deg, rgba(0,0,51,0.8071603641456583) 0%, rgba(255,255,255,0) 100%);
+  font-weight: 300;
+  line-height: 2;
+}
+.treatment-img-text span{
+font-family: "Nexa-Bold";
+  font-size: 20px;
+}
+.section-4-dots {
+      margin-top: 30px;
+      color: var(--lightgray);
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+}
+.section-4-dots i {
+      margin-right: 5px;
+      font-size: 10px;
+}
+.section-4-dots .dot-active {
+  font-size: 14px;
+      color: var(--blue);
+}
+
+
+/* Section 4 ends */
+
+/* section 5 */
+.section-5 {
+  background-color: var(--bggray);
+  padding:50px 0px;
+}
+.sec-5-icons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sec-5-icons img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+.sec-5-icons div {
+width: 180px;
+height: 180px;
+background-color: white;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+margin: 10px 3px;
+border-radius: 5px;
+}
+.sec-5-icons h3 {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  color: var(--gray);
+}
+/* section 5 ends */
+
+/* section 6 starts */
+.need-help {
+  background-color: var(--bgblue);
+  padding: 50px 0px;
+}
+
+.need-help .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.need-help h2 {
+  color: white;
+}
+.need-help p {
+  margin-bottom: 0px;
+  color: var(--darkblue);
+}
+.need-help button {
+  font-family: 'Nexa-Light';
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  width: 11rem;
+  height: 3rem;
+}
+
+/* Need Help ends */
+
+/* Footer starts */
+.footer {
+  padding: 30px 0px;
+}
+.footer .container {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9rem;
+  height: 2rem;
+}
+.footer .socialmedia-icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.socialmedia-icons i {
+  margin-left: 0.8rem;
+  font-size: 20px;
+  transition: ease-in-out 50ms;
+}
+.footer-links a{
+  margin: 0px 0.8rem 0px 0px;
+}
+.footer p {
+  margin-bottom:0px;
+}
+.footer-footer {
+  width: auto;
+  height: 8px;
+  background-color: var(--blue);
+  border: none;
+}
+.fab {
+  transition: ease-in-out 100ms;
+}
+.fa-facebook-f:hover {
+  transition: ease-in-out 100ms;
+  color: #4064ac;
+}
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+.fa-pinterest:hover {
+  color: #c51f26;
+}
+.fa-google-plus:hover {
+  color: #d54836;
+}
+.fa-instagram:hover {
+  color: #bf3199;
+}
+/* Footer ends here */
+
+/* tablet view */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+.nav-links,.nav-button {
+  display: none;
+}
+nav .dropdown {
+  display: block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.show {display: block;}
+/* Nav Bar */
+
+/* Section 1 */
+.section-1 {
+  height: 18rem;
+  background-position: left;
+}
+.section-1 .sec-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sec-1 p {
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+.section-1 .sec-1-search {
+  width: 100%;
+  justify-content: center;
+}
+.sec-1-search .search-bar {
+  width: 50%;
+}
+/* section-1 ends */
+
+/* section-2 starts */
+.section-2 .text {
+  text-align: center;
+}
+.section-2 .text p {
+  margin: 20px 0px;
+}
+.section-2 .buttons span {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.section-2 .buttons h2 {
+  width: 90%;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.section-2 .image {
+  width: 90%;
+}
+.section-2 .image p {
+  margin: 20px 0px 0px 0px;
+}
+/* section 2 ends */
+
+/* section 3 starts here */
+.section-3 h1 {
+  text-align: center;
+}
+.section-3 p{
+  text-align: center;
+}
+.list-of-doctors {
+  justify-content: space-evenly;
+}
+.DocCard {
+  width: 40%;
+}
+.DocCard p {
+  text-align: start;
+}
+.section-3-dots {
+  display: none;
+}
+/* Section 3 ends here */
+
+/* Section 4 starts  */
+.section-4 h1 {
+  text-align: center;
+}
+.sec-4-img span {
+  font-family: "Nexa-Bold";
+  font-size: 20px;
+}
+.sec-4-img {
+  font-size: 14px;
+}
+.dentistry { 
+  grid-row-start: 1;
+  grid-row-end: 35;
+}
+.cancer {
+  grid-row-start: 1;
+  grid-row-end: 35;
+}
+.cardiologic {
+  grid-row-start: 1;
+  grid-row-end: 35;
+}
+.multi-organ {
+  grid-row-start: 36;
+  grid-row-end: 70;
+}
+.orthopedics {
+  grid-row-start: 36;
+  grid-row-end: 70;
+}
+.infertility {
+  grid-row-start: 36;
+  grid-row-end: 70;
+}
+.section-4-dots {
+  display: none;
+}
+/* Section 4 ends here */
+/* section 5 starts here */
+.section-5 .container h1 {
+  text-align: center;
+}
+.sec-5-icons {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.sec-5-icons div {
+  width: auto;
+  border-radius: 10px;
+  margin: 10px;
+}
+/* Section 5 ends here */
+
+/* Need Help section  */
+.need-help .container {
+  flex-direction: column;
+}
+.need-help-text {
+  text-align: center;
+}
+.need-help-button button{
+  font-size: 15px;
+}
+.need-help p {
+  margin: 20px 0px;
+}
+/* Need help Section ends */
+
+/* Footer */
+.footer .socialmedia-icons i {
+  font-size: 15px;
+}
+
+/* Footer */
+
+}
+
+
+/* Mobile View */
+
+@media only screen and (max-width:767px) {
+  .nav-links,.nav-button {
+      display: none;
+  }
+  nav .dropdown {
+      display: block;
+      position: relative;
+  }
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .show {display: block;}
+  /* Nav Bar */
+  
+  /* Section 1 */
+.section-1 {
+  height: auto;
+  background-position: left;
+  padding: 10px 0px;
+}
+.section-1 .sec-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sec-1 h1 {
+  text-align: center;
+}
+.sec-1 p {
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+.sec-1-search {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sec-1-search-inner-div {
+  width: 100%;
+  display: flex;
+}
+.sec-1 .sec-1-search input {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.sec-1 button {
+  margin: 5px 0px;
+}
+/* section-1 ends */
+
+/* section-2 starts */
+.section-2 {
+  grid-template-columns: 100%;
+  margin: 10px auto;
+}
+.section-2 .text {
+  text-align: center;
+}
+.section-2 .text p {
+  margin: 20px 0px;
+}
+.section-2 .image {
+  display: none;
+}
+.section-2 .tab-mob-image {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.tab-mob-image img {
+  width: 100%;
+}
+.tab-mob-image h3 {
+  margin-top: 10px;
+}
+.tab-mob-image p {
+  text-align: center;
+}
+.section-2 .buttons {
+  width: 100%;
+}
+.section-2 .buttons h2 {
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.section-2 .buttons span {
+  margin-right: 15px;
+}
+/* section 2 ends */
+
+/* section 3 starts */
+.section-3 .container h1 , .section-3 .container p {
+  text-align: center;
+}
+.DocCard {
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+.DocCard-img {
+  height: 25rem;
+}
+.DocCard .DocCard-text p {
+  text-align: start;
+}
+.section-3-dots {
+  display: none;
+}
+/* section3 ends  */
+
+/* section -4  */
+.section-4 h1 , .section-4 p{
+  text-align: center;
+}
+.sec-4-img {
+  display: grid;
+  margin: 0px;
+  grid-template-columns: auto;
+}
+.dentistry { 
+  grid-row-start: 1;
+  grid-row-end: 40;
+}
+.cancer {
+  grid-row-start: 40;
+  grid-row-end: 80;
+}
+.cardiologic {
+  grid-row-start: 80;
+  grid-row-end: 120;
+}
+.multi-organ {
+  grid-row-start: 120;
+  grid-row-end: 160;
+}
+.orthopedics {
+  grid-row-start: 160;
+  grid-row-end: 200;
+}
+.infertility {
+  grid-row-start: 200;
+  grid-row-end: 240;
+}
+.section-4-dots{
+  display: none;
+}
+/* Section 5  */
+
+.sec-5-icons div {
+  border-radius: 20px;
+}
+.section-5 h1 , .section-5 p {
+  text-align: center;
+}
+/* Section 5 ends */
+
+/* Need Help */
+.need-help {
+  padding: 40px 0px;
+}
+.need-help-inner {
+  flex-direction: column;
+}
+.need-help-inner p {
+  margin: 20px 0px;
+  text-align: center;
+}
+.need-help-inner h2 {
+  text-align: center;
+}
+.need-help-button button {
+  padding: 10px;
+  width: 11rem;
+  height: 3rem;
+}
+/* Need Help ends */
+@media only screen and (max-width:425px) {
+  .sec-5-icons div {
+      width: 50%;
+  }
+  .sec-5-icons {
+      justify-content: center;
+  }
+}
+/* Footer */
+.footer {
+  background-color: var(--darkblue);
+  color: #cccccc;
+}
+.footer .container {
+  position: relative;
+  height: auto;
+  align-items: center;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.footer img {
+  height: 3rem;
+  width: 11rem;
+}
+.footer img , .footer .socialmedia-icons{
+  position: relative;
+}
+.footer-links a {
+  margin: 10px auto;
+  color: #cccccc;
+}
+.footer .socialmedia-icons i{
+  width: auto;
+  margin: 0px 0.8em 0px 0px;
+  text-align: center;
+}
+/* Footer */
+}
