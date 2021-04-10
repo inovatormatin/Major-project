@@ -1,11 +1,11 @@
 /* Fonts Installation */
 @font-face {
     font-family: 'Nexa-Bold';
-    src: url(/Tvastra/src/client/fonts/Nexa-Bold.otf) format('truetype');
+    src: url(../fonts/Nexa-Bold.otf) format('truetype');
 }
 @font-face {
     font-family: 'Nexa-Light';
-    src: url(/Tvastra/src/client/fonts/Nexa-Light.otf) format('truetype');
+    src: url(../fonts/Nexa-Light.otf) format('truetype');
 }
 
 /* Colors */

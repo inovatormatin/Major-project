@@ -95,10 +95,8 @@ section {
     color: #2a7ecc;
     margin: 0px 20px;
 }
-section footer {
-        display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+        text-align: center;
 }
 
 /* Tablet View */
