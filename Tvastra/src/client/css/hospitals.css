@@ -1,9 +1,5 @@
-.bg-lightgray {
-    background-color: var(--bggray);
-}
-
 .hos-section-1 {
-    height: 24rem;
+    height: 20rem;
     background-image:linear-gradient(to left, rgba(0,0,0,0),var(--blue)), url(https://ikminc.com/wp-content/uploads/2016/11/St-Clair-Hospital-ACC-1-04.27.18-Update-Final-4K.jpg);
     background-size: cover;
     background-position: center; 

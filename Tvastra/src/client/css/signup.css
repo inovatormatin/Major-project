@@ -1,0 +1,64 @@
+body {
+    background-color: var(--bgblue);
+}
+section {
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.signup-form {
+    margin: 2rem 0rem;
+    width: 23rem;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+form {
+    margin: 1.5rem;
+}
+.signup-form hr {
+    height: 1px;
+    width: auto;
+    background-color: var(--blue);
+}
+.signup-form h2 {
+    padding: 1rem 0px;
+    text-align: center;
+    color: var(--blue);
+}
+.signup-form input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.signup-form button {
+    width: 100%;
+    background-color: var(--darkblue);
+    color: white;
+    border: none;
+}
+.form-footer {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 1rem;
+}
+.form-footer h6 {
+    margin-right: .5rem;
+}
+.form-footer a{
+    color: var(--blue);
+    font-family: "Nexa-Bold";
+}
+.login-footer {
+    margin: 0 0 1rem;
+}
+
+@media only screen and (max-width:767px) {
+    .signup-form {
+        width: 90%;
+    }
+}

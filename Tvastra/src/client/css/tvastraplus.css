@@ -14,7 +14,7 @@
 	font-weight: 400;
 	font-size: 14px;
 	color: white;
-	background: #0097ff;
+	background: var(--blue);
 	border-radius: 5px;
 	padding: 8px 15px;
 	line-height: 2;
@@ -119,12 +119,12 @@
 	font-weight: 700;
 }
 .price p{
-	color: #0097ff;
+	color: var(--blue);
 	font-size: 15px;
 	font-weight: 400;
 }
 .price button{
-	background-color: #0097ff;
+	background-color: var(--blue);
 	color: white;
 	font-weight: 300;
 	font-size: 14px;
@@ -184,7 +184,7 @@
 	line-height: 1.5;
 }
 .checked {
-	color: #0097ff;
+	color: var(--blue);
 }
 .total-rating {
 	padding: 0px 50px;
@@ -204,15 +204,15 @@
 .ratings strong {
 	font-size: 70px;
 	font-weight: 600;
-	color: #0097ff;
+	color: var(--blue);
 }
 .ratings p{
 	font-weight: 300;
-	color: #0097ff;
+	color: var(--blue);
 	padding: 15px 0px;
 }
 .rating-distribution label{
-	color: #0097ff;
+	color: var(--blue);
 	font-size: 20px;
     padding: 10px;
     line-height: 1.2
@@ -246,17 +246,17 @@ meter::-webkit-meter-optimum-value {
 .Reviews-cards .fa-users, .Reviews-cards .fa-user-md, .Reviews-cards .fa-pills, .Reviews-cards .fa-portrait{
 	font-size: 45px;
 	margin: 0px;
-	color: #0099ff;
+	color: var(--blue);
 	padding: 0.1em;
 }
 .Reviews-cards span{
-	color: #0099ff;
+	color: var(--blue);
 	font-weight: 700;
 	font-size: 1.5em;
 	padding: 0.1em;
 } 
 .Reviews-cards p{
-	color: #0099ff;
+	color: var(--blue);
 	font-weight: 300;
 	font-size: 1em;
 	padding: 0.3em;
@@ -510,8 +510,8 @@ meter::-webkit-meter-optimum-value {
 	margin-bottom: 8px;
 }
 .plan_type {
-	background-color: #80b3ff9c;
-	color: #1a4c96;
+	background-color: var(--blue);
+	color: white;
 	border-radius: 0.5em;
 	font-size: 0.8em;
 	padding: 0.5em 0.8em;
@@ -527,44 +527,38 @@ meter::-webkit-meter-optimum-value {
 	font-weight: 700;
 }
 /* mohit css */
-.tvastraplus-other-text {
+.heading-with-icon {
+    margin: 10px 0px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    position:relative;
 }
-.FAQ_question {
-    margin: 25px 0px;
-    width: 100%;
+.heading-with-icon button:hover {
+    background-color: var(--bggray);
 }
 .fa-chevron-circle-down {
     float: right;
+    color: var(--bgblue);
 }
-.FAQ_question button {
+.heading-with-icon button {
     position: relative;
     background-color: white;
-    color: #105fa8ea;
+    color:var(--blue);
     cursor: pointer;
     width:100%;
     border: none;
     text-align: left;
-    outline: none;
-    font-size: 1.1em;
-    font-weight: bolder;
-    letter-spacing: 1px;
     padding: 10px 0px;
+    font-size: 1rem;
+    outline: none;
 }
-.FAQ_question button:hover{
-    color: #06294bea;
-    background-color: rgb(222, 226, 231);
-}
-.tvastraplus-other-text .FAQ_ans {
-    padding: 0 18px;
+
+.doctor-other-text .content {
+    margin: 0px 0px 10px;
+	padding-left: 5px;
     max-height: 0;
     width: auto;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    background-color: #e4f3ffa2;
 }
 /* mohit css */
 /* FAQ ends here */

@@ -1,5 +1,5 @@
 .section-1 {
-    height: 24rem;
+    height: 20rem;
     background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png);
     background-position: center;
     color: white;
@@ -25,8 +25,8 @@
 }
 .contact-section-2-data ul {
     display: flex;
-    flex-wrap: wrap;
-    align-content:space-around ;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .contact-section-2-data i {
     color: var(--blue);
@@ -36,6 +36,13 @@
     display: flex;
     align-items: center;
 }
+.contact-section-2-data h5 {
+    font-family: "Nexa-bold";
+}
+.contact-section-2 span {
+    font-family: "Nexa-light";
+}
+
 .third-div {
     background-color: var(--bgblue);
     padding: 1.5rem;
@@ -67,4 +74,28 @@ form button {
     color: white;
     border: none;
     float: right;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .contact-section-2-data {
+        grid-template-columns: 1fr;
+        grid-gap: 15px 0px;
+    }
+    .contact-section-2 ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .contact-section-2-data {
+        grid-template-columns: 1fr;
+        grid-gap: 15px 0px;
+    }
+    .third-div form {
+        grid-template-columns: 1fr;
+    }
+    .third-div form input {
+        margin-bottom: 10px;
+    }
 }

@@ -121,11 +121,6 @@ select:hover{
     cursor: pointer;
 }
 
-label {
-    font-family: "Nexa-Light";
-    font-weight: 600;
-    font-size: 0.9rem;
-}
 
 hr {
     margin: 0px;

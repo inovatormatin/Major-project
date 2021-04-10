@@ -1,0 +1,72 @@
+body {
+    background-color: var(--bgblue);
+}
+section {
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.submit-query-form {
+    margin: 2rem 0rem;
+    width: 40rem;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+form {
+    margin: 1.5rem;
+}
+.submit-query-form hr {
+    height: 1px;
+    width: auto;
+    background-color: var(--blue);
+}
+.submit-query-form h4 {
+    padding: 1rem 0px;
+    text-align: center;
+    color: var(--blue);
+}
+.submit-query-form .time-interval-class {
+    width: auto;
+}
+.submit-query-form input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.submit-query-form button {
+    width: 100%;
+    background-color: var(--darkblue);
+    color: white;
+    border: none;
+    letter-spacing: 4px;
+}
+.form-footer {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 1rem;
+}
+.form #submitquery-message {
+    height: 10rem;
+    text-align:start;
+}
+.form-footer h6 {
+    margin-right: .5rem;
+}
+.form-footer a{
+    color: var(--blue);
+    font-family: "Nexa-Bold";
+}
+.login-footer {
+    margin: 0 0 1rem;
+}
+
+@media only screen and (max-width:767px) {
+    .submit-query-form {
+        width: 90%;
+    }
+}

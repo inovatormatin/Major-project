@@ -1,0 +1,63 @@
+body {
+    background-color: var(--bgblue);
+}
+section {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signin-form {
+    box-sizing: border-box;
+    width: 23rem;
+    height: 18rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+form {
+    margin: 1.5rem;
+}
+.signin-form h2 {
+    padding: 1rem 0px;
+    text-align: center;
+    color: var(--blue);
+}
+.signin-form hr {
+    width: auto;
+    background-color: var(--blue);
+}
+.signin-form input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.signin-form button {
+    width: 100%;
+    background-color: var(--darkblue);
+    color: white;
+    border: none;
+}
+.form-footer {
+    display: flex;
+    justify-content:center;
+}
+.form-footer h6 {
+    margin-right: .5rem;
+}
+.form-footer a{
+    color: var(--blue);
+    font-family: "Nexa-Bold";
+}
+.login-footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:450px) {
+    .signin-form {
+        width: 90%;
+    }
+}

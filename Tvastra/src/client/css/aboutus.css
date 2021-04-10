@@ -1,5 +1,5 @@
 .about-sec-1 {
-    height: 24rem;
+    height: 20rem;
     background-image:linear-gradient( to top,rgba(0,0,0,0.8),rgba(0,0,0,0.1)), url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/aboutUs_hero.jpeg);
     background-size: cover;
     background-position: top; 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/theme.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/bookappointment.css">
     <title>Sign Up</title>
 </head>
 <body>
@@ -21,11 +21,11 @@
                 <a href="./doctors.html">Doctors</a>
                 <a href="./hospitals.html">hospitals</a>
                 <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
+                <a href="./contactus.html">Contact Us</a>
                 <a href="./aboutus.html">About</a>
             </div>
             <div class="nav-button">
-                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <a href="./signin.html"><button class="nav-logout-button">LogOut</button></a>
                 <button class="nav-quote-button">Get a Quote</button>
             </div>  <!--Content for pc and laptop-->
 
@@ -44,40 +44,23 @@
 </header> <!-- Header Nav ends Here -->
 
 <section>
-    <div class="signup-form">
-        <h2>Sign Up</h2>
+    <div class="submit-query-form">
+        <h4>Book an Appointment</h3>
         <hr>
         <form action="" class="form">
-            <input type="text" class="name" name="Name" placeholder="Enter Name" required>
-            <input type="email" class="Email" name="Email" placeholder="Enter Email" required>
-            <input type="password" class="password" name="Password" placeholder="Enter Password" required>
-            <input type="text" list="gender" id="Gender" placeholder="Enter your Gender">
-            <datalist id="gender">
-                <option value="M">Male</option>
-                <option value="f">Female</option>
-                <option value="O">Others</option>
-            </datalist>
-
-            <input type="date" name="date" id="date" placeholder="D.O.B" required>
-            <input type="number" class="phone-number" placeholder="Enter Number" required>
-            <input type="text" class="city" placeholder="Enter City" required>
-            <input type="text" class="state" placeholder="Enter State" required>
-            
-            <input type="text" list="cities" id="city" name="city" placeholder="Enter your Country">
-            <datalist id="cities">
-            <option value="NYC">New York City</option>
-            <option value="Tky">Tokyo</option>
-            <option value="Brcln">Barcelona</option>
-            <option value="MC">Mexico City</option>
-            <option value="Mb">Melbourne</option>
-            <option value="Other">Other</option>  
-        </datalist>
-            <button type="submit">SIGN UP</button>
+            <label for="appointment-date">Select Appointment Date*</label>
+            <input type="date" id="appointment-date">
+            <div class="time-interval-div">
+                <label for="time-interval-class">Time Interval*</label>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id=" morning" value="Morning">
+                <label for="morning">Morning</label>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id=" afternoon" value="Afternoon">
+                <label for="afternoon">Afternoon</label>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id=" evening" value="Evening">
+                <label for="evening">Evening</label>
+            </div>
+       
         </form>
-        <div class="form-footer">
-            <h6>Have an Account?</h6>
-            <a href="../views/signin.html">Sign In</a>
-        </div>
     </div>
     <p class="login-footer">All Rights Reserved. &#169; tvastra 2021</p>
  </section>

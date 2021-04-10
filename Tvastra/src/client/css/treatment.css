@@ -1,5 +1,5 @@
 .treatment-section-1 {
-    height: 24rem;
+    height: 20rem;
     background-image:linear-gradient(to left, rgba(0,0,0,0),var(--blue)), url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg);
     background-size: cover;
     background-position: top; 
@@ -84,7 +84,7 @@
 .side-1 hr,.side-2 hr {
     position: absolute;
     width: 18px;
-    height: 1px;
+    height: 2px;
     background-color: var(--blue);
     left: 0;
     top: 30px;
@@ -106,7 +106,7 @@
 }
 .side-1 span,.side-2 span {
     font-family: "Nexa-Bold";
-    color: var(--gray);
+    color: var(--darkgray);
     display: flex;
     padding:20px 0px 5px;
     justify-content: space-between;
@@ -219,9 +219,56 @@
 
 
 
+/* Tablet View  */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+     .treatment-sec-1 {
+         text-align: center;
+     }
+     .treatment-section-2 {
+         grid-template-columns: 1fr;
+     }
+     .section-2-side {
+         display: grid;
+         grid-template-columns: auto auto;
+         grid-gap: 0px 15px;
+         grid-template-rows: auto;
+     }
+     .side-1 , .side-2 {
+         height: fit-content;
+     }
+}
 
+@media only screen and (max-width:767px) {
+    .treatment-sec-1 {
+        text-align: center;
+    }
+    .treatment-section-2 {
+        grid-template-columns: 1fr;
+    }
+    .section-2-main-data {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "head"
+        "image"
+        "text";
+    }
+    .section-2-main-data h2 {
+        text-align: center;
+    }
 
+    .section-2-main-cards {
+        grid-template-columns: 1fr;
+        grid-gap: 15px 0px;
+    }
 
+    .more-services-container-text {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .more-services-container-img {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
