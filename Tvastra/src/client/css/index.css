@@ -106,6 +106,9 @@ nav .dropdown {
 }
 .section-2 .image {
   grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .section-2 {
   width: 90%;
