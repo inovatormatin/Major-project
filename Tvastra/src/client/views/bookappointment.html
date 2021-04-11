@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/theme.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/bookappointment.css">
-    <title>Sign Up</title>
+    <title>Book an Appointment</title>
 </head>
 <body>
     
@@ -44,22 +44,38 @@
 </header> <!-- Header Nav ends Here -->
 
 <section>
-    <div class="submit-query-form">
-        <h4>Book an Appointment</h3>
+    <div class="appointment-form">
+        <h4>Book an Appointment</h4>
         <hr>
         <form action="" class="form">
-            <label for="appointment-date">Select Appointment Date*</label>
+            <label class="font-bold" for="appointment-date">Select Appointment Date*</label>
             <input type="date" id="appointment-date">
             <div class="time-interval-div">
-                <label for="time-interval-class">Time Interval*</label>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id=" morning" value="Morning">
-                <label for="morning">Morning</label>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id=" afternoon" value="Afternoon">
-                <label for="afternoon">Afternoon</label>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id=" evening" value="Evening">
-                <label for="evening">Evening</label>
+                <label class="font-bold" for="time-interval-class">Time Interval*</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="morning" value="Morning">
+                <label for="morning">Morning</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="afternoon" value="Afternoon">
+                <label for="afternoon">Afternoon</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="evening" value="Evening">
+                <label for="evening">Evening</label><br>
             </div>
-       
+            <div class="time-interval-div">
+                <label class="font-bold" for="time-interval-class">Appointment Status / Urgency*</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="routine" value="routine Check-Up">
+                <label for="routine">Routine Check-Up</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check-up">
+                <label for="non-urgent-checkup">Non Urgent Check-Up</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="urgent-checkup" value="Urgent Check Up">
+                <label for="urgent-checkup">Urgent Check-Up</label><br>
+                <input type="radio" name="Time-Interval" class="time-interval-class" id="surgical-appointment" value="Surgical Appointment">
+                <label for="surgical-appointment">Surgical Appointment</label><br>
+            </div>
+            <h3>Upload Previous Health Record</h3>
+            <input type="button" class="file-button" id="file-button" value="Choose file">
+            <label for="file-button"> No File chosen</label>
+            <h3>Appointment Details</h3>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+            <button>BOOK APPOINTMENT</button>
         </form>
     </div>
     <p class="login-footer">All Rights Reserved. &#169; tvastra 2021</p>

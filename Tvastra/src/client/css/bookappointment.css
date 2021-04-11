@@ -1,6 +1,12 @@
 body {
     background-color: var(--bgblue);
 }
+.font-bold {
+    font-family: "Nexa-Bold";
+}
+.font-light {
+    font-family: "Nexa-Light";
+}
 section {
     display: flex;
     position: relative;
@@ -9,7 +15,12 @@ section {
     align-items: center;
     flex-direction: column;
 }
-.submit-query-form {
+.appointment-form h4 {
+    color: var(--blue);
+    text-align: center;
+    margin: 15px;
+}
+.appointment-form {
     margin: 2rem 0rem;
     width: 40rem;
     background-color: white;
@@ -18,41 +29,40 @@ section {
     flex-direction: column;
 }
 form {
-    margin: 1.5rem;
+    padding: 1rem;
 }
-.submit-query-form hr {
-    height: 1px;
-    width: auto;
-    background-color: var(--blue);
-}
-.submit-query-form h4 {
-    padding: 1rem 0px;
-    text-align: center;
-    color: var(--blue);
-}
-.submit-query-form .time-interval-class {
-    width: auto;
-}
-.submit-query-form input {
+.form input {
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    padding: .7rem;
+    margin: 10px 0px;
 }
-.submit-query-form button {
+
+form .file-button {
+    padding: 5px;
+    width: fit-content;
+}
+
+form textarea {
+    margin: 10px 0px;
     width: 100%;
-    background-color: var(--darkblue);
-    color: white;
-    border: none;
-    letter-spacing: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-.form-footer {
-    display: flex;
-    justify-content:center;
-    margin-bottom: 1rem;
+.time-interval-div {
+    margin: 10px 0px;
 }
-.form #submitquery-message {
-    height: 10rem;
-    text-align:start;
+
+form button {
+    width: 100%;
+    background:var(--darkblue);
+    color:white;
+    letter-spacing: 3px;
+}
+
+input.time-interval-class {
+    width: fit-content;
+    margin: 5px 0px;
 }
 .form-footer h6 {
     margin-right: .5rem;
@@ -66,7 +76,7 @@ form {
 }
 
 @media only screen and (max-width:767px) {
-    .submit-query-form {
+    .appointment-form {
         width: 90%;
     }
 }
