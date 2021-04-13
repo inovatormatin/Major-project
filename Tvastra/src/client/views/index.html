@@ -34,7 +34,7 @@
                 <a href="./treatment.html">Treatment</a>
                 <a href="./tvastraplus.html">Other Services</a>
                 <a href="./aboutus.html">About</a>
-                   <a href="#">SignIn / SignUp</a>
+                <a href="#">SignIn / SignUp</a>
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
@@ -45,8 +45,13 @@
             <p>Join the thousands of others who have exercised their right to quality healthcare at a price you can afford.</p>
             <div class="sec-1-search">
                 <div class="sec-1-search-inner-div"><i class='fas fa-map-marker-alt map-marker'></i><i class='fas fa-crosshairs'></i>
-                    <input class="location" type="text" name="location" placeholder="Ahemdabad"></div>
-                <input id="user_search_input" class="search-bar" type="text" name="search-bar" placeholder="Search for doctors, hospitals and treatments.">
+                <input class="location" type="text" name="location" placeholder="Ahemdabad"></div>
+                <div class="search-bar-with-suggestion">
+                  <input id="user_search_input" class="search-bar" type="text" name="search-bar" placeholder="Search for doctors, hospitals and treatments.">
+                  <ul id="suggestion_ul" class="search-bar-suggestion-list">
+                    <!-- suggestion will show here -->
+                  </ul>
+                </div>
                 <button id="user_search_button" type="button">Search</button>
             </div>
         </div>
