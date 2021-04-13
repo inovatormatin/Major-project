@@ -85,8 +85,18 @@ nav .dropdown {
   right: 15px;
   color: var(--lightgray);
 }
-.sec-1-search .search-bar {
+.search-bar-with-suggestion {
   width: 30%;
+}
+.sec-1-search .search-bar {
+  width: 92%;
+}
+.search-bar-suggestion-list {
+  position: absolute;
+  background-color: #f0f0f0de;
+  width: 24.89%;
+  padding: 0.5rem 0.9rem;
+  visibility: hidden;
 }
 .sec-1-search button {
   width: 10rem;

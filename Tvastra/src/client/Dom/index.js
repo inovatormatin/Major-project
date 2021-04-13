@@ -1,3 +1,60 @@
+// Search suggestion from Homepage start here
+var SearchSuggestion = [
+	"apollo hospital",
+	"cancer",
+	"cardiology",
+	"coni star",
+	"dentistry",
+	"doctors",
+	"duke Sanson",
+	"fortis",
+	"georgia peter",
+	"hospital",
+	"jackline star",
+	"orthopedic surgery",
+	"primus Super Speciality Hospital",
+	"rockland Hospital",
+	"rose moon",
+	"tvastra Plus",
+	"treatment"
+];
+var x = 0;
+var ul = document.getElementById("suggestion_ul");
+function isSuggestionEmpty() {
+	if(S_input.value === "") {
+		ul.style.visibility = "hidden";
+	}
+}
+function cleanSuggestion() {
+	if(ul.childElementCount > 0) {
+		ul.innerHTML = '';
+		ul.style.visibility = "hidden";
+	}
+}
+function autocomplete() {
+	if(S_input.value.length > 0) {
+		S_input.value = document.querySelectorAll("li")[0].innerHTML;
+		searchValueByButton();
+	}
+}
+function printAll() {
+	cleanSuggestion();
+	if (S_input.value.length === 0) {
+		x = S_input.value.length + 1;
+	}
+	for(var i = 0; i < SearchSuggestion.length; i++){
+		if(x > 0 && SearchSuggestion[i].startsWith(S_input.value.toLowerCase()))
+		{
+			var li = document.createElement("li");
+			li.appendChild(document.createTextNode(SearchSuggestion[i]));
+			ul.appendChild(li);
+			li.onclick = autocomplete;
+			ul.style.visibility = "visible";
+		}
+	}
+}
+// Search suggestion from Homepage ends here 
+
 // Search js from Homepage start here
 var Doctor = ["duke sanson","rose moon","coni star","georgia peter","jackline star"];
 var Treatment = ["dentistry","orthopedic surgery","cancer","cardiology"];
@@ -68,6 +125,8 @@ function searchValue() {
 	}
 }
 function searchValueByEnter(event) {
+	printAll();
+	isSuggestionEmpty();
 	if (S_input.value.length > 0 && event.keyCode === 13) {
 		searchValue();
 		S_input.value = "";
@@ -81,7 +140,6 @@ function searchValueByButton() {
 }
 S_input.addEventListener("keypress", searchValueByEnter);
 S_button.addEventListener("click", searchValueByButton);
-
 // Search js from Homepage ends here 
 
 // How it works js from Homepage start here 
