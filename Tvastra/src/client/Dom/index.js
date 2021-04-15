@@ -140,6 +140,13 @@ function searchValueByButton() {
 }
 S_input.addEventListener("keypress", searchValueByEnter);
 S_button.addEventListener("click", searchValueByButton);
+function hideIt() {
+	ul.style.visibility = "hidden";
+}
+var sec1 = document.getElementById("sec1");
+var sec2 = document.getElementById("sec2");
+sec1.addEventListener("click", hideIt);
+sec2.addEventListener("click", hideIt);
 // Search js from Homepage ends here 
 
 // How it works js from Homepage start here 
@@ -194,8 +201,8 @@ function revaluex() {
 			option2.getElementsByTagName("span")[0].style.color = "#0173b2";
 		break;
 		case 3:
-			document.getElementById("sideimage_HIW_desk-tab").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img3.jpeg";
-			document.getElementById("sideimage_HIW_mob").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img3.jpeg";
+			document.getElementById("sideimage_HIW_desk-tab").src = "https://www.itsm-center.si/images/itil-check.png";
+			document.getElementById("sideimage_HIW_mob").src = "https://www.itsm-center.si/images/itil-check.png";
 			document.getElementById("sideimage_h2_desk-tab").innerHTML = "Consult with doctor";
 			document.getElementById("sideimage_h3_mob").innerHTML = "Consult with doctor";
 			document.getElementById("sideimage_p_desk-tab").innerHTML = "After uploading the medical reports user can directly consult with doctor.";
@@ -205,8 +212,8 @@ function revaluex() {
 			option3.getElementsByTagName("span")[0].style.color = "#0173b2";
 		break;
 		case 4:
-			document.getElementById("sideimage_HIW_desk-tab").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img4.jpeg";
-			document.getElementById("sideimage_HIW_mob").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img4.jpeg";
+			document.getElementById("sideimage_HIW_desk-tab").src = "https://img.freepik.com/free-vector/surgeons-team-surrounding-patient-operation-table-flat-vector-illustration-cartoon-medical-workers-preparing-surgery-medicine-technology-concept_74855-8596.jpg?size=626&ext=jpg&ga=GA1.2.1356500412.1617235200";
+			document.getElementById("sideimage_HIW_mob").src = "https://img.freepik.com/free-vector/surgeons-team-surrounding-patient-operation-table-flat-vector-illustration-cartoon-medical-workers-preparing-surgery-medicine-technology-concept_74855-8596.jpg?size=626&ext=jpg&ga=GA1.2.1356500412.1617235200";
 			document.getElementById("sideimage_h2_desk-tab").innerHTML = "Fix surgery";
 			document.getElementById("sideimage_h3_mob").innerHTML = "Fix surgery";
 			document.getElementById("sideimage_p_desk-tab").innerHTML = "After Consultation user can check the details for surgery and can fix thier surgery.";
@@ -216,8 +223,8 @@ function revaluex() {
 			option4.getElementsByTagName("span")[0].style.color = "#0173b2";
 		break;
 		case 5:
-			document.getElementById("sideimage_HIW_desk-tab").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img5.jpg";
-			document.getElementById("sideimage_HIW_mob").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img5.jpg";
+			document.getElementById("sideimage_HIW_desk-tab").src = "https://www.bajajallianz.com/content/dam/bagic/ab-health-insurance/why-health-ins.png";
+			document.getElementById("sideimage_HIW_mob").src = "https://www.bajajallianz.com/content/dam/bagic/ab-health-insurance/why-health-ins.png";
 			document.getElementById("sideimage_h2_desk-tab").innerHTML = "Hospital sent estimates";
 			document.getElementById("sideimage_h3_mob").innerHTML = "Hospital sent estimates";
 			document.getElementById("sideimage_p_desk-tab").innerHTML = "After fixing the surgery Hospital will calculate an estimate of all expenses and duties";
@@ -238,8 +245,8 @@ function revaluex() {
 			option6.getElementsByTagName("span")[0].style.color = "#0173b2";
 		break;
 		case 7:
-			document.getElementById("sideimage_HIW_desk-tab").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img7.jpeg";
-			document.getElementById("sideimage_HIW_mob").src = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img7.jpeg";
+			document.getElementById("sideimage_HIW_desk-tab").src = "https://img.freepik.com/free-vector/woman-resting-hospital-bed-with-dropper-intensive-therapy_284092-582.jpg?size=626&ext=jpg";
+			document.getElementById("sideimage_HIW_mob").src = "https://img.freepik.com/free-vector/woman-resting-hospital-bed-with-dropper-intensive-therapy_284092-582.jpg?size=626&ext=jpg";
 			document.getElementById("sideimage_h2_desk-tab").innerHTML = "Surgery Completed";
 			document.getElementById("sideimage_h3_mob").innerHTML = "Surgery Completed";
 			document.getElementById("sideimage_p_desk-tab").innerHTML = "After the Payment surgery and treatment will be get done on given day.";
