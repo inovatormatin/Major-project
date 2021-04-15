@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/doctors.css">
+    <title>Doctors Page</title>
+</head>
+<body>
+
+<header><!-- Header Nav starts here -->
+        <nav class="container">
+            <div class="nav-img">
+                <a href="./index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
+            </div>
+            <div class="nav-links"><!--Content for pc and laptop-->
+                <a href="./doctors.html">Doctors</a>
+                <a href="./hospitals.html">hospitals</a>
+                <a href="./treatment.html">Treatment</a>
+                <a href="./tvastraplus.html">Other Services</a>
+                <a href="./aboutus.html">About</a>
+            </div>
+            <div class="nav-button">
+                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <button class="nav-quote-button">Get a Quote</button>
+            </div>  <!--Content for pc and laptop-->
+
+            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
+               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
+               <div id="myDropdown" class="dropdown-content">
+                <a href="./doctors.html">Doctors</a>
+                <a href="./hospitals.html">hospitals</a>
+                <a href="./treatment.html">Treatment</a>
+                <a href="./tvastraplus.html">Other Services</a>
+                <a href="./aboutus.html">About</a>
+                   <a href="./signin.html">SignIn / SignUp</a>
+               </div>
+            </div> <!-- Content for tablet view Only till here -->
+        </nav>
+</header> <!-- Header Nav ends Here -->
+
+<section class="doc-section-1"> <!--Section 1 starts here-->
+    <div class="container doc-sec-1">
+        <h2>Cardiac Surgeons in <span>Delhi</span></h2>
+        </div>
+    </div>
+</section><!-- Section 1 Ends -->
+
+<section class="doc-section-2 container"><!-- Section 2 Starts here (About doctors) -->
+    <div class="section-2-heading">
+        <h4>Home / Doctor List</h4>
+        <button>Sort By<span><i class="fas fa-angle-down"></i></span></button>
+    </div>
+
+    <div class="filter-by"><!-- Doctor Filter  -->
+        <h5>Filter By</h3>
+        <div class="selected-filter"><span>DLF Cyber City<i class="fas fa-times fa-1x"></i></span><span>Multi Organ Transplant<i class="fas fa-times fa-1x"></i></span><span>Apollo Hospital<i class="fas fa-times fa-1x"></i></span><span>30+<i class="fas fa-times fa-1x"></i></span></div>
+            <div class="Fsec filter-by-location container">
+                <div class="filter-title">
+                    <h4>Location</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                </div>
+                <input type="checkbox" id="dlf-cyber-city" value="DLF Cyber City">
+                <label for="dlf-cyber-city">DLF Cyber City</label><br>
+                <input type="checkbox" id="dwarka" value="Dwarka">
+                <label for="dwarka">Dwarka</label><br>
+                <input type="checkbox" id="LajpatNagar" value="Lajpat Nagar">
+                <label for="LajpatNagar">Lajpat Nagar</label><br>
+                <input type="checkbox" id="palamvihar" value="Palam Vihar">
+                <label for="palamvihar">Palam Vihar</label><br>
+                <input type="checkbox" id="punjabi-baag" value="Punjabi Baag">
+                <label for="punjabi-baag">Punjabi Baag</label>
+                <h6>+ Show more</h6>
+            </div>
+        <hr class="filter-hr">
+
+        <div class="Fsec filter-by-treatment container">
+            <div class="filter-title">
+                <h4>Treatment</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+            </div>
+            <input type="checkbox" id="multi-orhan-transplant" value="Multi Organ Transplant">
+            <label for="multi-orhan-transplant">Multi Organ Transplant</label><br>
+            <input type="checkbox" id="orthopedics-surgery" value="Orthopedics Surgery">
+            <label for="orthopedics-surgery">Orthopedics Surgery</label><br>
+            <input type="checkbox" id="infertility-treatment" value="Infertility Treatment">
+            <label for="infertility-treatment">Infertility Treatment</label><br>
+            <input type="checkbox" id="dentistry" value="Dentistry">
+            <label for="dentistry"> Dentistry</label><br>
+            <input type="checkbox" id="cardiology" value="Cardiology">
+            <label for="cardiology">Cardiology</label><br>
+            <input type="checkbox" id="cancer" value="Cancer">
+            <label for="cancer">Cancer</label>
+            <h6>+ Show more</h6>
+        </div>
+        <hr class="filter-hr">
+
+        <div class="Fsec filter-by-hospital container">
+            <div class="filter-title">
+                <h4>Hospitals</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+            </div>
+            <input type="checkbox" id="apollo-hospital" value="Apollo Hospital">
+            <label for="apollo-hospital">Apollo Hospital</label><br>
+            <input type="checkbox" id="mns-hospital" value="Manipal North Side Hospital">
+            <label for="mns-hospital">Manipal North Side Hospital</label><br>
+            <input type="checkbox" id="northstar" value="Northstar">
+            <label for="northstar">Northstar</label><br>
+            <input type="checkbox" id="aiims" value="AIIMS">
+            <label for="aiims">AIIMS</label><br>
+            <input type="checkbox" id="fortis-hospital" value="Fortis Hospital">
+            <label for="fortis-hospital">Fortis Hospital</label><br>
+            <input type="checkbox" id="elbit-daignostics" value="Elbit Daignostics">
+            <label for="elbit-daignostics">Elbit Daignostics</label><br>
+            <h6>+ Show more</h6>
+        </div>
+        <hr class="filter-hr">
+
+        <div class="Fsec filter-by-experience container">
+            <div class="filter-title">
+                <h4>Years of Experience</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+            </div>
+            <input type="checkbox" id="30" value="30+">
+            <label for="30">30+</label><br>
+            <input type="checkbox" id="25" value="25+">
+            <label for="25">25+</label><br>
+            <input type="checkbox" id="20" value="20+">
+            <label for="20">20+</label><br>
+            <input type="checkbox" id="15" value="15+">
+            <label for="15">15+</label><br>
+            <input type="checkbox" id="10" value="10+">
+            <label for="10">10+</label><br>
+            <input type="checkbox" id="5" value="5+">
+            <label for="5">5+</label><br>            
+        </div>
+        <hr class="filter-hr">
+    </div><!-- filter by column ends here -->
+    
+    <div class="section-2-doc-info"><!-- Doctor Information -->
+        <!-- doctor 1 -->
+        <div class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Duke Sanson</h3>
+                <div><i class="fa fa-user-md"></i><h6>Neuro Surgeon</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc0 image"></div>
+        </div>
+
+        <div class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Rose Moon</h3>
+                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc1 image"></div>
+        </div>
+
+        <div class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc2 image"></div>
+        </div>
+
+        <div class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Georgia Peter</h3>
+                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div> 
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc3 image"></div>
+        </div>
+        <div class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc2 image"></div>
+        </div>
+</div>
+</section><!-- Section 2 ends here -->
+
+<section class="need-help">
+    <div class="need-help-inner container"><!--Need Help Container-->
+        <div class="need-help-text">
+            <h2>Need Help?</h2>
+            <p>Just let us know. We will be happy to assist you!</p>
+        </div>
+        <div class="need-help-button">
+           <a href="./submitquery.html"><button>Submit your query</button></a>
+        </div>
+    </div>
+</section><!-- Need Help Section ends here -->
+
+<footer class="footer"> <!--Footer-->
+    <div class="container">
+        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt="Footer.png">
+            <div class="footer-links">
+                <a href="./doctors.html">Doctors</a>
+                <a href="./hospitals.html">hospitals</a>
+                <a href="./treatment.html">Treatment</a>
+                <a href="./tvastraplus.html">Other Services</a>
+                <a href="./aboutus.html">About</a>
+                <a href="./FAQs.html">FAQs</a>
+             </div>
+             <div class="socialmedia-icons">
+                <i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest"></i><i class="fab fa-google-plus"></i><i class="fab fa-instagram"></i>
+             </div>
+             <p>All Rights Reserved. &#169; tvastra 2021</p>
+    </div>
+</footer> <!--footer ends-->
+<hr class="footer-footer">
+
+</body>
+<script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+<script src="../Dom/script.js"></script>
+</html>

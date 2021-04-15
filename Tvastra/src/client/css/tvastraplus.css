@@ -209,7 +209,8 @@
 .ratings p{
 	font-weight: 300;
 	color: var(--blue);
-	padding: 15px 0px;
+	padding: 15px 0px 0px;
+	margin: 0px;
 }
 .rating-distribution label{
 	color: var(--blue);
@@ -434,6 +435,7 @@ meter::-webkit-meter-optimum-value {
 }
 .test_gallery ul{
 	display: flex;
+	justify-content: space-evenly;
 }
 .test_gallery li{
 	border-radius: 0.5em;
@@ -572,7 +574,7 @@ meter::-webkit-meter-optimum-value {
 	    font-size: 30px;
 	}
 	.Tvastra-Plus-About-BackgroundSection {
-		height: 850px;
+		height: 75em;
 	}
 	/* plans section */
 	.Tvastra-Plus-Plans-Section {
@@ -708,7 +710,7 @@ meter::-webkit-meter-optimum-value {
 	    padding: 0px;
 	}
 	.Tvastra-Plus-About-BackgroundSection {
-	    height: 94em;
+	    height: 115em;
 	    grid-template-rows: 17% 83%;
 	}
 	.Tvastra-Plus-Plans-Section-span {
