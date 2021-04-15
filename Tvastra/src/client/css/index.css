@@ -89,13 +89,13 @@ nav .dropdown {
   width: 30%;
 }
 .sec-1-search .search-bar {
-  width: 92%;
+  width: -webkit-fill-available;
 }
 .search-bar-suggestion-list {
   position: absolute;
   background-color: #f0f0f0de;
-  width: 24.89%;
-  padding: 0.5rem 0.9rem;
+  width: 26.89%;
+  padding: 0.5rem 0px;
   visibility: hidden;
 }
 .sec-1-search button {
@@ -103,7 +103,12 @@ nav .dropdown {
   background-color: var(--darkblue);
   color: white;
   border-radius: 0px;
-  
+}
+.search-bar-suggestion-list li{
+  padding: 0.2rem 0.9rem;
+}
+.search-bar-suggestion-list li:hover{
+  background-color: #bdbdbd;
 }
 /* Section 1 ends here */
 
@@ -522,8 +527,8 @@ nav .dropdown {
   width: 100%;
   justify-content: center;
 }
-.sec-1-search .search-bar {
-  width: 50%;
+.search-bar-with-suggestion {
+  width: 92%;
 }
 /* section-1 ends */
 
@@ -708,11 +713,23 @@ nav .dropdown {
   display: flex;
 }
 .sec-1 .sec-1-search input {
-  width: 100%;
+  width: -webkit-fill-available;
   margin-bottom: 8px;
 }
 .sec-1 button {
   margin: 5px 0px;
+}
+.sec-1-search button {
+  width: 6rem;
+}
+.search-bar-with-suggestion {
+  width: 100%;
+}
+.search-bar-suggestion-list {
+  width: 89.89%;
+}
+.search-bar-suggestion-list {
+  margin-top: -7px;
 }
 /* section-1 ends */
 

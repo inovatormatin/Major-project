@@ -19,7 +19,7 @@
             </div>
             <div class="nav-links"><!--Content for pc and laptop-->
                 <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">hospitals</a>
+                <a href="./hospitals.html">Hospitals</a>
                 <a href="./treatment.html">Treatment</a>
                 <a href="./tvastraplus.html">Other Services</a>
                 <a href="./aboutus.html">About</a>
@@ -58,11 +58,14 @@
 
     <div class="filter-by"><!-- Doctor Filter  -->
         <h5>Filter By</h3>
-        <div class="selected-filter"><span>DLF Cyber City<i class="fas fa-times fa-1x"></i></span><span>Multi Organ Transplant<i class="fas fa-times fa-1x"></i></span><span>Apollo Hospital<i class="fas fa-times fa-1x"></i></span><span>30+<i class="fas fa-times fa-1x"></i></span></div>
+        <div id="filter" class="selected-filter">
+           
+        </div>
             <div class="Fsec filter-by-location container">
                 <div class="filter-title">
-                    <h4>Location</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                    <h4>Location</h4><span><i id="locSearchButton" class="fa fa-search fa-xs"></i><i id="locFilterRemover" class="fa fa-minus fa-xs"></i></span>
                 </div>
+                <form id="Location">
                 <input type="checkbox" id="dlf-cyber-city" value="DLF Cyber City">
                 <label for="dlf-cyber-city">DLF Cyber City</label><br>
                 <input type="checkbox" id="dwarka" value="Dwarka">
@@ -73,14 +76,16 @@
                 <label for="palamvihar">Palam Vihar</label><br>
                 <input type="checkbox" id="punjabi-baag" value="Punjabi Baag">
                 <label for="punjabi-baag">Punjabi Baag</label>
+                </form>
                 <h6>+ Show more</h6>
             </div>
         <hr class="filter-hr">
 
         <div class="Fsec filter-by-treatment container">
             <div class="filter-title">
-                <h4>Treatment</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                <h4>Treatment</h4><span><i id="trtSearchButton" class="fa fa-search fa-xs"></i><i id="trtFilterRemover" class="fa fa-minus fa-xs"></i></span>
             </div>
+            <form id="Treatment">
             <input type="checkbox" id="multi-orhan-transplant" value="Multi Organ Transplant">
             <label for="multi-orhan-transplant">Multi Organ Transplant</label><br>
             <input type="checkbox" id="orthopedics-surgery" value="Orthopedics Surgery">
@@ -93,14 +98,16 @@
             <label for="cardiology">Cardiology</label><br>
             <input type="checkbox" id="cancer" value="Cancer">
             <label for="cancer">Cancer</label>
+            </form>
             <h6>+ Show more</h6>
         </div>
         <hr class="filter-hr">
 
         <div class="Fsec filter-by-hospital container">
             <div class="filter-title">
-                <h4>Hospitals</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                <h4>Hospitals</h4><span><i id="hspSearchButton" class="fa fa-search fa-xs"></i><i id="hspFilterRemover" class="fa fa-minus fa-xs"></i></span>
             </div>
+            <form id="Hospital">
             <input type="checkbox" id="apollo-hospital" value="Apollo Hospital">
             <label for="apollo-hospital">Apollo Hospital</label><br>
             <input type="checkbox" id="mns-hospital" value="Manipal North Side Hospital">
@@ -113,14 +120,16 @@
             <label for="fortis-hospital">Fortis Hospital</label><br>
             <input type="checkbox" id="elbit-daignostics" value="Elbit Daignostics">
             <label for="elbit-daignostics">Elbit Daignostics</label><br>
+            </form>
             <h6>+ Show more</h6>
         </div>
         <hr class="filter-hr">
 
         <div class="Fsec filter-by-experience container">
             <div class="filter-title">
-                <h4>Years of Experience</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                <h4>Years of Experience</h4><span><i id="expSearchButton" class="fa fa-search fa-xs"></i><i id="expFilterRemover" class="fa fa-minus fa-xs"></i></span>
             </div>
+            <form id="experience">
             <input type="checkbox" id="30" value="30+">
             <label for="30">30+</label><br>
             <input type="checkbox" id="25" value="25+">
@@ -132,7 +141,8 @@
             <input type="checkbox" id="10" value="10+">
             <label for="10">10+</label><br>
             <input type="checkbox" id="5" value="5+">
-            <label for="5">5+</label><br>            
+            <label for="5">5+</label><br>     
+            </form>       
         </div>
         <hr class="filter-hr">
     </div><!-- filter by column ends here -->
@@ -227,7 +237,7 @@
         <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt="Footer.png">
             <div class="footer-links">
                 <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">hospitals</a>
+                <a href="./hospitals.html">Hospitals</a>
                 <a href="./treatment.html">Treatment</a>
                 <a href="./tvastraplus.html">Other Services</a>
                 <a href="./aboutus.html">About</a>
@@ -243,5 +253,6 @@
 
 </body>
 <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+<script src="../Dom/doctorsList.js"></script>
 <script src="../Dom/script.js"></script>
 </html>
