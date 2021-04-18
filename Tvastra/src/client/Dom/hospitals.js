@@ -1,127 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/hospitals.css">
-    <title>Hospitals Page</title>
-</head>
-<body>
-<header><!-- Header Nav starts here -->
-        <nav class="container">
-            <div class="nav-img">
-                <a href="./index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
-            </div>
-            <div class="nav-links"><!--Content for pc and laptop-->
-                <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">Hospitals</a>
-                <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
-                <a href="./aboutus.html">About</a>
-            </div>
-            <div class="nav-button">
-                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
-                <button class="nav-quote-button">Get a Quote</button>
-            </div>  <!--Content for pc and laptop-->
+let SearchFilterTags = [];
+function Search() {
+	addCheckedLocation();
+	addCheckedTreatment();
+	addCheckedDepartment();
+	findMatchingHospital();
+}
+// filter function for location
+let Location = document.getElementById("Location");
+let locSearchButton = document.getElementById("hosLocSearchButton");
+let locFilterRemover = document.getElementById("hosLocFilterRemover");
+function addCheckedLocation() {
+	for(var i = 0; i < Location.length;i++) {
+		if (Location[i].checked) {
+			if(SearchFilterTags.includes(Location[i].value)) {
+				// already present in list
+			}
+			else{
+				SearchFilterTags.push(Location[i].value);
+			}
+		}
+		else {
+			if(SearchFilterTags.includes(Location[i].value)) {
+				SearchFilterTags = SearchFilterTags.filter(e => e !== Location[i].value);
+			}
+		}
+	}
+}
+function removeLocFilter() {
+	for(var i = 0; i < Location.length;i++) {
+		if (Location[i].checked) {
+			SearchFilterTags = SearchFilterTags.filter(e => e !== Location[i].value);
+			Location[i].checked = false;
+		}
+	}
+}
+locSearchButton.addEventListener("click", Search);
+locFilterRemover.addEventListener("click", removeLocFilter);
 
-            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
-               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
-               <div id="myDropdown" class="dropdown-content">
-                <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">hospitals</a>
-                <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
-                <a href="./aboutus.html">About</a>
-                   <a href="./signin.html">SignIn / SignUp</a>
-               </div>
-            </div> <!-- Content for tablet view Only till here -->
-        </nav>
-</header> <!-- Header Nav ends Here -->
-    
-<section class="hos-section-1"> <!--Section 1 starts here-->
-    <div class="container hos-sec-1">
-        <h2>Hospitals in <span>Delhi</span></h2>
-        </div>
-    </div>
-</section><!-- Section 1 Ends -->
+// filter function for treatment
+var Treatment = document.getElementById("Treatment");
+var trtSearchButton = document.getElementById("hosTrtSearchButton");
+var trtFilterRemover = document.getElementById("hosTrtFilterRemover");
+function addCheckedTreatment() {
+	for(var i = 0; i < Treatment.length;i++) {
+		if (Treatment[i].checked) {
+			if(SearchFilterTags.includes(Treatment[i].value)) {
+				// already present in list
+			}
+			else{
+				SearchFilterTags.push(Treatment[i].value);
+			}
+		}
+		else {
+			if(SearchFilterTags.includes(Treatment[i].value)) {
+				SearchFilterTags = SearchFilterTags.filter(e => e !== Treatment[i].value);
+			}
+		}
+	}
+}
+function removeTrtFilter() {
+	for(var i = 0; i < Treatment.length;i++) {
+		if (Treatment[i].checked) {
+			SearchFilterTags = SearchFilterTags.filter(e => e !== Treatment[i].value);
+			Treatment[i].checked = false;
+		}
+	}
+}
+trtSearchButton.addEventListener("click", Search);
+trtFilterRemover.addEventListener("click", removeTrtFilter);
 
-<section class="hos-section-2 container"><!-- Section 2 Starts here (About hostors) -->
-    <div class="section-2-heading">
-        <h4>Home / Hospital List</h4>
-        <button>Sort By<span><i class="fas fa-angle-down"></i></span></button>
-    </div>
+// filter function for department
+var Department = document.getElementById("Department");
+var depSearchButton = document.getElementById("hosDepSearchButton");
+var depFilterRemover = document.getElementById("hosDepFilterRemover");
+function addCheckedDepartment() {
+	for(var i = 0; i < Department.length;i++) {
+		if (Department[i].checked) {
+			if(SearchFilterTags.includes(Department[i].value)) {
+				// already present in list
+			}
+			else{
+				SearchFilterTags.push(Department[i].value);
+			}
+		}
+		else {
+			if(SearchFilterTags.includes(Department[i].value)) {
+				SearchFilterTags = SearchFilterTags.filter(e => e !== Department[i].value);
+			}
+		}
+	}
+}
+function removeDepFilter() {
+	for(var i = 0; i < Department.length;i++) {
+		if (Department[i].checked) {
+			SearchFilterTags = SearchFilterTags.filter(e => e !== Department[i].value);
+			Department[i].checked = false;
+		}
+	}
+}
+depSearchButton.addEventListener("click", Search);
+depFilterRemover.addEventListener("click", removeDepFilter);
 
-    <div class="filter-by"><!-- hostor Filter  -->
-        <h5>Filter By</h3>
-        
-            <div class="Fsec filter-by-location container">
-                <div class="filter-title">
-                    <h4>Location</h4><span><i id="hosLocSearchButton" class="fa fa-search fa-xs"></i><i id="hosLocFilterRemover" class="fa fa-minus fa-xs"></i></span>
-                </div>
-                <form id="Location">
-                <input type="checkbox" id="dlf-cyber-city" value="DLF Cyber City">
-                <label for="dlf-cyber-city">DLF Cyber City</label><br>
-                <input type="checkbox" id="dwarka" value="Dwarka">
-                <label for="dwarka">Dwarka</label><br>
-                <input type="checkbox" id="LajpatNagar" value="Lajpat Nagar">
-                <label for="LajpatNagar">Lajpat Nagar</label><br>
-                <input type="checkbox" id="palamvihar" value="Palam Vihar">
-                <label for="palamvihar">Palam Vihar</label><br>
-                <input type="checkbox" id="punjabi-baag" value="Punjabi Baag">
-                <label for="punjabi-baag">Punjabi Baag</label>
-                </form>
-                <h6>+ Show more</h6>
-            </div>
-        <hr class="filter-hr">
+// Matching doctors with filter list
+let Hos1 = ["Department One","DLF Cyber City","Multi Organ Transplant","Orthopedics Surgery","Infertility Treatment","Dentistry"];
+let Hos2 = ["Department Two","Lajpat Nagar","Multi Organ Transplant","Orthopedics Surgery","Infertility Treatment","Cancer"];
+let Hos3 = ["Department Three","Palam Vihar","Multi Organ Transplant","Orthopedics Surgery","Cardiology","Cancer"];
+let Hos4 = ["Department Four","Dwarka","Multi Organ Transplant","Dentistry","Cardiology","Cancer"];
+let Hos5 = ["Department One","Punjabi Baag","Infertility Treatment","Dentistry","Cardiology","Cancer"];
+let Hos6 = ["Department Three","DLF Cyber City","Orthopedics Surgery","Infertility Treatment","Cardiology","Cancer"];
+let Hos7 = ["Department Two","New Delhi","Multi Organ Transplant","Infertility Treatment","Cardiology","Cancer"];
+let Hos8 = ["Department Four","Dwarka","Multi Organ Transplant","Orthopedics Surgery","Dentistry","Cancer"];
+let Hos9 = ["Department Three","Palam Vihar","Orthopedics Surgery","Infertility Treatment","Dentistry","Cardiology"];
+let Hos10 = ["Department One","Punjabi Baag","Multi Organ Transplant","Orthopedics Surgery","Cardiology","Cancer"];
+let HosList = document.getElementById("hos-list-sec");
 
-        <div class="Fsec filter-by-treatment container">
-            <div class="filter-title">
-                <h4>Treatment</h4><span><i id="hosTrtSearchButton" class="fa fa-search fa-xs"></i><i id="hosTrtFilterRemover" class="fa fa-minus fa-xs"></i></span>
-            </div>
-            <form id="Treatment">
-            <input type="checkbox" id="multi-orhan-transplant" value="Multi Organ Transplant">
-            <label for="multi-orhan-transplant">Multi Organ Transplant</label><br>
-            <input type="checkbox" id="orthopedics-surgery" value="Orthopedics Surgery">
-            <label for="orthopedics-surgery">Orthopedics Surgery</label><br>
-            <input type="checkbox" id="infertility-treatment" value="Infertility Treatment">
-            <label for="infertility-treatment">Infertility Treatment</label><br>
-            <input type="checkbox" id="dentistry" value="Dentistry">
-            <label for="dentistry"> Dentistry</label><br>
-            <input type="checkbox" id="cardiology" value="Cardiology">
-            <label for="cardiology">Cardiology</label><br>
-            <input type="checkbox" id="cancer" value="Cancer">
-            <label for="cancer">Cancer</label>
-            </form>
-            <h6>+ Show more</h6>
-        </div>
-        <hr class="filter-hr">
-
-        <div class="Fsec filter-by-hospital container">
-            <div class="filter-title">
-                <h4>Department</h4><span><i id="hosDepSearchButton" class="fa fa-search fa-xs"></i><i id="hosDepFilterRemover" class="fa fa-minus fa-xs"></i></span>
-            </div>
-            <form id="Department">
-            <input type="checkbox" id="department-one" value="Department One">
-            <label for="department-one">Department One</label><br>
-            <input type="checkbox" id="department-two" value="Department Two">
-            <label for="department-two">Department Two</label><br>
-            <input type="checkbox" id="department-three" value="Department Three">
-            <label for="department-three">Department Three</label><br>
-            <input type="checkbox" id="department-four" value="Department Four">
-            <label for="department-four">Department Four</label><br>
-            </form>
-            <h6>+ Show more</h6>
-        </div>
-        <hr class="filter-hr">
-    </div><!-- filter by column ends here -->
-    
-    <div id="hos-list-sec" class="section-2-hos-info"><!-- hostor Information -->
-            <!-- hospital 1 -->
-            <div class="section-2-hos-div">
+// adding html
+		// <!-- Hospital 1 -->
+let Hos0inner =
+		`<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Apollo Hospital</h3>
@@ -140,9 +136,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos0 image"></div>
-            </div>
-            <!-- Hospital 2 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 2 -->
+let Hos1inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Fortis</h3>
@@ -161,9 +158,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos1 image"></div>
-            </div>
-            <!-- Hospital 3 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 3 -->
+let Hos2inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Rockland Hospital</h3>
@@ -182,9 +180,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos2 image"></div>
-            </div>
-            <!-- Hospital 4 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 4 -->
+let Hos3inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Primus Super Speciality Hospital</h3>
@@ -203,9 +202,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos3 image"></div>
-            </div>
-            <!-- Hospital 5 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 5 -->
+let Hos4inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Manipal North Side Hospital</h3>
@@ -224,9 +224,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos4 image"></div>
-            </div>
-            <!-- Hospital 6 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 6 -->
+let Hos5inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Northstar</h3>
@@ -245,9 +246,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos5 image"></div>
-            </div>
-            <!-- Hospital 7 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!--Hospital 7 -->
+let Hos6inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>AIIMS</h3>
@@ -266,9 +268,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos6 image"></div>
-            </div>
-            <!-- Hospital 8 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 8 -->
+let Hos7inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Elbit Daignostics</h3>
@@ -287,9 +290,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos7 image"></div>
-            </div>
-            <!-- Hospital 9 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 9 -->
+let Hos8inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Akash hospital</h3>
@@ -308,9 +312,10 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos8 image"></div>
-            </div>
-            <!-- Hospital 10 -->
-            <div class="section-2-hos-div">
+            </div>`;
+        // <!-- Hospital 10 -->
+let Hos9inner =
+        `<div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>BLK Super Speciality Hospital</h3>
@@ -329,43 +334,31 @@
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos9 image"></div>
-            </div>
-    </div>
-</section><!-- Section 2 ends here -->
-
-<section class="need-help">
-    <div class="need-help-inner container"><!--Need Help Container-->
-        <div class="need-help-text">
-            <h2>Need Help?</h2>
-            <p>Just let us know. We will be happy to assist you!</p>
-        </div>
-        <div class="need-help-button">
-           <a href="./submitquery.html"><button>Submit your query</button></a>
-        </div>
-    </div>
-</section><!-- Need Help Section ends here -->
-
-<footer class="footer"> <!--Footer-->
-    <div class="container">
-        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt="Footer.png">
-            <div class="footer-links">
-                <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">Hospitals</a>
-                <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
-                <a href="./aboutus.html">About</a>
-                <a href="./FAQs.html">FAQs</a>
-             </div>
-             <div class="socialmedia-icons">
-                <i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest"></i><i class="fab fa-google-plus"></i><i class="fab fa-instagram"></i>
-             </div>
-             <p>All Rights Reserved. &#169; tvastra 2021</p>
-    </div>
-</footer> <!--footer ends-->
-<hr class="footer-footer">
-
-</body>
-<script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
-<script src="../Dom/hospitals.js"></script>
-<script src="../Dom/script.js"></script>
-</html>
+            </div>`;
+let HosTags = [Hos1,Hos2,Hos3,Hos4,Hos5,Hos6,Hos7,Hos8,Hos9,Hos10];
+let Hos = [Hos0inner,Hos1inner,Hos2inner,Hos3inner,Hos4inner,Hos5inner,Hos6inner,Hos7inner,Hos8inner,Hos9inner];
+let HosInner = "";
+function findMatchingHospital() {
+    if(SearchFilterTags.length > 0){
+        HosList.innerHTML = " ";
+        HosInner = " ";
+        for(var i = 0; i < HosTags.length;i++) {
+            for(var j = 0; j < 4;j++) {
+                if(HosTags[i].includes(SearchFilterTags[j])) {
+                    HosInner += Hos[i];
+                    j = 4;
+                }
+            }   
+        }
+        HosList.innerHTML = HosInner;
+    }
+    else {
+        if(HosList.innerHTML = " "){
+            HosInner = " ";
+            for(var i = 0; i < Hos.length;i++) {
+                HosInner += Hos[i];
+            }
+            HosList.innerHTML = HosInner;
+        }
+    }
+}

@@ -267,6 +267,7 @@ meter::-webkit-meter-optimum-value {
 /* Benifits of Plus membership starts here */
 
 .Benifits-of-Plus-membership {
+	text-align: -webkit-center;
 	padding: 20px 80px;
 	margin: 0px 0px;
 }
