@@ -4,7 +4,7 @@
   "description": "## This is the wiki file to read about the tasks",
   "main": "app.js",
   "scripts": {
-    "nodemon": "nodemon src/app.js"
+    "nodemon": "nodemon app.js"
   },
   "repository": {
     "type": "git",

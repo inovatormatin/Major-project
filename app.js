@@ -2,7 +2,7 @@ const express = require('express');
 const compression = require('compression');
 const cors = require('cors');
 const logger = require('morgan');
-const routes = require('./backend/routes/MainRoutes');
+const routes = require('./Tvastra/src/backend/routes/MainRoutes');
 const session = require("express-session")
 const cookie = require("cookie-parser");
 const bycrypt = require("bcryptjs");
@@ -13,10 +13,10 @@ const flash =  require("connect-flash")
 const app = express();
 
 // DB Config 
-const db = require('./backend/config/keys').mongoURI;
+const db = require('./Tvastra/src/backend/config/keys').mongoURI;
 
 // Passport config
-require('./backend/config/passport')(passport);
+require('./Tvastra/src/backend/config/passport')(passport);
 
 
 // connect to Mongo 
@@ -30,8 +30,8 @@ app.use(cookie());
 app.use(compression());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.set('views',__dirname+"/client/views");
-app.use(express.static(__dirname+'/client'));
+app.set('views',__dirname+"/Tvastra/src/client/views");
+app.use(express.static(__dirname+'/Tvastra/src/client'));
 app.use(logger('dev'));
 
 // EJS LAYOUTS
