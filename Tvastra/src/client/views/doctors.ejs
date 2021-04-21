@@ -12,36 +12,56 @@
 </head>
 <body>
 
-<header><!-- Header Nav starts here -->
+    <header><!-- Header Nav starts here -->
         <nav class="container">
             <div class="nav-img">
-                <a href="./index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
+                <a href="index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
             </div>
             <div class="nav-links"><!--Content for pc and laptop-->
+                <a href="doctors.html">Doctors</a>
+                <a href="hospitals.html">Hospitals</a>
+                <a href="treatment.html">Treatment</a>
+                <a href="tvastraplus.html">Other Services</a>
+                <a href="aboutus.html">About</a>
+            </div>
+            <div class="nav-button">
+                <% if(user == 'hello') { %>
+                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <% } %>
+                <% if(user.name) { %>
+                    <!-- User dropdown -->
+                    <div class="user-dropdown">
+                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-caret-down"></i></button>
+                            <div id="user-dropdown" class="user-dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Appointments</a>
+                                <a href="#">Settings</a>
+                            </div>                    
+                    </div>
+                 <a href="./logout"><button class="logout-button">LogOut</button></a>
+                <% } %>  
+            </div>  <!--Content for pc and laptop-->
+            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
+               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
+               <div id="myDropdown" class="dropdown-content">
                 <a href="./doctors.html">Doctors</a>
                 <a href="./hospitals.html">Hospitals</a>
                 <a href="./treatment.html">Treatment</a>
                 <a href="./tvastraplus.html">Other Services</a>
                 <a href="./aboutus.html">About</a>
-            </div>
-            <div class="nav-button">
-                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
-                <button class="nav-quote-button">Get a Quote</button>
-            </div>  <!--Content for pc and laptop-->
-
-            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
-               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
-               <div id="myDropdown" class="dropdown-content">
-                <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">hospitals</a>
-                <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
-                <a href="./aboutus.html">About</a>
-                   <a href="./signin.html">SignIn / SignUp</a>
+                <% if(user == 'hello') { %>
+                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <% } %>
+                <% if(user.name) { %>
+                    <a href="#">Profile</a>
+                    <a href="#">Appointments</a>
+                    <a href="#">Settings</a>
+                    <a href="./logout">LogOut</a>
+                <% } %> 
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
-</header> <!-- Header Nav ends Here -->
+</header> <!-- Header Nav ends Here -->  
 
 <section class="doc-section-1"> <!--Section 1 starts here-->
     <div class="container doc-sec-1">
@@ -64,8 +84,8 @@
             <div class="Fsec filter-by-location container">
                 <div class="filter-title">
                     <h4>Location</h4><span><i id="locSearchButton" class="fa fa-search fa-xs"></i><i id="locFilterRemover" class="fa fa-minus fa-xs"></i></span>
-                </div>
-                <form id="Location">
+                </div><form id="Location">
+                
                 <input type="checkbox" id="dlf-cyber-city" value="DLF Cyber City">
                 <label for="dlf-cyber-city">DLF Cyber City</label><br>
                 <input type="checkbox" id="dwarka" value="Dwarka">
@@ -147,75 +167,188 @@
         <hr class="filter-hr">
     </div><!-- filter by column ends here -->
     
-    <div class="section-2-doc-info"><!-- Doctor Information -->
+    <div id="doc-list-sec" class="section-2-doc-info"><!-- Doctor Information -->
         <!-- doctor 1 -->
-        <div class="section-2-doc-div">
+        <div id="doctor1" class="section-2-doc-div">
             <div class="doc-info">
                 <hr class="doc-name-bar">
                 <h3>Duke Sanson</h3>
-                <div><i class="fa fa-user-md"></i><h6>Neuro Surgeon</h6></div>
-                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class="fa fa-user-md"></i><h6>Cancer</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Northstar</h6></div>
                 <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
-                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>DLF Cyber City</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
             </div>
             <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
             <div class="doc0 image"></div>
         </div>
-
-        <div class="section-2-doc-div">
+        <!-- doctor 2 -->
+        <div id="doctor2" class="section-2-doc-div">
             <div class="doc-info">
                 <hr class="doc-name-bar">
                 <h3>Rose Moon</h3>
-                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
-                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class="fa fa-user-md"></i><h6>Cancer</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>AIIMS</h6></div>
                 <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
-                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
-                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Dwarka</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>5 Years of Experience</h6></div>
             </div>
             <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
             <div class="doc1 image"></div>
         </div>
-
-        <div class="section-2-doc-div">
+        <!-- doctor 3 -->
+        <div id="doctor3" class="section-2-doc-div">
             <div class="doc-info">
                 <hr class="doc-name-bar">
                 <h3>Coni Star</h3>
-                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
-                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class="fa fa-user-md"></i><h6>Cardiology</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Fortis Hospital</h6></div>
                 <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
-                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
-                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Lajpat Nagar</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>5 Years of Experience</h6></div>
             </div>
             <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
             <div class="doc2 image"></div>
         </div>
-
-        <div class="section-2-doc-div">
+        <!-- doctor 4 -->
+        <div id="doctor4" class="section-2-doc-div">
             <div class="doc-info">
                 <hr class="doc-name-bar">
                 <h3>Georgia Peter</h3>
-                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
-                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class="fa fa-user-md"></i><h6>Cardiology</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Elbit Daignostics</h6></div>
                 <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
-                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
-                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div> 
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Palam Vihar</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>10 Years of Experience</h6></div> 
             </div>
             <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
             <div class="doc3 image"></div>
         </div>
-        <div class="section-2-doc-div">
+        <!-- doctor 5 -->
+        <div id="doctor5" class="section-2-doc-div">
             <div class="doc-info">
                 <hr class="doc-name-bar">
                 <h3>Coni Star</h3>
-                <div><i class="fa fa-user-md"></i><h6>Cardiac Surgeon</h6></div>
-                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class="fa fa-user-md"></i><h6>Dentistry</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Manipal North Side Hospital</h6></div>
                 <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
-                <div><i class='fas fa-map-marker-alt'></i>  <h6>New Delhi, India</h6></div>
-                <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Punjabi Baag</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>15 Years of Experience</h6></div>
             </div>
             <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
-            <div class="doc2 image"></div>
+            <div class="doc4 image"></div>
+        </div>
+        <!-- doctor 6 -->
+        <div id="doctor6" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Dentistry</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>DLF Cyber City</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>10 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc5 image"></div>
+        </div>
+        <!-- doctor 7 -->
+        <div id="doctor7" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Infertility Treatment</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Northstar</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Dwarka</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>15 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc6 image"></div>
+        </div>
+        <!-- doctor 8 -->
+        <div id="doctor8" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Infertility Treatment</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>AIIMS</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Lajpat Nagar</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>25 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc7 image"></div>
+        </div>
+        <!-- doctor 9 -->
+        <div id="doctor9" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Orthopedics Surgery</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Fortis Hospital</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Palam Vihar</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>20 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc8 image"></div>
+        </div>
+        <!-- doctor 10 -->
+        <div id="doctor10" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Orthopedics Surgery</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Elbit Daignostics</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Punjabi Baag</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>20 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc9 image"></div>
+        </div>
+        <!-- doctor 11 -->
+        <div id="doctor11" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Multi Organ Transplant</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Manipal North Side Hospital</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Palam Vihar</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>25 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc10 image"></div>
+        </div>
+        <!-- doctor 12 -->
+        <div id="doctor12" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Multi Organ Transplant</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>Apollo Hospitals, Delhi</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>Dwarka</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>30 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc11 image"></div>
+        </div>
+        <!-- doctor 13 -->
+        <div id="doctor13" class="section-2-doc-div">
+            <div class="doc-info">
+                <hr class="doc-name-bar">
+                <h3>Coni Star</h3>
+                <div><i class="fa fa-user-md"></i><h6>Multi Organ Transplant</h6></div>
+                <div><i class='far fa-hospital'></i> <h6>AIIMS</h6></div>
+                <div><i class='fas fa-award'></i>  <h6>MBBS, MD, FRCP, Fellowship</h6></div>
+                <div><i class='fas fa-map-marker-alt'></i>  <h6>DLF Cyber City</h6></div>
+                <div><i class='fas fa-clock'></i>  <h6>30 Years of Experience</h6></div>
+            </div>
+            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc12 image"></div>
         </div>
 </div>
 </section><!-- Section 2 ends here -->

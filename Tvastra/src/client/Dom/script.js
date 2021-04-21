@@ -16,7 +16,6 @@ for (i = 0; i < coll.length; i++) {
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -31,6 +30,21 @@ window.onclick = function(event) {
   }
 }
 
+function userdropdown() {
+  document.getElementById("user-dropdown").classList.toggle("user-show"); 
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.user-dropbtn')) {
+    var userdropdowns = document.getElementsByClassName("user-dropdown-content");
+    var i;
+    for (i = 0; i < userdropdowns.length; i++) {
+      var useropenDropdown = userdropdowns[i];
+      if (useropenDropdown.classList.contains('user-show')) {
+        useropenDropdown.classList.remove('user-show');
+      }
+    }
+  }
+}
 
 
 // var option2= document.getElementById("two");

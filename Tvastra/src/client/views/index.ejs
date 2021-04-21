@@ -23,8 +23,21 @@
                 <a href="aboutus.html">About</a>
             </div>
             <div class="nav-button">
-                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
-                <button class="nav-quote-button">Get a Quote</button>
+                <% if(user == 'hello') { %>
+                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <% } %>
+                <% if(user.name) { %>
+                    <!-- User dropdown -->
+                    <div class="user-dropdown">
+                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-caret-down"></i></button>
+                            <div id="user-dropdown" class="user-dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Appointments</a>
+                                <a href="#">Settings</a>
+                            </div>                    
+                    </div>
+                 <a href="./logout"><button class="logout-button">LogOut</button></a>
+                <% } %>  
             </div>  <!--Content for pc and laptop-->
             <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
                <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
@@ -34,7 +47,15 @@
                 <a href="./treatment.html">Treatment</a>
                 <a href="./tvastraplus.html">Other Services</a>
                 <a href="./aboutus.html">About</a>
-                <a href="./signin.html">SignIn / SignUp</a>
+                <% if(user == 'hello') { %>
+                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <% } %>
+                <% if(user.name) { %>
+                    <a href="#">Profile</a>
+                    <a href="#">Appointments</a>
+                    <a href="#">Settings</a>
+                    <a href="./logout">LogOut</a>
+                <% } %> 
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
@@ -71,12 +92,12 @@
                 <p id="sideimage_p_mob">This depicts that user will have to fix appointment
                     first when it selects a particular doctor</p>
             </div>
-            <h2 id="two" onclick="active2()"><span>02</span>Upload Medical Reports</h2>
-            <h2 id="three" onclick="active3()"><span>03</span>Consult with doctor</h2>
-            <h2 id="four" onclick="active4()"><span>04</span>Fix surgery</h2>
-            <h2 id="five" onclick="active5()"><span>05</span>Hospital sent estimates</h2>
-            <h2 id="six" onclick="active6()"><span>06</span>Payment</h2>
-            <h2 id="seven" onclick="active7()"><span>07</span>Surgery Completed</h2>
+            <h2 id="two"    onclick="active2()"><span>02</span>Upload Medical Reports</h2>
+            <h2 id="three"  onclick="active3()"><span>03</span>Consult with doctor</h2>
+            <h2 id="four"   onclick="active4()"><span>04</span>Fix surgery</h2>
+            <h2 id="five"   onclick="active5()"><span>05</span>Hospital sent estimates</h2>
+            <h2 id="six"    onclick="active6()"><span>06</span>Payment</h2>
+            <h2 id="seven"  onclick="active7()"><span>07</span>Surgery Completed</h2>
     </div>
         <!-- This Only works in Desktop and tablet view -->
     <div class="image">
@@ -91,18 +112,19 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis strud exerci tation ullamcorper suscipit lobortis nisl ut</p>
         <div class="list-of-doctors">
         <!-- Doctor 1 -->
-        <div class="DocCard">
-            <div class="D1-img DocCard-img"></div>
-            <div class="DocCard-text">
-                <hr class="name-bar">
-             <h3 class="DocCard-docname">Charlie Moon</h3>
-             <p>Cardiac Surgeon <br>
-                MBBS,MD,FRCP,MRCP,FellowShip<br>
-                New Delhi, India
-             </p>
-             <hr class="DocCard-footer">
-            </div>  
-        </div>
+          <div class="DocCard">
+              <div class="D1-img DocCard-img"></div>
+              <div class="DocCard-text">
+                  <hr class="name-bar">
+               <h3 class="DocCard-docname">Charlie Moon</h3>
+               <p>Cardiac Surgeon <br>
+                  MBBS,MD,FRCP,MRCP,FellowShip<br>
+                  New Delhi, India
+               </p>
+               <hr class="DocCard-footer">
+              </div>  
+          </div>
+        </a>
         <!-- Doctor 2 -->
         <div class="DocCard">
             <div class="D2-img DocCard-img"></div>

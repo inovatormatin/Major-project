@@ -1,0 +1,17 @@
+.message-crossbutton {
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    font-size: 25px;
+}
+.alert-warning {
+    background-color: var(--blue);
+    color: white;
+}
+
+.alert {
+    border: none;
+    border-radius: 0px;
+    margin: 5px 0px;
+    padding-left: 2rem;
+}

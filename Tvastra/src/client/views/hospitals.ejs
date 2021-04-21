@@ -12,36 +12,56 @@
 </head>
 <body>
 
-<header><!-- Header Nav starts here -->
+    <header><!-- Header Nav starts here -->
         <nav class="container">
             <div class="nav-img">
-                <a href="./index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
+                <a href="index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
             </div>
             <div class="nav-links"><!--Content for pc and laptop-->
+                <a href="doctors.html">Doctors</a>
+                <a href="hospitals.html">Hospitals</a>
+                <a href="treatment.html">Treatment</a>
+                <a href="tvastraplus.html">Other Services</a>
+                <a href="aboutus.html">About</a>
+            </div>
+            <div class="nav-button">
+                <% if(user == 'hello') { %>
+                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <% } %>
+                <% if(user.name) { %>
+                    <!-- User dropdown -->
+                    <div class="user-dropdown">
+                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-caret-down"></i></button>
+                            <div id="user-dropdown" class="user-dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Appointments</a>
+                                <a href="#">Settings</a>
+                            </div>                    
+                    </div>
+                 <a href="./logout"><button class="logout-button">LogOut</button></a>
+                <% } %>  
+            </div>  <!--Content for pc and laptop-->
+            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
+               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
+               <div id="myDropdown" class="dropdown-content">
                 <a href="./doctors.html">Doctors</a>
                 <a href="./hospitals.html">Hospitals</a>
                 <a href="./treatment.html">Treatment</a>
                 <a href="./tvastraplus.html">Other Services</a>
                 <a href="./aboutus.html">About</a>
-            </div>
-            <div class="nav-button">
-                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
-                <button class="nav-quote-button">Get a Quote</button>
-            </div>  <!--Content for pc and laptop-->
-
-            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
-               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
-               <div id="myDropdown" class="dropdown-content">
-                <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">hospitals</a>
-                <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
-                <a href="./aboutus.html">About</a>
-                   <a href="./signin.html">SignIn / SignUp</a>
+                <% if(user == 'hello') { %>
+                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <% } %>
+                <% if(user.name) { %>
+                    <a href="#">Profile</a>
+                    <a href="#">Appointments</a>
+                    <a href="#">Settings</a>
+                    <a href="./logout">LogOut</a>
+                <% } %> 
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
-</header> <!-- Header Nav ends Here -->
+</header> <!-- Header Nav ends Here -->  
     
 <section class="hos-section-1"> <!--Section 1 starts here-->
     <div class="container hos-sec-1">
@@ -61,8 +81,9 @@
         
             <div class="Fsec filter-by-location container">
                 <div class="filter-title">
-                    <h4>Location</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                    <h4>Location</h4><span><i id="hosLocSearchButton" class="fa fa-search fa-xs"></i><i id="hosLocFilterRemover" class="fa fa-minus fa-xs"></i></span>
                 </div>
+                <form id="Location">
                 <input type="checkbox" id="dlf-cyber-city" value="DLF Cyber City">
                 <label for="dlf-cyber-city">DLF Cyber City</label><br>
                 <input type="checkbox" id="dwarka" value="Dwarka">
@@ -73,14 +94,16 @@
                 <label for="palamvihar">Palam Vihar</label><br>
                 <input type="checkbox" id="punjabi-baag" value="Punjabi Baag">
                 <label for="punjabi-baag">Punjabi Baag</label>
+                </form>
                 <h6>+ Show more</h6>
             </div>
         <hr class="filter-hr">
 
         <div class="Fsec filter-by-treatment container">
             <div class="filter-title">
-                <h4>Treatment</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                <h4>Treatment</h4><span><i id="hosTrtSearchButton" class="fa fa-search fa-xs"></i><i id="hosTrtFilterRemover" class="fa fa-minus fa-xs"></i></span>
             </div>
+            <form id="Treatment">
             <input type="checkbox" id="multi-orhan-transplant" value="Multi Organ Transplant">
             <label for="multi-orhan-transplant">Multi Organ Transplant</label><br>
             <input type="checkbox" id="orthopedics-surgery" value="Orthopedics Surgery">
@@ -93,14 +116,16 @@
             <label for="cardiology">Cardiology</label><br>
             <input type="checkbox" id="cancer" value="Cancer">
             <label for="cancer">Cancer</label>
+            </form>
             <h6>+ Show more</h6>
         </div>
         <hr class="filter-hr">
 
         <div class="Fsec filter-by-hospital container">
             <div class="filter-title">
-                <h4>Department</h4><span><i class="fa fa-search fa-xs"></i><i class="fa fa-minus fa-xs"></i></span>
+                <h4>Department</h4><span><i id="hosDepSearchButton" class="fa fa-search fa-xs"></i><i id="hosDepFilterRemover" class="fa fa-minus fa-xs"></i></span>
             </div>
+            <form id="Department">
             <input type="checkbox" id="department-one" value="Department One">
             <label for="department-one">Department One</label><br>
             <input type="checkbox" id="department-two" value="Department Two">
@@ -109,22 +134,19 @@
             <label for="department-three">Department Three</label><br>
             <input type="checkbox" id="department-four" value="Department Four">
             <label for="department-four">Department Four</label><br>
-            <input type="checkbox" id="department-five" value="Department Five">
-            <label for="department-five">Department Five</label><br>
-            <input type="checkbox" id="department-six" value="Department Six">
-            <label for="department-six">Department Six</label><br>
+            </form>
             <h6>+ Show more</h6>
         </div>
         <hr class="filter-hr">
     </div><!-- filter by column ends here -->
     
-    <div class="section-2-hos-info"><!-- hostor Information -->
-            <!-- hostor 1 -->
+    <div id="hos-list-sec" class="section-2-hos-info"><!-- hostor Information -->
+            <!-- hospital 1 -->
             <div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Apollo Hospital</h3>
-                    <h6><i class='fas fa-map-marker-alt'></i>New Delhi, India</h6>
+                    <h6><i class='fas fa-map-marker-alt'></i>DLF Cyber City</h6>
                     <h6><i class='fas fa-bed'></i>133 Beds</h6>
                     <div class="hos-info-inner">
                         <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
@@ -133,75 +155,109 @@
                         <span>orthopedics Surgery</span>
                         <span>infertility Treatment</span>
                         <span>Dentistry</span>
-                        <span>Cardiology</span>
-                        <span>Cancer</span>
-                        <span class="bg-lightgray">+40 more</span>
+                        <span class="bg-lightgray">+10 more</span>
                         </div>
                     </div>
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos0 image"></div>
             </div>
-<!-- Hosital 2 -->
+            <!-- Hospital 2 -->
             <div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Fortis</h3>
-                    <h6><i class='fas fa-map-marker-alt'></i>New Delhi, India</h6>
-                    <h6><i class='fas fa-bed'></i>133 Beds</h6>
+                    <h6><i class='fas fa-map-marker-alt'></i>Lajpat Nagar</h6>
+                    <h6><i class='fas fa-bed'></i>145 Beds</h6>
                     <div class="hos-info-inner">
                         <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
                         <div>
                         <span>Multi Organ Transplant</span>
                         <span>orthopedics Surgery</span>
                         <span>infertility Treatment</span>
-                        <span>Dentistry</span>
-                        <span>Cardiology</span>
                         <span>Cancer</span>
-                        <span class="bg-lightgray">+40 more</span>
+                        <span class="bg-lightgray">+20 more</span>
                         </div>
                     </div>
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos1 image"></div>
             </div>
-<!-- Hospital 3 -->
+            <!-- Hospital 3 -->
             <div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Rockland Hospital</h3>
-                    <h6><i class='fas fa-map-marker-alt'></i>New Delhi, India</h6>
-                    <h6><i class='fas fa-bed'></i>133 Beds</h6>
+                    <h6><i class='fas fa-map-marker-alt'></i>Palam Vihar</h6>
+                    <h6><i class='fas fa-bed'></i>130 Beds</h6>
                     <div class="hos-info-inner">
                         <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
                         <div>
                         <span>Multi Organ Transplant</span>
                         <span>orthopedics Surgery</span>
-                        <span>infertility Treatment</span>
-                        <span>Dentistry</span>
                         <span>Cardiology</span>
                         <span>Cancer</span>
-                        <span class="bg-lightgray">+40 more</span>
+                        <span class="bg-lightgray">+30 more</span>
                         </div>
                     </div>
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
                 <div class="hos2 image"></div>
             </div>
-<!-- Hospital 4 -->
+            <!-- Hospital 4 -->
             <div class="section-2-hos-div">
                 <div class="hos-info">
                     <hr class="hos-name-bar">
                     <h3>Primus Super Speciality Hospital</h3>
-                    <h6><i class='fas fa-map-marker-alt'></i>New Delhi, India</h6>
-                    <h6><i class='fas fa-bed'></i>133 Beds</h6>
+                    <h6><i class='fas fa-map-marker-alt'></i>Dwarka</h6>
+                    <h6><i class='fas fa-bed'></i>100 Beds</h6>
                     <div class="hos-info-inner">
                         <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
                         <div>
                         <span>Multi Organ Transplant</span>
-                        <span>orthopedics Surgery</span>
+                        <span>Dentistry</span>
+                        <span>Cardiology</span>
+                        <span>Cancer</span>
+                        <span class="bg-lightgray">+20 more</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos3 image"></div>
+            </div>
+            <!-- Hospital 5 -->
+            <div class="section-2-hos-div">
+                <div class="hos-info">
+                    <hr class="hos-name-bar">
+                    <h3>Manipal North Side Hospital</h3>
+                    <h6><i class='fas fa-map-marker-alt'></i>Punjabi Baag</h6>
+                    <h6><i class='fas fa-bed'></i>123 Beds</h6>
+                    <div class="hos-info-inner">
+                        <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
+                        <div>
                         <span>infertility Treatment</span>
                         <span>Dentistry</span>
+                        <span>Cardiology</span>
+                        <span>Cancer</span>
+                        <span class="bg-lightgray">+30 more</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos4 image"></div>
+            </div>
+            <!-- Hospital 6 -->
+            <div class="section-2-hos-div">
+                <div class="hos-info">
+                    <hr class="hos-name-bar">
+                    <h3>Northstar</h3>
+                    <h6><i class='fas fa-map-marker-alt'></i>DLF Cyber City</h6>
+                    <h6><i class='fas fa-bed'></i>150 Beds</h6>
+                    <div class="hos-info-inner">
+                        <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
+                        <div>
+                        <span>orthopedics Surgery</span>
+                        <span>infertility Treatment</span>
                         <span>Cardiology</span>
                         <span>Cancer</span>
                         <span class="bg-lightgray">+40 more</span>
@@ -209,7 +265,91 @@
                     </div>
                 </div>
                 <div class="hos-info-button"><button>Call Now</button></div>
-                <div class="hos3 image"></div>
+                <div class="hos5 image"></div>
+            </div>
+            <!-- Hospital 7 -->
+            <div class="section-2-hos-div">
+                <div class="hos-info">
+                    <hr class="hos-name-bar">
+                    <h3>AIIMS</h3>
+                    <h6><i class='fas fa-map-marker-alt'></i>New Delhi</h6>
+                    <h6><i class='fas fa-bed'></i>156 Beds</h6>
+                    <div class="hos-info-inner">
+                        <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
+                        <div>
+                        <span>Multi Organ Transplant</span>
+                        <span>infertility Treatment</span>
+                        <span>Cardiology</span>
+                        <span>Cancer</span>
+                        <span class="bg-lightgray">+30 more</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos6 image"></div>
+            </div>
+            <!-- Hospital 8 -->
+            <div class="section-2-hos-div">
+                <div class="hos-info">
+                    <hr class="hos-name-bar">
+                    <h3>Elbit Daignostics</h3>
+                    <h6><i class='fas fa-map-marker-alt'></i>Dwarka</h6>
+                    <h6><i class='fas fa-bed'></i>112 Beds</h6>
+                    <div class="hos-info-inner">
+                        <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
+                        <div>
+                        <span>Multi Organ Transplant</span>
+                        <span>orthopedics Surgery</span>
+                        <span>Dentistry</span>
+                        <span>Cancer</span>
+                        <span class="bg-lightgray">+10 more</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos7 image"></div>
+            </div>
+            <!-- Hospital 9 -->
+            <div class="section-2-hos-div">
+                <div class="hos-info">
+                    <hr class="hos-name-bar">
+                    <h3>Akash hospital</h3>
+                    <h6><i class='fas fa-map-marker-alt'></i>Palam Vihar</h6>
+                    <h6><i class='fas fa-bed'></i>133 Beds</h6>
+                    <div class="hos-info-inner">
+                        <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
+                        <div>
+                        <span>orthopedics Surgery</span>
+                        <span>infertility Treatment</span>
+                        <span>Dentistry</span>
+                        <span>Cardiology</span>
+                        <span class="bg-lightgray">+20 more</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos8 image"></div>
+            </div>
+            <!-- Hospital 10 -->
+            <div class="section-2-hos-div">
+                <div class="hos-info">
+                    <hr class="hos-name-bar">
+                    <h3>BLK Super Speciality Hospital</h3>
+                    <h6><i class='fas fa-map-marker-alt'></i>Punjabi Baag</h6>
+                    <h6><i class='fas fa-bed'></i>103 Beds</h6>
+                    <div class="hos-info-inner">
+                        <h6><i class="fas fa-stethoscope"></i>Famous Treatments</h6>
+                        <div>
+                        <span>Multi Organ Transplant</span>
+                        <span>orthopedics Surgery</span>
+                        <span>Cardiology</span>
+                        <span>Cancer</span>
+                        <span class="bg-lightgray">+10 more</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos9 image"></div>
             </div>
     </div>
 </section><!-- Section 2 ends here -->
@@ -247,5 +387,6 @@
 
 </body>
 <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+<script src="../Dom/hospitals.js"></script>
 <script src="../Dom/script.js"></script>
 </html>
