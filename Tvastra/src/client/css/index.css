@@ -283,7 +283,7 @@ nav .dropdown {
 }
 .owl-theme .owl-nav {
   margin-top: 0px;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .owl-theme .owl-nav button{
   outline: none;
@@ -301,7 +301,7 @@ justify-content: space-between;
 box-sizing: border-box;
 }
 .DocCard {
-  width: 18rem;
+  width: 100%;
   box-sizing: border-box;
   height: auto;
   margin: 10px 5px 10px 0px;
