@@ -10,13 +10,20 @@ section {
 .signin-form {
     box-sizing: border-box;
     width: 23rem;
-    height: 18rem;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
 }
+
+header nav .nav-links a{
+    text-decoration: none;
+}
+.signin-form input:focus{
+    outline-color: var(--blue);
+}
 form {
-    margin: 1.5rem;
+    margin: .9rem 1.5rem;
 }
 .signin-form h2 {
     padding: 1rem 0px;
@@ -30,17 +37,19 @@ form {
 .signin-form input {
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
-.signin-form button {
+.signin-form .signin-button {
     width: 100%;
     background-color: var(--darkblue);
     color: white;
     border: none;
+    height: 2.4rem;
 }
 .form-footer {
     display: flex;
     justify-content:center;
+    margin-bottom: 1rem;
 }
 .form-footer h6 {
     margin-right: .5rem;
@@ -54,7 +63,18 @@ form {
     bottom: 0;
     text-align: center;
 }
-
+.password-div {
+    position: relative;
+}
+#password-eye {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--blue);
+}
+#password-eye:hover{
+    cursor: pointer;
+}
 
 @media only screen and (max-width:450px) {
     .signin-form {

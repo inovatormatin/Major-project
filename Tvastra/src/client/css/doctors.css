@@ -217,7 +217,11 @@
     background-image: url(https://www.cdc.gov/drugoverdose/training/modules/module1/images/welcomeimage.png);
 }
 .section-2-doc-div .doc11 {
+<<<<<<< HEAD
     background-image: url(https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg);
+=======
+    background-image: url(https://www.vebdr.com/wp-content/uploads/2017/12/women-img0001.png);
+>>>>>>> 113249291b5fddf956d227391c216e11797bbc74
 }
 .section-2-doc-div .doc12 {
     background-image: url(https://webcomicms.net/sites/default/files/clipart/174399/picture-doctor-174399-2506358.jpg);
@@ -232,6 +236,9 @@
 
 .filter-by .selected-filter {
     display: none;
+}
+.doc-info div{
+    width: 100%;
 }
 
 }
@@ -259,5 +266,8 @@
     .doc-info-button {
         display: flex;
         justify-content: center;
+    }
+    .doc-info div{
+        width: 100%;
     }
 }

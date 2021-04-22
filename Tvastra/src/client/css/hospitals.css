@@ -243,6 +243,9 @@
 .filter-by .selected-filter {
     display: none;
 }
+.hos-info-inner div {
+    margin-left: 0;
+}
 
 }
 
@@ -269,5 +272,8 @@
     .hos-info-button {
         display: flex;
         justify-content: center;
+    }
+    .hos-info-inner div {
+        margin-left: 0;
     }
 }

@@ -93,7 +93,9 @@ input {
     color: var(--darkblue);
     letter-spacing: 1px;
 }
-
+input:focus {
+    outline-color: var(--blue);
+}
 ::placeholder {
     letter-spacing: 1px;
 }

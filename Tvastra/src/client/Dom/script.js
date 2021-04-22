@@ -14,9 +14,8 @@ for (i = 0; i < coll.length; i++) {
 
 
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.add("show");
 }
-
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -31,7 +30,36 @@ window.onclick = function(event) {
   }
 }
 
+function userdropdown() {
+  document.getElementById("user-dropdown").classList.toggle("user-show"); 
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.user-dropbtn')) {
+    var userdropdowns = document.getElementsByClassName("user-dropdown-content");
+    var i;
+    for (i = 0; i < userdropdowns.length; i++) {
+      var useropenDropdown = userdropdowns[i];
+      if (useropenDropdown.classList.contains('user-show')) {
+        useropenDropdown.classList.remove('user-show');
+      }
+    }
+  }
+}
 
+const showpass = () =>{
+  let eye = document.getElementById('password-eye').classList;
+  let pass = document.getElementById('password');
+  if(eye.value.includes('fa-eye-slash')){
+    eye.remove('fa-eye-slash');
+    eye.add('fa-eye');
+    pass.type = 'text';
+  }
+  else{
+    eye.remove('fa-eye');
+    eye.add('fa-eye-slash');
+    pass.type = 'password';
+  }
+}
 
 // var option2= document.getElementById("two");
 // function display() {
