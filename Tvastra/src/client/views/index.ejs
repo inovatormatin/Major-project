@@ -10,6 +10,7 @@
     <title>Home Page</title>
 </head>
 <body>
+
 <header><!-- Header Nav starts here -->
         <nav class="container">
             <div class="nav-img">
@@ -29,8 +30,15 @@
                 <% if(user.name) { %>
                     <!-- User dropdown -->
                     <div class="user-dropdown">
-                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-caret-down"></i></button>
+                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-chevron-down fa-sm"></i></button>
                             <div id="user-dropdown" class="user-dropdown-content">
+                                <div class="dropdown-user-div">
+                                    <i class="far fa-user"></i>
+                                    <div>
+                                        <h6 class="user-name"><%= user.name %></h6> 
+                                        <h6 class="user-number"><%= user.mobile %></h6>
+                                    </div>
+                                </div>
                                 <a href="#">Profile</a>
                                 <a href="#">Appointments</a>
                                 <a href="#">Settings</a>
@@ -59,14 +67,16 @@
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
-</header> <!-- Header Nav ends Here -->    
+</header> <!-- Header Nav ends Here -->  
+  
 <section id="sec1" class="section-1"> <!--Section 1 starts here-->
         <div class="container sec-1">
             <h1>Find Affordable Healthcare</h1>
             <p>Join the thousands of others who have exercised their right to quality healthcare at a price you can afford.</p>
             <div class="sec-1-search">
                 <div class="sec-1-search-inner-div"><i class='fas fa-map-marker-alt map-marker'></i><i class='fas fa-crosshairs'></i>
-                <input class="location" type="text" name="location" placeholder="Ahemdabad"></div>
+                <input class="location" type="text" name="location" placeholder="Ahmedabad">
+            </div>
                 <div class="search-bar-with-suggestion">
                   <input id="user_search_input" class="search-bar" type="text" name="search-bar" placeholder="Search for doctors, hospitals and treatments.">
                   <ul id="suggestion_ul" class="search-bar-suggestion-list">

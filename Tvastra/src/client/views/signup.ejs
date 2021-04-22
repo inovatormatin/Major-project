@@ -53,15 +53,18 @@
             <%- include("./partials/messages")  %>
         <!-- Messages to flash  -->
         <form action="/signup.html" class="form" method="POST">
-            <input type="text" class="name" name="name" placeholder="Enter Name" value="<%= typeof name != 'undefined' ? name : '' %>" >
-            <input type="email" class="Email" name="email" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>" >
-            <input type="password" class="password" name="password" placeholder="Enter Password" value="<%= typeof password != 'undefined' ? password : '' %>" >
+            <input type="text" class="name" name="name" placeholder="Enter Name" value="<%= typeof name != 'undefined' ? name : '' %>" required>
+            <input type="email" class="Email" name="email" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+            <div class="password-div">
+                <input type="password" id="password" class="password" name="password" placeholder="Enter Password"  value="<%= typeof password != 'undefined' ? password : '' %>" required>
+                <i onclick="showpass()" id="password-eye" class="far fa-eye-slash"></i>
+            </div>
             <input type="password" class="password2" name="password2" placeholder="Confirm Password" >
-            <input type="text" name="gender" list="Gender" id="Gender" placeholder="Enter your Gender">
-            <datalist id="Gender">
-                <option value="M">Male</option>
-                <option value="f">Female</option>
-                <option value="O">Others</option>
+            <input type="text" name="gender" list="gender" id="Gender" placeholder="Enter your Gender">
+            <datalist id="gender">
+                <option >Male</option>
+                <option >Female</option>
+                <option >Others</option>
             </datalist>
             <input type="date" name="date" id="date" placeholder="D.O.B" >
             <input type="number" name="mobile" class="phone-number" placeholder="Enter Number" value="<%= typeof mobile != 'undefined' ? mobile : '' %>" >

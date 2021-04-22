@@ -14,7 +14,7 @@ for (i = 0; i < coll.length; i++) {
 
 
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.add("show");
 }
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -46,6 +46,20 @@ window.onclick = function(event) {
   }
 }
 
+const showpass = () =>{
+  let eye = document.getElementById('password-eye').classList;
+  let pass = document.getElementById('password');
+  if(eye.value.includes('fa-eye-slash')){
+    eye.remove('fa-eye-slash');
+    eye.add('fa-eye');
+    pass.type = 'text';
+  }
+  else{
+    eye.remove('fa-eye');
+    eye.add('fa-eye-slash');
+    pass.type = 'password';
+  }
+}
 
 // var option2= document.getElementById("two");
 // function display() {

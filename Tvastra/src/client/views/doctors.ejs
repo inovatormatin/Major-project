@@ -31,8 +31,15 @@
                 <% if(user.name) { %>
                     <!-- User dropdown -->
                     <div class="user-dropdown">
-                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-caret-down"></i></button>
+                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-chevron-down fa-sm"></i></button>
                             <div id="user-dropdown" class="user-dropdown-content">
+                                <div class="dropdown-user-div">
+                                    <i class="far fa-user"></i>
+                                    <div>
+                                        <h6 class="user-name"><%= user.name %></h6> 
+                                        <h6 class="user-number"><%= user.mobile %></h6>
+                                    </div>
+                                </div>
                                 <a href="#">Profile</a>
                                 <a href="#">Appointments</a>
                                 <a href="#">Settings</a>
@@ -61,7 +68,7 @@
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
-</header> <!-- Header Nav ends Here -->  
+</header> <!-- Header Nav ends Here -->   
 
 <section class="doc-section-1"> <!--Section 1 starts here-->
     <div class="container doc-sec-1">

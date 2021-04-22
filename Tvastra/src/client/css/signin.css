@@ -15,6 +15,13 @@ section {
     display: flex;
     flex-direction: column;
 }
+
+header nav .nav-links a{
+    text-decoration: none;
+}
+.signin-form input:focus{
+    outline-color: var(--blue);
+}
 form {
     margin: .9rem 1.5rem;
 }
@@ -56,7 +63,18 @@ form {
     bottom: 0;
     text-align: center;
 }
-
+.password-div {
+    position: relative;
+}
+#password-eye {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--blue);
+}
+#password-eye:hover{
+    cursor: pointer;
+}
 
 @media only screen and (max-width:450px) {
     .signin-form {

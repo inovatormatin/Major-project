@@ -17,6 +17,9 @@ section {
     display: flex;
     flex-direction: column;
 }
+header nav .nav-links a{
+    text-decoration: none;
+}
 form {
     margin: .9rem 1.5rem ;
 }
@@ -34,6 +37,9 @@ form {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
+}
+.signup-form input:focus{
+    outline-color: var(--blue);
 }
 .signup-form .signup-button {
     width: 100%;
@@ -57,7 +63,18 @@ form {
 .login-footer {
     margin: 0 0 1rem;
 }
-
+.password-div {
+    position: relative;
+}
+#password-eye {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--blue);
+}
+#password-eye:hover{
+    cursor: pointer;
+}
 @media only screen and (max-width:767px) {
     .signup-form {
         width: 90%;

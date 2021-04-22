@@ -12,7 +12,7 @@
 </head>
 <body>
     
-<header><!-- Header Nav starts here -->
+    <header><!-- Header Nav starts here -->
         <nav class="container">
             <div class="nav-img">
                 <a href="index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
@@ -31,8 +31,15 @@
                 <% if(user.name) { %>
                     <!-- User dropdown -->
                     <div class="user-dropdown">
-                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-caret-down"></i></button>
+                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-chevron-down fa-sm"></i></button>
                             <div id="user-dropdown" class="user-dropdown-content">
+                                <div class="dropdown-user-div">
+                                    <i class="far fa-user"></i>
+                                    <div>
+                                        <h6 class="user-name"><%= user.name %></h6> 
+                                        <h6 class="user-number"><%= user.mobile %></h6>
+                                    </div>
+                                </div>
                                 <a href="#">Profile</a>
                                 <a href="#">Appointments</a>
                                 <a href="#">Settings</a>
@@ -61,7 +68,7 @@
                </div>
             </div> <!-- Content for tablet view Only till here -->
         </nav>
-</header> <!-- Header Nav ends Here -->   
+    </header> <!-- Header Nav ends Here --> 
 
 <section class="about-sec-1"><!--section 1-->
     <div class="container">
@@ -84,10 +91,12 @@
 </section><!--section 2 ends-->
 
 <section class="about-sec-3">
-    <video src="../vedio/The New Stamford Hospital TV Commercial.mp4" autoplay muted></video>
+    <video autoplay loop muted id="vid">
+        <source src="../vedio/The New Stamford Hospital TV Commercial.mp4" type="video/mp4"/> 
+    </video>
     <div class="container">
         <div class="about-sec-3-text">
-            <h2>Your wellness builds upon the medical daily.</h3>
+            <h2>Your wellness builds upon the medical daily.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio unde nesciunt veritatis architecto necessitatibus eos rerum alias, molestiae similique omnis dolorum facere, eligendi accusantium, suscipit doloribus? Eveniet esse consequuntur nulla!</p>
             <button>Get a Free Checkup</button>
         </div>
@@ -137,4 +146,7 @@
 </body>
 <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
 <script src="../Dom/script.js"></script>
+<script>
+    document.getElementById('vid').play();
+</script>
 </html>

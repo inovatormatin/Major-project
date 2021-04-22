@@ -54,7 +54,10 @@
         <!-- Messages to flash  -->
         <form action="/signin.html" method="POST">
             <input type="email" class="Email" name="email" placeholder="Enter Your Email" value="<%= typeof email != 'undefined' ? email : '' %>" >
-            <input type="password" class="password" name="password" placeholder="Enter Your Password" >
+            <div class="password-div">
+                <input type="password" id="password" class="password" name="password" placeholder="Enter Password"  value="<%= typeof password != 'undefined' ? password : '' %>" >
+                <i onclick="showpass()" id="password-eye" class="far fa-eye-slash"></i>
+            </div>
             <button class="signin-button" type="submit">LOG IN</button>
         </form>
         <div class="form-footer">
