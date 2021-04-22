@@ -12,63 +12,9 @@
 </head>
 <body>
 
-    <header><!-- Header Nav starts here -->
-        <nav class="container">
-            <div class="nav-img">
-                <a href="index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
-            </div>
-            <div class="nav-links"><!--Content for pc and laptop-->
-                <a href="doctors.html">Doctors</a>
-                <a href="hospitals.html">Hospitals</a>
-                <a href="treatment.html">Treatment</a>
-                <a href="tvastraplus.html">Other Services</a>
-                <a href="aboutus.html">About</a>
-            </div>
-            <div class="nav-button">
-                <% if(user == 'hello') { %>
-                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
-                <% } %>
-                <% if(user.name) { %>
-                    <!-- User dropdown -->
-                    <div class="user-dropdown">
-                        <button onclick="userdropdown()" class="user-dropbtn user-button"><%= user.name %><i onclick="userdropdown()" id="user-dropdown-icon" class="fas fa-chevron-down fa-sm"></i></button>
-                            <div id="user-dropdown" class="user-dropdown-content">
-                                <div class="dropdown-user-div">
-                                    <i class="far fa-user"></i>
-                                    <div>
-                                        <h6 class="user-name"><%= user.name %></h6> 
-                                        <h6 class="user-number"><%= user.mobile %></h6>
-                                    </div>
-                                </div>
-                                <a href="#">Profile</a>
-                                <a href="#">Appointments</a>
-                                <a href="#">Settings</a>
-                            </div>                    
-                    </div>
-                 <a href="./logout"><button class="logout-button">LogOut</button></a>
-                <% } %>  
-            </div>  <!--Content for pc and laptop-->
-            <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
-               <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
-               <div id="myDropdown" class="dropdown-content">
-                <a href="./doctors.html">Doctors</a>
-                <a href="./hospitals.html">Hospitals</a>
-                <a href="./treatment.html">Treatment</a>
-                <a href="./tvastraplus.html">Other Services</a>
-                <a href="./aboutus.html">About</a>
-                <% if(user == 'hello') { %>
-                    <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
-                <% } %>
-                <% if(user.name) { %>
-                    <a href="#">Profile</a>
-                    <a href="#">Appointments</a>
-                    <a href="#">Settings</a>
-                    <a href="./logout">LogOut</a>
-                <% } %> 
-               </div>
-            </div> <!-- Content for tablet view Only till here -->
-        </nav>
-    </header> <!-- Header Nav ends Here -->
+<!-- header -->
+<%- include("./partials/header")  %>
+<!-- header -->
 
 <section>
     <div class="submit-query-form">
