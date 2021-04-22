@@ -190,6 +190,19 @@ nav .dropdown {
 /* section 2 end */
 
 /* section 3 starts */
+.owl-theme .owl-dots {
+  text-align: left;
+}
+.owl-theme .owl-dots .owl-dot{
+  outline: none;
+}
+.owl-theme .owl-nav {
+  margin-top: 0px;
+  font-size: 2rem;
+}
+.owl-theme .owl-nav button{
+  outline: none;
+}
 .section-3 {
   background-color: var(--darkblue);
   color: white;
@@ -213,6 +226,15 @@ box-sizing: border-box;
 .D2-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg); }
 .D3-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg); }
 .D4-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg); }
+.D5-img { background-image: url(https://cerebralpalsynewstoday.com/wp-content/uploads/2017/06/shutterstock_52856165-921x480@2x.jpg); } 
+.D6-img { background-image: url(https://www.cdc.gov/diabetes/images/library/spotlights/Male-doctor-smiling-portrait-close-up-Med-Res-72991363.jpg); }
+.D7-img { background-image: url(https://post.medicalnewstoday.com/wp-content/uploads/2019/01/Male_Doctor_732x549-thumbnail.jpg); }
+.D8-img { background-image: url(https://otwartegrupy.pl/img/lekarz_bestdoctors.jpg); }
+.D9-img { background-image: url(https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop); }
+.D10-img { background-image: url(https://telemedizin.one/wp-content/uploads/2019/12/doctor07.jpg.pagespeed.ce.vrs67renwa.jpg); }
+.D11-img { background-image: url(https://www.cdc.gov/drugoverdose/training/modules/module1/images/welcomeimage.png); }
+.D12-img { background-image: url(https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg); }
+.D13-img { background-image: url(https://webcomicms.net/sites/default/files/clipart/174399/picture-doctor-174399-2506358.jpg); }
 .DocCard-img {
   height: 20rem;
   background-position: center;
@@ -568,7 +590,7 @@ nav .dropdown {
   justify-content: space-evenly;
 }
 .DocCard {
-  width: 40%;
+  width: 100%;
 }
 .DocCard p {
   text-align: start;
