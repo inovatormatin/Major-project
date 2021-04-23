@@ -426,8 +426,7 @@ meter::-webkit-meter-optimum-value {
 	padding: 20px 80px;
 }
 .test_gallery img{
-	width: 3.4em;
-	height: 3.4em;
+	height: 20%;
 }
 .test_gallery h2{
 	padding: 20px 0px;
@@ -441,8 +440,8 @@ meter::-webkit-meter-optimum-value {
 .test_gallery li{
 	border-radius: 0.5em;
 	margin: 0.4em;
+	width: 12em;
 	height: 12em;
-	width: 19em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -455,6 +454,11 @@ meter::-webkit-meter-optimum-value {
 }
 .test_gallery li p{
 	font-weight: 500;
+	margin: 0px;
+}
+.test_gallery .owl-carousel .owl-item{
+	display: flex;
+	justify-content: center;
 }
 /* test carosule ends here */
 
@@ -564,6 +568,11 @@ meter::-webkit-meter-optimum-value {
     background-color: #e4f3ffa2;
 }
 /* mohit css */
+
+/* carosule*/
+.owl-carousel .owl-item img {
+	width: none;
+}
 /* FAQ ends here */
 
 /***************************************************************************************/
@@ -663,8 +672,10 @@ meter::-webkit-meter-optimum-value {
 	    flex-wrap: wrap;
 	}
 	.test_gallery li {
-		width: 18em;
 		align-items: center;
+	}
+	.test_gallery img {
+    	height: 20%;
 	}
 	/**/
 	/* why we love tvastra plus */
@@ -832,8 +843,7 @@ meter::-webkit-meter-optimum-value {
 	    height: 9em;
 	}
 	.test_gallery img {
-	    width: 3em;
-	    height: 3em;
+	    height: 20%;
 	    margin-bottom: 0.9em;
 	}
 	.test_gallery li strong {
