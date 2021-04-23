@@ -18,7 +18,7 @@ router.route("/tvastraplus.html").get(maincontroller.tvastraplus);
 router.route("/contact.html").get(maincontroller.contact);
 router.route("/aboutus.html").get(maincontroller.aboutus);
 router.route("/bookappointment.html").get(ensureAuth.ensureAuth,maincontroller.appointment);
-router.route("/submitquery.html").get(ensureAuth.ensureAuth,maincontroller.submitquery);
+router.route("/submitquery.html").get(maincontroller.submitquery);
 router.route("/FAQs.html").get(maincontroller.faq);
 router.route("/logout").get(LoginController.logout);
 

@@ -248,6 +248,9 @@ nav .dropdown {
   border: 1px solid var(--gray);
   color: var(--gray);
 }
+.section-2 .buttons h2:hover {
+  cursor: pointer;
+}
 .section-2 .buttons .one {
   color: black;
   border: 2px solid var(--blue);
@@ -713,15 +716,15 @@ nav .dropdown {
   grid-row-end: 35;
 }
 .multi-organ {
-  grid-row-start: 36;
+  grid-row-start: 35;
   grid-row-end: 70;
 }
 .orthopedics {
-  grid-row-start: 36;
+  grid-row-start: 35;
   grid-row-end: 70;
 }
 .infertility {
-  grid-row-start: 36;
+  grid-row-start: 35;
   grid-row-end: 70;
 }
 .section-4-dots {

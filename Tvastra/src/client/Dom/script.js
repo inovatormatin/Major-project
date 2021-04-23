@@ -12,24 +12,6 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.add("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
 function userdropdown() {
   document.getElementById("user-dropdown").classList.toggle("user-show"); 
 }
@@ -41,6 +23,23 @@ window.onclick = function(event) {
       var useropenDropdown = userdropdowns[i];
       if (useropenDropdown.classList.contains('user-show')) {
         useropenDropdown.classList.remove('user-show');
+      }
+    }
+  }
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
   }
