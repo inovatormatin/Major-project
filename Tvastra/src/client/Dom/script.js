@@ -12,22 +12,6 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-function userdropdown() {
-  document.getElementById("user-dropdown").classList.toggle("user-show"); 
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.user-dropbtn')) {
-    var userdropdowns = document.getElementsByClassName("user-dropdown-content");
-    var i;
-    for (i = 0; i < userdropdowns.length; i++) {
-      var useropenDropdown = userdropdowns[i];
-      if (useropenDropdown.classList.contains('user-show')) {
-        useropenDropdown.classList.remove('user-show');
-      }
-    }
-  }
-}
-
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
