@@ -157,13 +157,13 @@ var option4 = document.getElementById("four");
 var option5 = document.getElementById("five");
 var option6 = document.getElementById("six");
 var option7 = document.getElementById("seven");
-function active1() {x = 1; revaluex();}
-function active2() {x = 2; revaluex();}
-function active3() {x = 3; revaluex();}
-function active4() {x = 4; revaluex();}
-function active5() {x = 5; revaluex();}
-function active6() {x = 6; revaluex();}
-function active7() {x = 7; revaluex();}
+function active1() {x = 1; clean(); imageMover(); revaluex();}
+function active2() {x = 2; clean(); imageMover(); revaluex();}
+function active3() {x = 3; clean(); imageMover(); revaluex();}
+function active4() {x = 4; clean(); imageMover(); revaluex();}
+function active5() {x = 5; clean(); imageMover(); revaluex();}
+function active6() {x = 6; clean(); imageMover(); revaluex();}
+function active7() {x = 7; clean(); imageMover(); revaluex();}
 var c;
 var j = [option1, option2, option3, option4,option5, option6, option7];
 function SpanColouring() {
@@ -266,3 +266,49 @@ function revaluex() {
 }
 revaluex();
 // // How it works js from Homepage ends here 
+let ms1 = document.getElementById("mob-image-sec1");
+let ms2 = document.getElementById("mob-image-sec2");
+let ms3 = document.getElementById("mob-image-sec3");
+let ms4 = document.getElementById("mob-image-sec4");
+let ms5 = document.getElementById("mob-image-sec5");
+let ms6 = document.getElementById("mob-image-sec6");
+let ms7 = document.getElementById("mob-image-sec7");
+let imageHtml = `<div class="tab-mob-image">
+                  <img id="sideimage_HIW_mob" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png" alt="">
+                  <h3 id="sideimage_h3_mob">Fix Consultation</h3>
+                  <p id="sideimage_p_mob">This depicts that user will have to fix appointment
+                      first when it selects a particular doctor</p>
+      	        </div>`;
+let ms = [ms1,ms2,ms3,ms4,ms5,ms6,ms7];
+function clean() {
+	var c = ``;
+	for(var i = 0; i < 7; i++) {
+		c = ms[i];
+		c.innerHTML = ``;
+	}
+}
+function imageMover() {
+	switch (x) {
+		case 1:
+			ms1.innerHTML = imageHtml;
+		break;
+		case 2:
+			ms2.innerHTML = imageHtml;
+		break;
+		case 3:
+			ms3.innerHTML = imageHtml;
+		break;
+		case 4:
+			ms4.innerHTML = imageHtml;
+		break;
+		case 5:
+			ms5.innerHTML = imageHtml;
+		break;
+		case 6:
+			ms6.innerHTML = imageHtml;
+		break;
+		case 7:
+			ms7.innerHTML = imageHtml;
+		break;
+	}
+}
