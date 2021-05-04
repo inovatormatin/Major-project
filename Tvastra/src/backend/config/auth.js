@@ -1,9 +1,14 @@
-module.exports = {
-    ensureAuth : function(req,res,next) {
+  function ensureAuth(req,res,next) {
         if(req.isAuthenticated()){
             return next();
         }
         req.flash('error_msg','Please login to view this resource');
         res.redirect('/signin.html')
     }
+
+    function
+
+module.exports = {
+        ensureAuth:ensureAuth,
+
 }
