@@ -1,18 +1,18 @@
 <header><!-- Header Nav starts here -->
     <nav class="container">
         <div class="nav-img">
-            <a href="index.html"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
+            <a href="Home"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="Logo_Tvastra"></a>
         </div>
         <div class="nav-links"><!--Content for pc and laptop-->
-            <a href="doctors.html">Doctors</a>
-            <a href="hospitals.html">Hospitals</a>
-            <a href="treatment.html">Treatment</a>
-            <a href="tvastraplus.html">Other Services</a>
-            <a href="aboutus.html">About</a>
+            <a href="Doctors">Doctors</a>
+            <a href="Hospitals">Hospitals</a>
+            <a href="Treatment">Treatment</a>
+            <a href="Tvastra_Plus">Other Services</a>
+            <a href="About_Us">About</a>
         </div>
         <div class="nav-button">
             <% if(user == 'hello') { %>
-                <a href="./signin.html"><button class="nav-login-button">Login / Sign Up</button></a>
+                <a href="SignIn"><button class="nav-login-button">Login / Sign Up</button></a>
             <% } %>
             <% if(user.name) { %>
                 <!-- User dropdown -->
@@ -26,30 +26,30 @@
                                     <h6 class="user-number"><%= user.mobile %></h6>
                                 </div>
                             </div>
-                            <a href="./Profile.html">Profile</a>
+                            <a href="Profile">Profile</a>
                             <a href="#">Appointments</a>
                             <a href="#">Settings</a>
                         </div>                    
                 </div>
-             <a href="./logout"><button class="logout-button">LogOut</button></a>
+             <a href="logout"><button class="logout-button">LogOut</button></a>
             <% } %>  
         </div>  <!--Content for pc and laptop-->
         <div class="dropdown"><!-- Content for tablet and Mobile View Only -->
            <i onclick="myFunction()" class="dropbtn fas fa-bars fa-lg"></i>
            <div id="myDropdown" class="dropdown-content">
-            <a href="./doctors.html">Doctors</a>
-            <a href="./hospitals.html">Hospitals</a>
-            <a href="./treatment.html">Treatment</a>
-            <a href="./tvastraplus.html">Other Services</a>
-            <a href="./aboutus.html">About</a>
+            <a href="Doctors">Doctors</a>
+            <a href="Hospitals">Hospitals</a>
+            <a href="Treatment">Treatment</a>
+            <a href="Tvastra_Plus">Other Services</a>
+            <a href="About_Us">About</a>
             <% if(user == 'hello') { %>
-                <a href="./signin.html">Login / Sign Up</a>
+                <a href="SignIn">Login / Sign Up</a>
             <% } %>
             <% if(user.name) { %>
-                <a href="#">Profile</a>
+                <a href="Profile">Profile</a>
                 <a href="#">Appointments</a>
                 <a href="#">Settings</a>
-                <a href="./logout">LogOut</a>
+                <a href="logout">LogOut</a>
             <% } %> 
            </div>
         </div> <!-- Content for tablet view Only till here -->

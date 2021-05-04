@@ -6,27 +6,27 @@ const router = express.Router();
 
 // get routes
 router.route("/").get(maincontroller.home);
-router.route("/index.html").get(maincontroller.home)
-router.route("/signup.html").get(maincontroller.signup);
-router.route("/signin.html").get(maincontroller.signin);
-router.route("/doctors.html").get(maincontroller.doctors);
-router.route("/doctor_details.html").get(maincontroller.doctor_details);
-router.route("/hospitals.html").get(maincontroller.hospitals);
-router.route("/hospital_details.html").get(maincontroller.hospital_details);
-router.route("/treatment.html").get(maincontroller.treatment);
-router.route("/tvastraplus.html").get(maincontroller.tvastraplus);
-router.route("/contact.html").get(maincontroller.contact);
-router.route("/aboutus.html").get(maincontroller.aboutus);
-router.route("/bookappointment.html").get(ensureAuth.ensureAuth,maincontroller.appointment);
-router.route("/submitquery.html").get(maincontroller.submitquery);
-router.route("/FAQs.html").get(maincontroller.faq);
+router.route("/Home").get(maincontroller.home)
+router.route("/SignUp").get(maincontroller.signup);
+router.route("/SignIn").get(maincontroller.signin);
+router.route("/Doctors").get(maincontroller.doctors);
+router.route("/Doctor_Details").get(maincontroller.doctor_details);
+router.route("/Hospitals").get(maincontroller.hospitals);
+router.route("/Hospital_Details").get(maincontroller.hospital_details);
+router.route("/Treatment").get(maincontroller.treatment);
+router.route("/Tvastra_Plus").get(maincontroller.tvastraplus);
+router.route("/Contact_Us").get(maincontroller.contact);
+router.route("/About_Us").get(maincontroller.aboutus);
+router.route("/Book_Appointment").get(ensureAuth.ensureAuth,maincontroller.appointment);
+router.route("/Submit_Query").get(maincontroller.submitquery);
+router.route("/FAQs").get(maincontroller.faq);
 router.route("/logout").get(LoginController.logout);
-router.route("/profile.html").get(ensureAuth.ensureAuth,maincontroller.profile);
-router.route("/userappointment.html").get(ensureAuth.ensureAuth,maincontroller.userappointment);
-router.route("/setting.html").get(ensureAuth.ensureAuth,maincontroller.setting);
+router.route("/Profile").get(ensureAuth.ensureAuth,maincontroller.profile);
+router.route("/User_Apoointment").get(ensureAuth.ensureAuth,maincontroller.userappointment);
+router.route("/Settings").get(ensureAuth.ensureAuth,maincontroller.setting);
 
 // post routes
-router.route("/signin.html").post(LoginController.signin);
-router.route("/signup.html").post(LoginController.signup);
+router.route("/SignIn").post(LoginController.signin);
+router.route("/SignUp").post(LoginController.signup);
 
 module.exports = router;
