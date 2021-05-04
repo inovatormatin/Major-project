@@ -72,11 +72,20 @@ form {
     right: 20px;
     color: var(--blue);
 }
+.form span {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+}
 #password-eye:hover{
     cursor: pointer;
 }
 @media only screen and (max-width:767px) {
     .signup-form {
         width: 90%;
+    }
+    .form span {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }

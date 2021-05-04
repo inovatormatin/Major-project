@@ -61,23 +61,27 @@
                 <i onclick="showpass()" id="password-eye" class="far fa-eye-slash"></i>
             </div>
             <input type="password" class="password2" name="password2" placeholder="Confirm Password" >
-            <input type="text" name="gender" list="gender" id="Gender" placeholder="Enter your Gender">
+            <input type="text" name="gender" list="gender" id="Gender" placeholder="Enter your Gender" value="<%= typeof gender != 'undefined' ? gender : '' %>" >
             <datalist id="gender">
                 <option >Male</option>
                 <option >Female</option>
                 <option >Others</option>
             </datalist>
-            <input type="date" name="date" id="date" placeholder="D.O.B" >
+            <input type="date" name="date" id="date" value="<%= typeof date != 'undefined' ? date : '' %>">
             <input type="number" name="mobile" class="phone-number" placeholder="Enter Number" value="<%= typeof mobile != 'undefined' ? mobile : '' %>" >
-            <input type="text" list="cities" id="city" name="city" placeholder="Enter your City">
-            <datalist id="cities">
-            <option >Delhi</option>
-            <option >Mumbai</option>
-            <option >Chennai</option>
-            <option >Bangalore</option>
-            <option >Punjab</option>
-            <option >Other</option>  
-        </datalist>
+            <span>
+                <input type="text" id="city" name="city" placeholder="Enter your City" value="<%= typeof city != 'undefined' ? city : '' %>">
+                <input type="text" id="state" name="state" placeholder="Enter your State" value="<%= typeof state != 'undefined' ? state : '' %>">
+            </span>
+              <input type="text" name="country" list="country" placeholder="Enter Your Country" value="<%= typeof country != 'undefined' ? country : '' %>" >
+              <datalist id="country">
+                <option >India</option>
+                <option >USA</option>
+                <option >Japan</option>
+                <option >South Korea</option>
+                <option >Dubai</option>
+                <option >Other</option>  
+              </datalist>
             <button  class="signup-button" type="submit">SIGN UP</button>
         </form>
         <div class="form-footer">

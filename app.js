@@ -1,11 +1,12 @@
 const express = require('express');
 const compression = require('compression');
+// Cors (cross origin resource sharing)
 const cors = require('cors');
+// morgan ( create request logs)
 const logger = require('morgan');
 const routes = require('./Tvastra/src/backend/Routes/MainRoutes');
 const session = require("express-session")
 const cookie = require("cookie-parser");
-const bycrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const passportlocal = require("passport-local");
@@ -38,6 +39,7 @@ app.use(logger('dev'));
 app.set('view engine','ejs');
 app.engine('html',require('ejs').renderFile);
 
+// Session implementation
 app.use(session({
     secret: "jsdfpjwermv@#$asdog",
     resave: false,
@@ -64,8 +66,6 @@ app.use((req, res, next) => { // color code the message type
     res.locals.error = req.flash('error')
     next();
 })
-
-
 
 app.use('/',routes);
 app.set('port',process.env.PORT || 4000);

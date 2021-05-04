@@ -25,6 +25,18 @@ const UserSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    city:{
+        type:String,
+        required:false
+    },
+    state:{
+        type:String,
+        required:false
+    },
+    country:{
+        type:String,
+        required:false
+    }
 })
 
 const User = mongoose.model('User', UserSchema);

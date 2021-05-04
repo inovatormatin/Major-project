@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
+    <title>Tvastra | <%= user.name %></title>
+</head>
+<body>
+<!-- header -->
+<%- include("./partials/header") %>
+<!-- header -->
+<section class="profile-sec-1 container">
+  <div class="left-section">
+    <h3>Dashboard</h3>
+    <ul>
+        <li class="active"><i class="fas fa-user "></i> Profile</li>
+        <li><i class="fas fa-calendar-check"></i> My Appointments</li>
+        <li><i class="fas fa-clipboard"></i> Medical Records</li>
+        <li><i class="fas fa-user-cog"></i> Settings</li>
+    </ul>
+  </div>
+  <div class="right-section">
+        <h3>Account</h3>
+        <div class="right-section-div-1">
+          <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
+            <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
+            <input type="file" id="profile-pic"></span>
+          <span><label for="name">Name</label>
+            <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
+        </div> 
+          <hr>
+        <div class="right-section-div-2">
+          <span>
+            <label for="mobile">Mobile Number</label>
+            <input type="number" name="mobile" value=<%= user.mobile %> readonly>
+          </span>
+          <span>
+            <label for="email">Email</label>
+            <input type="email" name="email" value=<%= user.email %> readonly>
+          </span>             
+          <span>
+            <label for="gender">Gender</label>
+            <input type="text" name="gender" value=<%= user.gender %> readonly>
+          </span>
+              <!-- Changing date format for better understanding -->
+                   <% let newdate = new Date (user.date)
+                      newdate = newdate.toDateString()
+                      newdate = newdate.split(' ')
+                      newdate = newdate.splice(1); %>
+          <span>
+            <label for="date">Date Of Birth</label>
+            <input type="text" name="date" value="<%= newdate %>" readonly>
+          </span>
+          <span>
+            <label for="city">City</label>
+            <input type="text" name="city" value="<%= user.city %>" placeholder="No city selected" readonly>
+          </span>
+          <span>
+            <label for="state">State</label>
+            <input type="text" name="state" value="<%= user.state %>"  placeholder="No state selected" readonly>
+          </span>
+          <span>
+            <label for="country">country</label>
+            <input type="text" name="country" value="<%= user.country %>" placeholder="No country selected" readonly>
+          </span>
+          <span>
+            <label for="bloodgroup">Blood Group</label>
+            <input type="text" name="bloodgroup" value="<%= user.blood %>" placeholder="No data available" readonly>
+          </span>
+        </div>   
+  </div>
+</section>
+<!-- footer -->
+<%- include("./partials/footer") %>
+<!-- fotter -->
+</body>
+<script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+<script src="../Dom/index.js"></script>
+<script src="../Dom/script.js"></script>
+<script src="../Dom/index-cl.js"></script>
+</html>

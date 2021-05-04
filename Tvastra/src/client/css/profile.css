@@ -1,0 +1,99 @@
+body {
+    background-color: var(--bggray);
+}
+hr {
+    margin: 20px 0 30px;
+}
+label {
+    display: block;
+    font-family: "Nexa-Bold";
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+}
+input {
+    width: 17rem;
+    box-sizing: border-box;
+}
+.profile-sec-1 {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas:"left right";
+    padding: 2rem 1rem;
+    background-color: white;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px var(--gray);
+}
+.left-section h3 {
+    padding: 0 0 1rem;
+}
+.right-section h3 {
+    padding: 0 1rem 1rem;
+}
+/* Left section  */
+.left-section {
+    grid-area: left;
+    border-right: 2px solid var(--gray);
+    padding-right: .4rem;
+}
+.left-section li {
+    padding: .8rem .4rem;
+    margin: 0;
+}
+.left-section i {
+    color: var(--darkgray);
+    margin-right: 5px;
+}
+.left-section li:hover {
+    cursor: pointer;
+    background-color: var(--bggray);
+}
+.active i {
+    color: var(--blue);
+}
+.active{
+    cursor: pointer;
+    font-weight: 900;
+    background-image: linear-gradient(to right,white,var(--bgblue));
+    border-left: 3px solid var(--blue);
+}
+/* right section */
+.right-section {
+    grid-area: right;
+}
+
+/* right section table 1  */
+.profile-pic {
+    color: var(--blue);
+}
+#profile-pic {
+    display: none;
+}
+.profile-pic-button {
+  background-color:var(--blue);
+  color: white;
+  padding: 0.6rem;
+  font-family: sans-serif;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  height: 1.1rem;
+  margin: 0 0 0 2rem;
+}
+/* Right section div 1 */
+.right-section-div-1 {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 25px;
+}
+.right-section-div-1 span:nth-child(1) {
+   display: flex;
+   align-items: center;
+}
+
+.right-section-div-2 {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 25px;
+}

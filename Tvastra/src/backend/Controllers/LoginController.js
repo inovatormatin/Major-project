@@ -1,11 +1,10 @@
-const express = require("express");
 const User = require("../Databases/Mongo");
 const bcrypt = require("bcryptjs")
 const passport = require("passport")
-const session = require('express-session')
 
 const signup = (req,res) =>{
-    const { name,email,password,password2,gender,mobile,date} = req.body;
+    const { name,email,password,password2,gender,mobile,date,city,state,country} = req.body;
+    console.log(name,email,password,password2,gender,mobile,date,city,country);
     const loweremail=email.toLowerCase();
     let errors = [];
     // Check Required Fields
@@ -20,13 +19,17 @@ const signup = (req,res) =>{
     if(password!= password2) {
         errors.push({ msg:'Password do not match'})
     }
+    // Check password length 
     if(errors.length>0){
         res.render('signup',{
             errors,
             name,
             email,
             password,
-            mobile
+            mobile,
+            city,
+            state,
+            country
         })
     }
 
@@ -44,10 +47,14 @@ const signup = (req,res) =>{
                     name,
                     email,
                     password,
-                    mobile
+                    mobile,
+                    city,
+                    state,
+                    country
                 });
             }
             else {
+                // create User 
                 const newUser = new User({
                     name,
                     email:loweremail,
@@ -55,6 +62,9 @@ const signup = (req,res) =>{
                     date,
                     gender,
                     mobile,
+                    city,
+                    state,
+                    country
                 });
                 // Hashing Passwords
                 bcrypt.genSalt(10,(err,salt)=>
@@ -79,8 +89,11 @@ const signup = (req,res) =>{
 // Signin 
  const signin = (req,res,next) =>{
     passport.authenticate('local',{
+        // Authentication Passed 
         successRedirect:'/',
+        // Authentication Failed
         failureRedirect:'/signin.html',
+        // Authentication Failed Message
         failureFlash:true
     })(req,res,next);
  };

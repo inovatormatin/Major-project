@@ -25,7 +25,7 @@
             <label class="font-bold" for="appointment-date">Select Appointment Date*</label>
             <input type="date" id="appointment-date">
             <div class="time-interval-div">
-                <label class="font-bold" for="time-interval-class">Time Interval*</label><br>
+                <label class="font-bold" for="Time-Interval">Time Interval*</label><br>
                 <input type="radio" name="Time-Interval" class="time-interval-class" id="morning" value="Morning">
                 <label for="morning">Morning</label><br>
                 <input type="radio" name="Time-Interval" class="time-interval-class" id="afternoon" value="Afternoon">
@@ -34,20 +34,22 @@
                 <label for="evening">Evening</label><br>
             </div>
             <div class="time-interval-div">
-                <label class="font-bold" for="time-interval-class">Appointment Status / Urgency*</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="routine" value="routine Check-Up">
+                <label class="font-bold" for="routine">Appointment Status / Urgency*</label><br>
+                <input type="radio" name="Appointment Status" class="time-interval-class" id="routine" value="routine Check-Up">
                 <label for="routine">Routine Check-Up</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check-up">
+                <input type="radio" name="Appointment Status" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check-up">
                 <label for="non-urgent-checkup">Non Urgent Check-Up</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="urgent-checkup" value="Urgent Check Up">
+                <input type="radio" name="Appointment Status" class="time-interval-class" id="urgent-checkup" value="Urgent Check Up">
                 <label for="urgent-checkup">Urgent Check-Up</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="surgical-appointment" value="Surgical Appointment">
+                <input type="radio" name="Appointment Status" class="time-interval-class" id="surgical-appointment" value="Surgical Appointment">
                 <label for="surgical-appointment">Surgical Appointment</label><br>
             </div>
             <h3>Upload Previous Health Record</h3>
-            <input type="button" class="file-button" id="file-button" value="Choose file">
-            <label for="file-button"> No File chosen</label>
+            <input type="file" class="file-button" id="file-button">
             <h3>Appointment Details</h3>
+            <div class="">
+
+            </div>
             <textarea name="" id="" cols="30" rows="5"></textarea>
             <button>BOOK APPOINTMENT</button>
         </form>

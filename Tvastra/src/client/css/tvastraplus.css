@@ -551,11 +551,15 @@ meter::-webkit-meter-optimum-value {
     color:var(--blue);
     cursor: pointer;
     width:100%;
-    border: none;
+    border-top:none;
+    border-bottom: 1px dashed var(--gray);
+    border-left: none;
+    border-right: none;
     text-align: left;
-    padding: 10px 0px;
+    padding: 15px 0px;
     font-size: 1rem;
     outline: none;
+    border-radius: 0;
 }
 
 .doctor-other-text .content {

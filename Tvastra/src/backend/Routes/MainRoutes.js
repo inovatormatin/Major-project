@@ -21,6 +21,9 @@ router.route("/bookappointment.html").get(ensureAuth.ensureAuth,maincontroller.a
 router.route("/submitquery.html").get(maincontroller.submitquery);
 router.route("/FAQs.html").get(maincontroller.faq);
 router.route("/logout").get(LoginController.logout);
+router.route("/profile.html").get(ensureAuth.ensureAuth,maincontroller.profile);
+router.route("/userappointment.html").get(ensureAuth.ensureAuth,maincontroller.userappointment);
+router.route("/setting.html").get(ensureAuth.ensureAuth,maincontroller.setting);
 
 // post routes
 router.route("/signin.html").post(LoginController.signin);

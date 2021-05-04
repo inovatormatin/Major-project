@@ -43,3 +43,6 @@ const showpass = () =>{
     pass.type = 'password';
   }
 }
+
+
+const myname = "MynameisMohit";

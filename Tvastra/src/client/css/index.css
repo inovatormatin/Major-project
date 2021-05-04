@@ -533,6 +533,7 @@ border-radius: 5px;
 /* Footer starts */
 .footer {
   padding: 30px 0px;
+  background-color: white;
 }
 .footer .container {
   position: relative;

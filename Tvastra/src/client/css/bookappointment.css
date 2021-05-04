@@ -39,13 +39,14 @@ form {
 }
 
 form .file-button {
-    padding: 5px;
+    padding: 0;
     width: fit-content;
+    border: none;
 }
 
 form textarea {
     margin: 10px 0px;
-    width: 100%;
+    max-width: 608px;
     box-sizing: border-box;
     overflow: hidden;
 }
