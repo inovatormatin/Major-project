@@ -6,7 +6,7 @@
         res.redirect('/signin.html')
     }
 
-    function
+    
 
 module.exports = {
         ensureAuth:ensureAuth,
