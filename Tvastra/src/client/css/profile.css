@@ -76,7 +76,6 @@ input {
   font-family: sans-serif;
   border-radius: 0.2rem;
   cursor: pointer;
-  height: 1.1rem;
   margin: 0 0 0 2rem;
 }
 /* Right section div 1 */
@@ -96,4 +95,36 @@ input {
     display: grid;
     grid-template-columns: 40% auto;
     grid-gap: 25px;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .profile-sec-1 {
+        grid-template-columns: 30% auto;
+    }
+    .profile-pic-button {
+        font-size: .8rem;
+    }
+   .right-section-div-1,.right-section-div-2 {
+       grid-template-columns: 50% auto;
+       justify-content: center;
+   }
+   input {
+    width: 12rem;
+   }
+}
+@media only screen and (max-width:767px) {
+    .left-section {
+        display: none;
+    }
+    .profile-sec-1 {
+        grid-template-columns: 1fr;
+        grid-template-areas: "right";
+    }
+    .right-section-div-1,.right-section-div-2 {
+        grid-template-columns: 1fr;
+    }
+    input {
+        width: 100%;
+    }
+    
 }

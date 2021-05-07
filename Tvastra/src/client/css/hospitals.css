@@ -267,7 +267,7 @@
         height: 24rem;
     }
     .hos-info h6 {
-        width: auto;
+        width: 100%;
     }
     .hos-info-button {
         display: flex;
