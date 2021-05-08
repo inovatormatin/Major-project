@@ -3,11 +3,8 @@
             return next();
         }
         req.flash('error_msg','Please login to view this resource');
-        res.redirect('/signin.html')
+        res.redirect('SignIn')
     }
-
-    
-
 module.exports = {
         ensureAuth:ensureAuth,
 }

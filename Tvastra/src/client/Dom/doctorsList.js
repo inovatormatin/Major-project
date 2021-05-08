@@ -163,7 +163,7 @@ let Doc0inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>DLF Cyber City</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>8 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc0 image"></div>
         </div>`;
         // <!-- doctor 2 -->
@@ -178,7 +178,7 @@ let Doc1inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Dwarka</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>5 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc1 image"></div>
         </div>`;
         // <!-- doctor 3 -->
@@ -193,7 +193,7 @@ let Doc2inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Lajpat Nagar</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>5 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc2 image"></div>
         </div>`;
         // <!-- doctor 4 -->
@@ -208,7 +208,7 @@ let Doc3inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Palam Vihar</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>10 Years of Experience</h6></div> 
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc3 image"></div>
         </div>`;
         // <!-- doctor 5 -->
@@ -223,7 +223,7 @@ let Doc4inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Punjabi Baag</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>15 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc4 image"></div>
         </div>`;
         // <!-- doctor 6 -->
@@ -238,7 +238,7 @@ let Doc5inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>DLF Cyber City</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>10 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc5 image"></div>
         </div>`;
         // <!-- doctor 7 -->
@@ -253,7 +253,7 @@ let Doc6inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Dwarka</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>15 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc6 image"></div>
         </div>`;
         // <!-- doctor 8 -->
@@ -268,7 +268,7 @@ let Doc7inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Lajpat Nagar</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>25 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc7 image"></div>
         </div>`;
         // <!-- doctor 9 -->
@@ -283,7 +283,7 @@ let Doc8inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Palam Vihar</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>20 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc8 image"></div>
         </div>`;
         // <!-- doctor 10 -->
@@ -298,7 +298,7 @@ let Doc9inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Punjabi Baag</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>20 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc9 image"></div>
         </div>`;
         // <!-- doctor 11 -->
@@ -313,7 +313,7 @@ let Doc10inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Palam Vihar</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>25 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc10 image"></div>
         </div>`;
         // <!-- doctor 12 -->
@@ -328,7 +328,7 @@ let Doc11inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>Dwarka</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>30 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc11 image"></div>
         </div>`;
         // <!-- doctor 13 -->
@@ -343,7 +343,7 @@ let Doc12inner =
                 <div><i class='fas fa-map-marker-alt'></i>  <h6>DLF Cyber City</h6></div>
                 <div><i class='fas fa-clock'></i>  <h6>30 Years of Experience</h6></div>
             </div>
-            <div class="doc-info-button"><a href="bookappointment.html"><button>Book an Appointment</button></a></div>
+            <div class="doc-info-button"><a href="Book_Appointment"><button>Book an Appointment</button></a></div>
             <div class="doc12 image"></div>
         </div>`;
 let DocTags = [Doc1,Doc2,Doc3,Doc4,Doc5,Doc6,Doc7,Doc8,Doc9,Doc10,Doc11,Doc12,Doc13];

@@ -69,55 +69,55 @@ function searchValue() {
 	makeInputInLowerCase();
 	switch(S_input.value) {
 		case Doctor[0]:
-			window.location.href = './doctors.html';
+			window.location.href = 'Doctors';
 		break;
 		case Doctor[1]:
-			window.location.href = './doctors.html';
+			window.location.href = 'Doctors';
 		break;
 		case Doctor[2]:
-			window.location.href = './doctors.html';
+			window.location.href = 'Doctors';
 		break;
 		case Doctor[3]:
-			window.location.href = './doctors.html';
+			window.location.href = 'Doctors';
 		break;
 		case Doctor[4]:
-			window.location.href = './doctors.html';
+			window.location.href = 'Doctors';
 		break;
 		case Treatment[0]:
-			window.location.href = './treatment.html';
+			window.location.href = 'Treatment';
 		break;
 		case Treatment[1]:
-			window.location.href = './treatment.html';
+			window.location.href = 'Treatment';
 		break;
 		case Treatment[2]:
-			window.location.href = './treatment.html';
+			window.location.href = 'Treatment';
 		break;
 		case Treatment[3]:
-			window.location.href = './treatment.html';
+			window.location.href = 'Treatment';
 		break;
 		case Hospital[0]:
-			window.location.href = './hospitals.html';
+			window.location.href = 'Hospitals';
 		break;
 		case Hospital[1]:
-			window.location.href = './hospitals.html';
+			window.location.href = 'Hospitals';
 		break;
 		case Hospital[2]:
-			window.location.href = './hospitals.html';
+			window.location.href = 'Hospitals';
 		break;
 		case Hospital[3]:
-			window.location.href = './hospitals.html';
+			window.location.href = 'Hospitals';
 		break;
 		case Others[0]:
 			window.location.href = './tvastraplus.html';
 		break;
 		case Others[1]:
-			window.location.href = './doctors.html';
+			window.location.href = 'Doctors';
 		break;
 		case Others[2]:
-			window.location.href = './hospitals.html';
+			window.location.href = 'Hospitals';
 		break;
 		case Others[3]:
-			window.location.href = './treatment.html';
+			window.location.href = 'Treatment';
 		break;
 		default:
 		    alert("Not found");
