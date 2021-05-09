@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/Doctordetails.css">
     <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
-    <title>Tvastra | Dr. John Nission</title>
+    <title>Tvastra | Doctor Info</title>
 </head>
 <body>
 
@@ -17,9 +17,12 @@
 <%- include("./partials/header")  %>
 <!-- header -->  
 
+<!-- creating path  -->
+<% let path = './partials/Alldoctors/'; %>
+<% path = path.concat(doctorname) %>
 
-         
-<%- include("./partials/Alldoctors/dukesanson") %>
+<!-- including main data -->
+<%- include(path) %>
 
 <section class="need-help"><!-- Need Help Section starts here -->
     <div class="need-help-inner container"><!--Need Help Container-->

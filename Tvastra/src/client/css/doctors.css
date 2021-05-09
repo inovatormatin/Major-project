@@ -172,11 +172,17 @@
 .doc-info-button {
     grid-area: button;
     padding: 20px 30px;
+    width: auto;
+    display: flex;
+}
+.doc-info-button form {
+    width: fit-content;
 }
 .doc-info-button button {
     background-color: var(--darkblue);
     color: white;
-    padding: 15px 30px;
+    padding: 12px 15px;
+    margin-right: 1rem;
 }
 .section-2-doc-div .image {
     grid-area: image;
@@ -239,6 +245,9 @@
 }
 
 @media only screen and (max-width:767px) {
+    .section-2-heading h4 {
+        font-size: 1rem;
+    }
     .doc-section-2 {
         grid-template-columns: 100%;
         grid-gap: 0px;
@@ -260,9 +269,15 @@
     }
     .doc-info-button {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .doc-info-button button {
+        margin: .3rem 0;
+        width: 165px;
     }
     .doc-info div{
         width: 100%;
     }
+    
 }

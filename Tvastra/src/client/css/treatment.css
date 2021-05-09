@@ -1,6 +1,6 @@
 .treatment-section-1 {
     height: 20rem;
-    background-image:linear-gradient(to left, rgba(0,0,0,0),var(--blue)), url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg);
+    
     background-size: cover;
     background-position: top; 
     display: flex;
@@ -31,7 +31,6 @@
 .section-2-main-image {
     grid-area: image;
     height: 18rem;
-    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -87,7 +86,7 @@
     height: 2px;
     background-color: var(--blue);
     left: 0;
-    top: 30px;
+    top: 31px;
 }
 .side-1,.side-2 {
     position: relative;
@@ -164,11 +163,12 @@
 .services-img hr {
     position: absolute;
     width: 18px;
-    height: 1px;
+    height: 2px;
     background-color: var(--blue);
     z-index: 10;
     left: 0;
-    bottom: 34px;
+    bottom: 36px;
+    border: 1px solid var(--bgblue);
 }
 .services-img h3 {
    box-sizing: border-box;
@@ -181,53 +181,12 @@
    border-bottom-left-radius: 10px ;
    border-bottom-right-radius: 10px;
 }
-.img-1 {
+.services-img {
     background-position: center;
     background-size: cover;
     transition: ease 1s;
-    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg);
 }
-.img-2 {
-    background-position: center;
-    background-size: cover;
-    transition: ease 0.5s;
-    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg);
-}
-.img-3 {
-    background-position: center;
-    background-size: cover;
-    transition: ease 0.5s;
-    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg);
-}
-.img-4 {
-    background-position: center;
-    background-size: cover;
-    transition: ease 0.5s;
-    background-image: url(https://www.dicardiology.com/sites/default/files/field/image/DoctorHeartFailurePatientfromCorAssist.jpg);
-}
-.img-5 {
-    background-position: center;
-    background-size: cover;
-    transition: ease 0.5s;
-    background-image: url(https://www.gannett-cdn.com/presto/2020/03/12/USAT/fb2c3e78-179e-4701-a0bb-6c314c50d19e-HEADER-GettyImages-903115066.jpg?width=660&height=441&fit=crop&format=pjpg&auto=webp);
-}
-.img-1:hover {
-    box-shadow: 10px 10px 50px gray;
-    transition: ease 0.5s;
-}
-.img-2:hover {
-    box-shadow: 10px 10px 50px gray;
-    transition: ease 0.5s;
-}
-.img-3:hover {
-    box-shadow: 10px 10px 50px gray;
-    transition: ease 0.5s;
-}
-.img-4:hover {
-    box-shadow: 10px 10px 50px gray;
-    transition: ease 0.5s;
-}
-.img-5:hover {
+.services-img:hover {
     box-shadow: 10px 10px 50px gray;
     transition: ease 0.5s;
 }

@@ -14,6 +14,9 @@ function doctors (req,res) {
         user:req.user||'hello'
     })
 }
+function doctor_details (req,res) {
+    res.render("doctor_details")
+}
 function hospitals (req,res) {
     res.render("hospitals",{
         user:req.user||'hello'
@@ -24,21 +27,44 @@ function hospital_details (req,res) {
         user:req.user||'hello'
     })
 }
-function doctor_details (req,res) {
-    res.render("doctor_details",{
-        user:req.user||'hello'
-    })
-}
-function treatment (req,res) {
-    res.render("treatment",{
-        user:req.user||'hello'
-    })
-}
+
 function contact (req,res) {
     res.render("contactus",{
         user:req.user||'hello'
     })
 }
+// Treatment Page Rendering 
+function dentistry (req,res) {
+    res.render("dentistry",{
+        user:req.user||'hello'
+    })
+}
+function cancer (req,res) {
+    res.render("cancer",{
+        user:req.user||'hello'
+    })
+}
+function orthopedic (req,res) {
+    res.render("orthopedic",{
+        user:req.user||'hello'
+    })
+}
+function cardiology (req,res) {
+    res.render("cardiology",{
+        user:req.user||'hello'
+    })
+}
+function heart (req,res) {
+    res.render("heart",{
+        user:req.user||'hello'
+    })
+}
+function liver (req,res) {
+    res.render("liver",{
+        user:req.user||'hello'
+    })
+}
+// Tvastra Plus Page render
 function tvastraplus (req,res) {
     res.render("tvastraplus",{
         user:req.user||'hello'
@@ -56,7 +82,7 @@ function faq (req,res) {
 }
 function appointment (req,res) {
     res.render("bookappointment",{
-        user:req.user||'hello'
+        user:req.user||'hello'     
     })
 }
 function aboutus (req,res) {
@@ -73,7 +99,8 @@ function userappointment (req,res) {
     res.render('userappointment',{
         user:req.user ||'hello'
     })
-}function setting (req,res) {
+}
+function setting (req,res) {
     res.render('setting',{
         user:req.user ||'hello'
     })
@@ -87,7 +114,12 @@ module.exports = {
     submitquery:submitquery,
     tvastraplus:tvastraplus,
     contact:contact,
-    treatment:treatment,
+    dentistry:dentistry,
+    cancer:cancer,
+    orthopedic:orthopedic,
+    liver:liver,
+    cardiology:cardiology,
+    heart:heart,
     doctor_details:doctor_details,
     hospital_details:hospital_details,
     hospitals:hospitals,

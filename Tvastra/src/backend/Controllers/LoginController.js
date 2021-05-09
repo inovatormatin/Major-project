@@ -76,7 +76,7 @@ const signup = (req,res) =>{
                         newUser.save()
                         .then(user =>{
                             req.flash('success_msg','You are now registered, Please login!!');
-                            res.redirect('/signin.html')
+                            res.redirect('SignIn')
                         })
                         .catch(err=> console.log(err))
                 }))
@@ -92,7 +92,7 @@ const signup = (req,res) =>{
         // Authentication Passed 
         successRedirect:'/',
         // Authentication Failed
-        failureRedirect:'/signin.html',
+        failureRedirect:'SignIn',
         // Authentication Failed Message
         failureFlash:true
     })(req,res,next);
@@ -103,7 +103,7 @@ const signup = (req,res) =>{
 const logout = (req,res)=>{
     req.logout();
     req.flash('success_msg','You are logged out');
-    res.redirect('/signin.html');
+    res.redirect('SignIn');
 };
 
 

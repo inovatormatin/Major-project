@@ -33,6 +33,17 @@
     top: 40px;
 }
 
+.doc-info-button form {
+    width: 100%;
+}
+.doc-info-button button {
+    background-color: var(--darkblue);
+    color: white;
+    padding: 12px 15px;
+    margin-right: 1rem;
+    width: 100%;
+}
+
 .doc-detail-sec-2-text ul {
     display: grid;
     grid-template-columns: 60% auto;

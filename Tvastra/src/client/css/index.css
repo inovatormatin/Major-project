@@ -26,6 +26,17 @@ justify-content: space-between;
 .nav-links a {
   margin: 0px 0.5rem;
 }
+.nav-links i {
+  font-size: .8rem;
+  color: var(--gray);
+  margin-left: 4px;
+  transition: 1.5s;
+}
+.nav-links a:hover i {
+  color: var(--blue);
+  transition: 1s;
+  transform: rotate(360deg);
+}
 .nav-links a:hover {
   color: var(--blue);
 }
@@ -35,7 +46,14 @@ justify-content: space-between;
 nav .dropdown {
   display: none;
 }
-
+.nav-login-button {
+  transition: 1s;
+}
+.nav-login-button:hover {
+  transition: 1s;
+  background-image:linear-gradient(to left,rgba(0, 0, 0, 0.2),var(--darkblue));
+  color: white;
+}
 .user-button {
   background-color: var(--darkblue);
   color: white;
@@ -46,12 +64,12 @@ nav .dropdown {
   position: relative;
 }
 .logout-button {
-  transition: 100ms;
+  transition: 1s;
 }
 .logout-button:hover {
-  transition: ease-in-out 100ms;
+  transition: 1s;
+  background-image:linear-gradient(to left,rgba(0, 0, 0, 0.2),var(--darkblue));
   color: white;
-  background-color: var(--darkblue);
 }
 /* User dropdown navbar */
 
