@@ -1,41 +1,41 @@
 // Search suggestion from Homepage start here
 var SearchSuggestion = [
 	// Hospitals
-	"Hospitals",
-	"Apollo Hospital",
-	"AIIMS",
-	"Akash Hospital",
-	"BLK Super",
-	"Elbit Hospital",
-	"Fortis",
-	"Manipal",
-	"North Star",
-	"Primus Super",
-	"Rockland",
+	"hospitals",
+	"apollo hospital",
+	"aiims",
+	"akash hospital",
+	"bLK super",
+	"elbit hospital",
+	"fortis",
+	"manipal",
+	"north star",
+	"primus super",
+	"rockland",
 	// Treatment
-	"Treatment",
-	"Cancer",
-	"Cardiology",
-	"Dentistry",
-	"Heart",
-	"Liver",
-	"Orthopedic",
+	"treatment",
+	"cancer",
+	"cardiology",
+	"dentistry",
+	"heart",
+	"liver",
+	"orthopedic",
 	// Doctors
-	"Doctors",
-	"Dr.Bironi White",
-	"Dr.Charlie Moon",
-	"Dr.Coni Star",
-	"Dr.Duke Sanson",
-	"Dr.Erin Neir",
-	"Dr.Georgia Peter",
-	"Dr.Jonny Eve",
-	"Dr.Symphony Lec",
-	"Dr.Steve Roc",
-	"Dr.Vrijuk Sent",
-	"Dr.Zacli Sent",
-	"Dr.Romeo",
-	"Dr.Rose Moon",
-	"Tvastra Plus"
+	"doctors",
+	"dr.bironi white",
+	"dr.charlie moon",
+	"dr.coni star",
+	"dr.duke sanson",
+	"dr.erin neir",
+	"dr.georgia peter",
+	"dr.jonny eve",
+	"dr.symphony lec",
+	"dr.steve roc",
+	"dr.vrijuk sent",
+	"dr.zacli sent",
+	"dr.romeo",
+	"dr.rose moon",
+	"tvastra plus"
 ];
 var x = 0;
 var ul = document.getElementById("suggestion_ul");
@@ -78,7 +78,7 @@ function printAll() {
 var Doctor = ["Dr.Bironi White","Dr.Charlie Moon","Dr.Coni Star","Dr.Duke Sanson","Dr.Erin Neir","Dr.Georgia Peter","Dr.Jonny Eve","Dr.Symphony Lec","Dr.Steve Roc","Dr.Vrijuk Sent","Dr.Zacli Sent","Dr.Romeo","Dr.Rose Moon",];
 var Treatment = ["Cancer","Cardiology","Dentistry","Heart","Liver","Orthopedic",];
 var Hospital = ["Apollo Hospital","AIIMS","Akash Hospital","BLK Super","Elbit Hospital","Fortis","Manipal","North Star","Primus Super","Rockland",];
-var Others = ["Tvastra Plus","Doctors","Hospitals","Treatment"];
+var Others = ["tvastra plus","Doctors","Hospitals","Treatment"];
 var S_input = document.getElementById("user_search_input");
 var S_button = document.getElementById("user_search_button");
 function makeInputInLowerCase() {
