@@ -58,7 +58,6 @@
 .hos-detail-image {
     position: relative;
     height: 18rem;
-    background-image: url( https://ahmedabad.apollohospitals.com/wp-content/uploads/2017/09/DSC_2331-864x607.jpg);
     background-position: center;
     background-size: cover;
     border: 2px solid var(--gray);

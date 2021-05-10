@@ -134,7 +134,10 @@ let Hos0inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                    <a href="tel:123-456-7890"><button>Call Now</button></a>
+                    <a href="Apollo_Hospital"><button>Read More</button></a>
+                </div>
                 <div class="hos0 image"></div>
             </div>`;
         // <!-- Hospital 2 -->
@@ -156,7 +159,10 @@ let Hos1inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Fortis_Hospital"><button>Read More</button></a>
+                </div>
                 <div class="hos1 image"></div>
             </div>`;
         // <!-- Hospital 3 -->
@@ -178,7 +184,10 @@ let Hos2inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Rockland_Hospital"><button>Read More</button></a>
+            </div>
                 <div class="hos2 image"></div>
             </div>`;
         // <!-- Hospital 4 -->
@@ -200,7 +209,10 @@ let Hos3inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Primus_Super_Hospital"><button>Read More</button></a>
+            </div>
                 <div class="hos3 image"></div>
             </div>`;
         // <!-- Hospital 5 -->
@@ -222,7 +234,10 @@ let Hos4inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Manipal_Hospital"><button>Read More</button></a>
+            </div>
                 <div class="hos4 image"></div>
             </div>`;
         // <!-- Hospital 6 -->
@@ -244,7 +259,10 @@ let Hos5inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Northstar_Hospital"><button>Read More</button></a>
+            </div>
                 <div class="hos5 image"></div>
             </div>`;
         // <!--Hospital 7 -->
@@ -266,7 +284,10 @@ let Hos6inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="AIIMS"><button>Read More</button></a>
+            </div>
                 <div class="hos6 image"></div>
             </div>`;
         // <!-- Hospital 8 -->
@@ -288,7 +309,10 @@ let Hos7inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Elbit_Hospital"><button>Read More</button></a>
+            </div>
                 <div class="hos7 image"></div>
             </div>`;
         // <!-- Hospital 9 -->
@@ -310,7 +334,10 @@ let Hos8inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                <a href="tel:123-456-7890"><button>Call Now</button></a>
+                <a href="Akash_Hospital"><button>Read More</button></a>
+            </div>
                 <div class="hos8 image"></div>
             </div>`;
         // <!-- Hospital 10 -->
@@ -332,7 +359,10 @@ let Hos9inner =
                         </div>
                     </div>
                 </div>
-                <div class="hos-info-button"><button>Call Now</button></div>
+                <div class="hos-info-button">
+                    <a href="tel:123-456-7890"><button>Call Now</button></a>
+                    <a href="BLK_Super_Hospital"><button>Read More</button></a>
+                </div>
                 <div class="hos9 image"></div>
             </div>`;
 let HosTags = [Hos1,Hos2,Hos3,Hos4,Hos5,Hos6,Hos7,Hos8,Hos9,Hos10];

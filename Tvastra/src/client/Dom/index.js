@@ -1,22 +1,41 @@
 // Search suggestion from Homepage start here
 var SearchSuggestion = [
-	"apollo hospital",
-	"cancer",
-	"cardiology",
-	"coni star",
-	"dentistry",
-	"doctors",
-	"duke Sanson",
-	"fortis",
-	"georgia peter",
-	"hospital",
-	"jackline star",
-	"orthopedic surgery",
-	"primus Super Speciality Hospital",
-	"rockland Hospital",
-	"rose moon",
-	"tvastra Plus",
-	"treatment"
+	// Hospitals
+	"Hospitals",
+	"Apollo Hospital",
+	"AIIMS",
+	"Akash Hospital",
+	"BLK Super",
+	"Elbit Hospital",
+	"Fortis",
+	"Manipal",
+	"North Star",
+	"Primus Super",
+	"Rockland",
+	// Treatment
+	"Treatment",
+	"Cancer",
+	"Cardiology",
+	"Dentistry",
+	"Heart",
+	"Liver",
+	"Orthopedic",
+	// Doctors
+	"Doctors",
+	"Dr.Bironi White",
+	"Dr.Charlie Moon",
+	"Dr.Coni Star",
+	"Dr.Duke Sanson",
+	"Dr.Erin Neir",
+	"Dr.Georgia Peter",
+	"Dr.Jonny Eve",
+	"Dr.Symphony Lec",
+	"Dr.Steve Roc",
+	"Dr.Vrijuk Sent",
+	"Dr.Zacli Sent",
+	"Dr.Romeo",
+	"Dr.Rose Moon",
+	"Tvastra Plus"
 ];
 var x = 0;
 var ul = document.getElementById("suggestion_ul");
@@ -56,10 +75,10 @@ function printAll() {
 // Search suggestion from Homepage ends here 
 
 // Search js from Homepage start here
-var Doctor = ["duke sanson","rose moon","coni star","georgia peter","jackline star"];
-var Treatment = ["dentistry","orthopedic surgery","cancer","cardiology"];
-var Hospital = ["apollo hospital","fortis","rockland hospital","primus super speciality hospital"];
-var Others = ["tvastra plus","doctors","hospital","treatment"];
+var Doctor = ["Dr.Bironi White","Dr.Charlie Moon","Dr.Coni Star","Dr.Duke Sanson","Dr.Erin Neir","Dr.Georgia Peter","Dr.Jonny Eve","Dr.Symphony Lec","Dr.Steve Roc","Dr.Vrijuk Sent","Dr.Zacli Sent","Dr.Romeo","Dr.Rose Moon",];
+var Treatment = ["Cancer","Cardiology","Dentistry","Heart","Liver","Orthopedic",];
+var Hospital = ["Apollo Hospital","AIIMS","Akash Hospital","BLK Super","Elbit Hospital","Fortis","Manipal","North Star","Primus Super","Rockland",];
+var Others = ["Tvastra Plus","Doctors","Hospitals","Treatment"];
 var S_input = document.getElementById("user_search_input");
 var S_button = document.getElementById("user_search_button");
 function makeInputInLowerCase() {
@@ -69,46 +88,94 @@ function searchValue() {
 	makeInputInLowerCase();
 	switch(S_input.value) {
 		case Doctor[0]:
-			window.location.href = 'Doctors';
+			window.location.href = 'Bironi_White';
 		break;
 		case Doctor[1]:
-			window.location.href = 'Doctors';
+			window.location.href = 'Charlie_Moon';
 		break;
 		case Doctor[2]:
-			window.location.href = 'Doctors';
+			window.location.href = 'Coni_Star';
 		break;
 		case Doctor[3]:
-			window.location.href = 'Doctors';
+			window.location.href = 'Duke_Sanson';
 		break;
 		case Doctor[4]:
-			window.location.href = 'Doctors';
+			window.location.href = 'Erin_Neir';
+		break;
+		case Doctor[5]:
+			window.location.href = 'Georgia_Peter';
+		break;
+		case Doctor[6]:
+			window.location.href = 'Jonny_Eve';
+		break;
+		case Doctor[7]:
+			window.location.href = 'Symphony_Lec';
+		break;
+		case Doctor[8]:
+			window.location.href = 'Steve_Roc';
+		break;
+		case Doctor[9]:
+			window.location.href = 'Vrijuk_Sent';
+		break;
+		case Doctor[10]:
+			window.location.href = 'Zacli_Sent';
+		break;
+		case Doctor[11]:
+			window.location.href = 'Romeo';
+		break;
+		case Doctor[12]:
+			window.location.href = 'Rose_Moon';
 		break;
 		case Treatment[0]:
-			window.location.href = 'Treatment';
+			window.location.href = 'Cancer';
 		break;
 		case Treatment[1]:
-			window.location.href = 'Treatment';
+			window.location.href = 'Cardiology';
 		break;
 		case Treatment[2]:
-			window.location.href = 'Treatment';
+			window.location.href = 'Dentistry';
 		break;
 		case Treatment[3]:
-			window.location.href = 'Treatment';
+			window.location.href = 'Heart';
+		break;
+		case Treatment[4]:
+			window.location.href = 'Liver';
+		break;
+		case Treatment[5]:
+			window.location.href = 'Orhtopedic';
 		break;
 		case Hospital[0]:
-			window.location.href = 'Hospitals';
+			window.location.href = 'Apollo_Hospital';
 		break;
 		case Hospital[1]:
-			window.location.href = 'Hospitals';
+			window.location.href = 'AIIMS';
 		break;
 		case Hospital[2]:
-			window.location.href = 'Hospitals';
+			window.location.href = 'Akash_Hospital';
 		break;
 		case Hospital[3]:
-			window.location.href = 'Hospitals';
+			window.location.href = 'BLK_Super_Hospital';
+		break;
+		case Hospital[4]:
+			window.location.href = 'Elbit_Hospital';
+		break;
+		case Hospital[5]:
+			window.location.href = 'Fortis_Hospital';
+		break;
+		case Hospital[6]:
+			window.location.href = 'Manipal_Hospital';
+		break;
+		case Hospital[7]:
+			window.location.href = 'Rockland_Hospital';
+		break;
+		case Hospital[8]:
+			window.location.href = 'Northstar_Hospital';
+		break;
+		case Hospital[9]:
+			window.location.href = 'Primus_Super_Hospital';
 		break;
 		case Others[0]:
-			window.location.href = './tvastraplus.html';
+			window.location.href = 'Tvastra_Plus';
 		break;
 		case Others[1]:
 			window.location.href = 'Doctors';
@@ -117,7 +184,7 @@ function searchValue() {
 			window.location.href = 'Hospitals';
 		break;
 		case Others[3]:
-			window.location.href = 'Treatment';
+			window.location.href = 'Dentistry';
 		break;
 		default:
 		    alert("Not found");

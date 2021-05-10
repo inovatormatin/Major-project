@@ -9,30 +9,141 @@ function home (req,res) {
         user:req.user||'hello'
     });
 }
-function doctors (req,res) {
-    res.render("doctors",{
-        user:req.user||'hello'
-    })
-}
-function doctor_details (req,res) {
-    res.render("doctor_details")
-}
-function hospitals (req,res) {
-    res.render("hospitals",{
-        user:req.user||'hello'
-    })
-}
-function hospital_details (req,res) {
-    res.render("hospital_details",{
-        user:req.user||'hello'
-    })
-}
-
 function contact (req,res) {
     res.render("contactus",{
         user:req.user||'hello'
     })
 }
+// All Doctors Information--------------------------------------
+function doctors (req,res) {
+    res.render("doctors",{
+        user:req.user||'hello'
+    })
+}
+
+function dukesanson (req,res){
+    res.render('doctors/dukesanson',{
+        user:req.user||'hello'
+    })
+}
+function bironiwhite (req,res){
+    res.render('doctors/bironiwhite',{
+        user:req.user||'hello'
+    })
+}
+function charliemoon (req,res){
+    res.render('doctors/charliemoon',{
+        user:req.user||'hello'
+    })
+}
+function conistar (req,res){
+    res.render('doctors/conistar',{
+        user:req.user||'hello'
+    })
+}
+function erinnier (req,res){
+    res.render('doctors/erinnier',{
+        user:req.user||'hello'
+    })
+}
+function georgia (req,res){
+    res.render('doctors/georgiapeter',{
+        user:req.user||'hello'
+    })
+}
+function jonnyeve (req,res){
+    res.render('doctors/jonnyeve',{
+        user:req.user||'hello'
+    })
+}
+function romeo (req,res){
+    res.render('doctors/romeo',{
+        user:req.user||'hello'
+    })
+}
+function rosemoon (req,res){
+    res.render('doctors/rosemoon',{
+        user:req.user||'hello'
+    })
+}
+function steveroc (req,res){
+    res.render('doctors/steveroc',{
+        user:req.user||'hello'
+    })
+}
+function symphony (req,res){
+    res.render('doctors/symphonylec',{
+        user:req.user||'hello'
+    })
+}
+function vrijuksent (req,res){
+    res.render('doctors/vrijuksent',{
+        user:req.user||'hello'
+    })
+}
+function zaclisent (req,res){
+    res.render('doctors/zaclisent',{
+        user:req.user||'hello'
+    })
+}
+
+//  All Hospitals ---------------------------------------------------
+function hospitals (req,res) {
+    res.render("hospitals",{
+        user:req.user||'hello'
+    })
+}
+function aiims (req,res) {
+    res.render("hospitals/aiims",{
+        user:req.user||'hello'
+    })
+}
+function akash (req,res) {
+    res.render("hospitals/akash",{
+        user:req.user||'hello'
+    })
+}
+function apollo (req,res) {
+    res.render("hospitals/apollo",{
+        user:req.user||'hello'
+    })
+}
+function blksuper (req,res) {
+    res.render("hospitals/blksuper",{
+        user:req.user||'hello'
+    })
+}
+function elbit (req,res) {
+    res.render("hospitals/elbit",{
+        user:req.user||'hello'
+    })
+}
+function fortis (req,res) {
+    res.render("hospitals/fortis",{
+        user:req.user||'hello'
+    })
+}
+function manipal (req,res) {
+    res.render("hospitals/manipal",{
+        user:req.user||'hello'
+    })
+}
+function northstar (req,res) {
+    res.render("hospitals/northstar",{
+        user:req.user||'hello'
+    })
+}
+function primussuper (req,res) {
+    res.render("hospitals/primussuper",{
+        user:req.user||'hello'
+    })
+}
+function rockland (req,res) {
+    res.render("hospitals/rockland",{
+        user:req.user||'hello'
+    })
+}
+
 // Treatment Page Rendering 
 function dentistry (req,res) {
     res.render("dentistry",{
@@ -64,6 +175,8 @@ function liver (req,res) {
         user:req.user||'hello'
     })
 }
+// 
+
 // Tvastra Plus Page render
 function tvastraplus (req,res) {
     res.render("tvastraplus",{
@@ -114,18 +227,43 @@ module.exports = {
     submitquery:submitquery,
     tvastraplus:tvastraplus,
     contact:contact,
-    dentistry:dentistry,
-    cancer:cancer,
-    orthopedic:orthopedic,
-    liver:liver,
-    cardiology:cardiology,
-    heart:heart,
-    doctor_details:doctor_details,
-    hospital_details:hospital_details,
     hospitals:hospitals,
     doctors:doctors,
     aboutus:aboutus,
     profile:profile,
     userappointment:userappointment,
     setting:setting,
+    // Treatments  == 
+    dentistry:dentistry,
+    cancer:cancer,
+    orthopedic:orthopedic,
+    liver:liver,
+    cardiology:cardiology,
+    heart:heart,
+    // DoctorsInformation == 
+    dukesanson:dukesanson,
+    vrijuksent:vrijuksent,
+    bironiwhite:bironiwhite,
+    charliemoon:charliemoon,
+    conistar:conistar,
+    erinnier:erinnier,
+    georgia:georgia,
+    jonnyeve:jonnyeve,
+    romeo:romeo,
+    rosemoon:rosemoon,
+    steveroc:steveroc,
+    symphony:symphony,
+    zaclisent:zaclisent,
+    // HospitalsInformation ==
+    apollo:apollo,
+    primussuper:primussuper,
+    aiims:aiims,
+    akash:akash,
+    blksuper:blksuper,
+    elbit:elbit,
+    fortis:fortis,
+    manipal:manipal,
+    rockland:rockland,
+    northstar:northstar,
+    
 }

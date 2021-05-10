@@ -1,6 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/Doctordetails.css">
+    <link rel="icon" type="image/x-icon" href="../../images/weblogo.png">
+    <title>Tvastra | Doctor Info</title>
+</head>
+<body>
+
+<!-- header -->
+<%- include("../partials/header")  %>
+<!-- header -->  
+
+
+
 <section class="doc-detail-sec-1"> <!--Section 1 starts -->
     <div class="container">
-        <h1>About Steve Roc</h1>
+        <h1>About Jonny Eve</h1>
         <p>Home / Doctor Profile</p>  
      </div>
 </section><!--section 1 ends-->
@@ -8,7 +29,7 @@
 <section class="doc-detail-sec-2 container"><!--section 2 starts here-->
     <div class="doc-detail-sec-2-text">
         <hr>
-        <h2>Steve Roc</h2>
+        <h2>Jonny Eve</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam velit labore blanditiis totam libero, quae, inventore, aliquam soluta quasi repudiandae reprehenderit ipsam non ipsum neque aperiam delectus laborum officia suscipit nisi ut? Quas rerum minus hic, architecto est numquam doloremque quibusdam soluta, deleniti, quo ut autem mollitia dolor explicabo? Consequuntur.</p>
         <div class="doctor-other-text">
             <div class="heading-with-icon"><button class="dropdown-1"> <span><i class="fas-left fas fa-award"></i></span> Specialisation <span><i class="fas fa-chevron-circle-down"></i></span></button>
@@ -35,11 +56,32 @@
         </div>
     </div>
 <div class="doc-detail-sec-2-image">
-    <div class="doc-detail-image" style="background-image: url(https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop);"></div>
+    <div class="doc-detail-image" style="background-image: url(https://cerebralpalsynewstoday.com/wp-content/uploads/2017/06/shutterstock_52856165-921x480@2x.jpg);"></div>
     <div class="doc-info-button">
         <form action="Book_Appointment" method="POST">
-            <button type="submit" name="doctorname" value="Steve Roc">Book Appointment</button>
+            <button type="submit" name="doctorname" value="Jonny Eve">Book Appointment</button>
         </form>
     </div>
 </div>
 </section><!--Section 2 ends here-->
+
+<section class="need-help"><!-- Need Help Section starts here -->
+    <div class="need-help-inner container"><!--Need Help Container-->
+        <div class="need-help-text">
+            <h2>Need Help?</h2>
+            <p>Just let us know. We will be happy to assist you!</p>
+        </div>
+        <div class="need-help-button">
+            <a href="Submit_Query"><button>Submit your query</button></a>
+        </div>
+    </div>
+</section><!-- Need Help Section ends here -->
+
+<!-- footer  -->
+<%- include("../partials/footer")  %>
+<!-- footer -->
+
+</body>
+<script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+<script src="../../Dom/script.js"></script>
+</html>

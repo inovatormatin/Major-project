@@ -1,4 +1,3 @@
-
 const appointment = (req,res) =>{
     const {doctorname} = req.body;
     let user = req.user;
