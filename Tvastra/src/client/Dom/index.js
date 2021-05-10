@@ -35,7 +35,7 @@ var SearchSuggestion = [
 	"Dr.Zacli Sent",
 	"Dr.Romeo",
 	"Dr.Rose Moon",
-	"Tvastra Plus"
+	"tvastra plus"
 ];
 var x = 0;
 var ul = document.getElementById("suggestion_ul");
@@ -75,10 +75,10 @@ function printAll() {
 // Search suggestion from Homepage ends here 
 
 // Search js from Homepage start here
-var Doctor = ["Dr.Bironi White","Dr.Charlie Moon","Dr.Coni Star","Dr.Duke Sanson","Dr.Erin Neir","Dr.Georgia Peter","Dr.Jonny Eve","Dr.Symphony Lec","Dr.Steve Roc","Dr.Vrijuk Sent","Dr.Zacli Sent","Dr.Romeo","Dr.Rose Moon",];
-var Treatment = ["Cancer","Cardiology","Dentistry","Heart","Liver","Orthopedic",];
-var Hospital = ["Apollo Hospital","AIIMS","Akash Hospital","BLK Super","Elbit Hospital","Fortis","Manipal","North Star","Primus Super","Rockland",];
-var Others = ["Tvastra Plus","Doctors","Hospitals","Treatment"];
+var Doctor = ["dr.bironi white","dr.charlie moon","dr.coni star","dr.duke sanson","dr.erin neir","dr.georgia peter","dr.jonny eve","dr.symphony lec","dr.steve roc","dr.vrijuk sent","dr.zacli sent","dr.romeo","dr.rose moon",];
+var Treatment = ["cancer","cardiology","dentistry","heart","liver","orthopedic",];
+var Hospital = ["apollo hospital","aiims","akash hospital","blk super","elbit hospital","fortis","manipal","north star","primus super","rockland",];
+var Others = ["tvastra plus","doctors","hospitals","treatment"];
 var S_input = document.getElementById("user_search_input");
 var S_button = document.getElementById("user_search_button");
 function makeInputInLowerCase() {
