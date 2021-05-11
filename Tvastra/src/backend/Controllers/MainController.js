@@ -146,32 +146,32 @@ function rockland (req,res) {
 
 // Treatment Page Rendering 
 function dentistry (req,res) {
-    res.render("dentistry",{
+    res.render("treatments/dentistry",{
         user:req.user||'hello'
     })
 }
 function cancer (req,res) {
-    res.render("cancer",{
+    res.render("treatments/cancer",{
         user:req.user||'hello'
     })
 }
 function orthopedic (req,res) {
-    res.render("orthopedic",{
+    res.render("treatments/orthopedic",{
         user:req.user||'hello'
     })
 }
 function cardiology (req,res) {
-    res.render("cardiology",{
+    res.render("treatments/cardiology",{
         user:req.user||'hello'
     })
 }
 function heart (req,res) {
-    res.render("heart",{
+    res.render("treatments/heart",{
         user:req.user||'hello'
     })
 }
 function liver (req,res) {
-    res.render("liver",{
+    res.render("treatments/liver",{
         user:req.user||'hello'
     })
 }

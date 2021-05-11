@@ -22,19 +22,19 @@ var SearchSuggestion = [
 	"orthopedic",
 	// Doctors
 	"doctors",
-	"dr.bironi white",
-	"dr.charlie moon",
-	"dr.coni star",
-	"dr.duke sanson",
-	"dr.erin neir",
-	"dr.georgia peter",
-	"dr.jonny eve",
-	"dr.symphony lec",
-	"dr.steve roc",
-	"dr.vrijuk sent",
-	"dr.zacli sent",
-	"dr.romeo",
-	"dr.rose moon",
+	"bironi white",
+	"charlie moon",
+	"coni star",
+	"duke sanson",
+	"erin neir",
+	"georgia peter",
+	"jonny eve",
+	"symphony lec",
+	"steve roc",
+	"vrijuk sent",
+	"zacli sent",
+	"romeo",
+	"rose moon",
 	"tvastra plus"
 ];
 var x = 0;
@@ -75,7 +75,19 @@ function printAll() {
 // Search suggestion from Homepage ends here 
 
 // Search js from Homepage start here
-var Doctor = ["dr.bironi white","dr.charlie moon","dr.coni star","dr.duke sanson","dr.erin neir","dr.georgia peter","dr.jonny eve","dr.symphony lec","dr.steve roc","dr.vrijuk sent","dr.zacli sent","dr.romeo","dr.rose moon",];
+var Doctor = ["bironi white",
+       		  "charlie moon",
+       		  "coni star",
+       		  "duke sanson",
+       		  "erin neir",
+       		  "georgia peter",
+       		  "jonny eve",
+       		  "symphony lec",
+       		  "steve roc",
+       		  "vrijuk sent",
+       		  "zacli sent",
+       		  "romeo",
+       		  "rose moon",];
 var Treatment = ["cancer","cardiology","dentistry","heart","liver","orthopedic",];
 var Hospital = ["apollo hospital","aiims","akash hospital","blk super","elbit hospital","fortis","manipal","north star","primus super","rockland",];
 var Others = ["tvastra plus","doctors","hospitals","treatment"];
