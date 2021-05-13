@@ -60,8 +60,11 @@ input {
 /* right section */
 .right-section {
     grid-area: right;
+    position: relative;
 }
-
+#appointment-content,#medical-content,#setting-content {
+    display: none;
+}
 /* right section table 1  */
 .profile-pic {
     color: var(--blue);

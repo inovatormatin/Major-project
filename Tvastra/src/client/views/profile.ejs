@@ -19,13 +19,15 @@
   <div class="left-section">
     <h3>Dashboard</h3>
     <ul>
-        <li class="active"><i class="fas fa-user "></i> Profile</li>
-        <li><i class="fas fa-calendar-check"></i> My Appointments</li>
-        <li><i class="fas fa-clipboard"></i> Medical Records</li>
-        <li><i class="fas fa-user-cog"></i> Settings</li>
+        <li id="profile" class="active" onclick="showprofile()"><i class="fas fa-user "></i> Profile</li>
+        <li id="showappointment" onclick="showappointment()"><i class="fas fa-calendar-check"></i> My Appointments</li>
+        <li id="medicalrecords" onclick="medicalrecords()"><i class="fas fa-clipboard"></i> Medical Records</li>
+        <li id="settings" onclick="showsettings()"><i class="fas fa-user-cog"></i> Settings</li>
     </ul>
   </div>
-  <div class="right-section">
+    <div class="right-section">
+      <!-- Profile Content -->
+      <div id="profile-content">
         <h3>Account</h3>
         <div class="right-section-div-1">
           <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
@@ -34,54 +36,70 @@
           <span><label for="name">Name</label>
             <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
         </div> 
-          <hr>
+        <hr>
         <div class="right-section-div-2">
-          <span>
-            <label for="mobile">Mobile Number</label>
-            <input type="number" name="mobile" value=<%= user.mobile %> readonly>
-          </span>
-          <span>
-            <label for="email">Email</label>
-            <input type="email" name="email" value=<%= user.email %> readonly>
-          </span>             
-          <span>
-            <label for="gender">Gender</label>
-            <input type="text" name="gender" value=<%= user.gender %> readonly>
-          </span>
-              <!-- Changing date format for better understanding -->
-                   <% let newdate = new Date (user.date)
-                      newdate = newdate.toDateString()
-                      newdate = newdate.split(' ')
-                      newdate = newdate.splice(1); %>
-          <span>
-            <label for="date">Date Of Birth</label>
-            <input type="text" name="date" value="<%= newdate %>" readonly>
-          </span>
-          <span>
-            <label for="city">City</label>
-            <input type="text" name="city" value="<%= user.city %>" placeholder="No city selected" readonly>
-          </span>
-          <span>
-            <label for="state">State</label>
-            <input type="text" name="state" value="<%= user.state %>"  placeholder="No state selected" readonly>
-          </span>
-          <span>
-            <label for="country">Country</label>
-            <input type="text" name="country" value="<%= user.country %>" placeholder="No country selected" readonly>
-          </span>
-          <span>
-            <label for="bloodgroup">Blood Group</label>
-            <input type="text" name="bloodgroup" value="<%= user.blood %>" placeholder="No data available" readonly>
-          </span>
-        </div>   
+            <span>
+              <label for="mobile">Mobile Number</label>
+              <input type="number" name="mobile" value=<%= user.mobile %> readonly>
+            </span>
+            <span>
+              <label for="email">Email</label>
+              <input type="email" name="email" value=<%= user.email %> readonly>
+            </span>             
+            <span>
+              <label for="gender">Gender</label>
+              <input type="text" name="gender" value=<%= user.gender %> readonly>
+            </span>
+            <!-- Changing date format for better understanding -->
+                 <% let newdate = new Date (user.date)
+                    newdate = newdate.toDateString()
+                    newdate = newdate.split(' ')
+                    newdate = newdate.splice(1); %>
+            <span>
+              <label for="date">Date Of Birth</label>
+              <input type="text" name="date" value="<%= newdate %>" readonly>
+            </span>
+            <span>
+              <label for="city">City</label>
+              <input type="text" name="city" value="<%= user.city %>" placeholder="No city selected" readonly>
+            </span>
+            <span>
+              <label for="state">State</label>
+              <input type="text" name="state" value="<%= user.state %>"  placeholder="No state selected" readonly>
+            </span>
+            <span>
+              <label for="country">Country</label>
+              <input type="text" name="country" value="<%= user.country %>" placeholder="No country selected" readonly>
+            </span>
+            <span>
+              <label for="bloodgroup">Blood Group</label>
+              <input type="text" name="bloodgroup" value="<%= user.blood %>" placeholder="No data available" readonly>
+            </span>
+      </div>   
+      </div>
+
+      <!-- Appointment Content -->
+      <div id="appointment-content">
+          <h3>Appointments</h3>
+      </div>
+
+      <!-- Medical Records Content -->
+      <div id="medical-content">
+        <h3>Medical Records</h3>
+    </div>
+
+    <!-- Settings Content -->
+    <div id="setting-content">
+      <h3>Settings</h3>
   </div>
+    </div>
+    
 </section>
 <!-- footer -->
 <%- include("./partials/footer") %>
 <!-- fotter -->
 </body>
 <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
-<script src="../Dom/index.js"></script>
 <script src="../Dom/script.js"></script>
-<script src="../Dom/index-cl.js"></script>
+<script src="../Dom/profile.js"></script>
 </html>

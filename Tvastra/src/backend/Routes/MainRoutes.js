@@ -19,7 +19,7 @@ router.route("/Book_Appointment").get(ensureAuth.ensureAuth,maincontroller.appoi
 router.route("/Submit_Query").get(maincontroller.submitquery);
 router.route("/FAQs").get(maincontroller.faq);
 router.route("/logout").get(LoginController.logout);
-router.route("/Profile").get(ensureAuth.ensureAuth,maincontroller.profile);
+router.route("/Profile").get(maincontroller.profile);
 router.route("/User_Apoointment").get(maincontroller.userappointment);
 router.route("/Settings").get(ensureAuth.ensureAuth,maincontroller.setting);
 

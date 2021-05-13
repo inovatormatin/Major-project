@@ -21,7 +21,102 @@
     <div class="appointment-form">
         <h4>Book an Appointment</h4>
         <hr>
-        <h2 class="docname">Dr. <%= doctorname %> </h2>
+        <% docimg = ""; %>
+        <% var exp ; %>
+        <% var hospital = ""; %>
+        <% var speciality = ""; %>
+        <% if(doctorname == "Duke Sanson") { %>
+            <%  docimg = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg"; %>
+            <%  exp = 8 %>
+            <%  hospital = "Northstar" %>
+            <%  speciality = "Cancer" %>
+        <% } %>
+        <% if(doctorname == "Rose Moon") { %>
+            <%  docimg = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg"; %>
+            <%  exp = 5 %>
+            <%  hospital = "AIIMS" %>
+            <%  speciality = "Cancer" %>
+        <% } %>
+        <% if(doctorname == "Coni Star") { %>
+            <%  docimg = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg"; %>
+            <%  exp = 5 %>
+            <%  hospital = "Fortis" %>
+            <%  speciality = "Cardiology" %>
+        <% } %>
+        <% if(doctorname == "Georgia Peter") { %>
+            <%  docimg = "https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg"; %>
+            <%  exp = 10 %>
+            <%  hospital = "Elbit Daignostics" %>
+            <%  speciality = "Cardiology" %>
+        <% } %>
+        <% if(doctorname == "Jonny Eve") { %>
+            <%  docimg = "https://cerebralpalsynewstoday.com/wp-content/uploads/2017/06/shutterstock_52856165-921x480@2x.jpg"; %>
+            <%  exp = 15 %>
+            <%  hospital = "Manipal North Hosptial" %>
+            <%  speciality = "Dentistry" %>
+        <% } %>
+        <% if(doctorname == "Charlie Moon") { %>
+            <%  docimg = "https://www.cdc.gov/diabetes/images/library/spotlights/Male-doctor-smiling-portrait-close-up-Med-Res-72991363.jpg"; %>
+            <%  exp = 10 %>
+            <%  hospital = "Apollo Hospital" %>
+            <%  speciality = "Dentistry" %>
+        <% } %>
+        <% if(doctorname == "Erin Nier") { %>
+            <%  docimg = "https://post.medicalnewstoday.com/wp-content/uploads/2019/01/Male_Doctor_732x549-thumbnail.jpg"; %>
+            <%  exp = 15 %>
+            <%  hospital = "Northstar Hospital" %>
+            <%  speciality = "Fertility" %>
+        <% } %>
+        <% if(doctorname == "Romeo") { %>
+            <%  docimg = "https://otwartegrupy.pl/img/lekarz_bestdoctors.jpg"; %>
+            <%  exp = 25 %>
+            <%  hospital = "AIIMS" %>
+            <%  speciality = "Infertility Treatment" %>
+        <% } %>
+        <% if(doctorname == "Steve Roc") { %>
+            <%  docimg = "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"; %>
+            <%  exp = 20 %>
+            <%  hospital = "Fortis" %>
+            <%  speciality = "Orthopedics Surgery" %>
+        <% } %>
+        <% if(doctorname == "Zacli Sent") { %>
+            <%  docimg = "https://telemedizin.one/wp-content/uploads/2019/12/doctor07.jpg.pagespeed.ce.vrs67renwa.jpg"; %>
+            <%  exp = 20 %>
+            <%  hospital = "Elbit" %>
+            <%  speciality = "Orthopedics Surgery" %>
+        <% } %>
+        <% if(doctorname == "Bironi White") { %>
+            <%  docimg = "https://www.cdc.gov/drugoverdose/training/modules/module1/images/welcomeimage.png"; %>
+            <%  exp = 25 %>
+            <%  hospital = "Manipal North Hospital" %>
+            <%  speciality = "Multi Organ Transplant" %>
+        <% } %>
+        <% if(doctorname == "Vrijuk Sent") { %>
+            <%  docimg = "https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg"; %>
+            <%  exp = 30 %>
+            <%  hospital = "Apollo" %>
+            <%  speciality = "Multi Organ Transplant" %>
+        <% } %>
+        <% if(doctorname == "Symphony Lec") { %>
+            <%  docimg = "https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg"; %>
+            <%  exp = 30 %>
+            <%  hospital = "AIIMS" %>
+            <%  speciality = "Multi Organ Transplant" %>
+        <% } %>
+
+
+        <div class="appointment-doc-info">
+            <div class="data">
+                <h2 class="docname">Dr. <%= doctorname %></h5>
+                <h5>Experience = <%= exp %> Years</h3>
+                <h5>Hospital = <%= hospital %></h5>
+                <h5>Speciality = <%= speciality %></h5>
+            </div>
+            <div class="appointment-doc-img">
+                <img src=<%= docimg %> alt=""></a>
+            </div>
+            
+        </div>
         <form method="POST" action="Book_Appointment" class="form">
             <label class="font-bold" for="appointment-date">Select Appointment Date*</label>
             <input type="date" id="appointment-date">

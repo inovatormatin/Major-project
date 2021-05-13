@@ -28,10 +28,47 @@ section {
     display: flex;
     flex-direction: column;
 }
+.appointment-doc-info {
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.appointment-doc-info .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.appointment-doc-info h5 {
+    font-size: .9rem;
+}
+.appointment-doc-info a {
+    font-size: .9rem;
+    color: var(--blue);
+}
+.appointment-doc-img {
+    width: 8rem;
+    height: 8rem;
+    float: right;
+    margin-bottom: 5px;
+    transition: 300ms;
+    margin-top: .5rem;
+}
+.appointment-doc-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px gray;
+}
+.appointment-doc-img:hover {
+    transform: scale(1.06);
+    transition: 300ms;
+    box-shadow: 10px 10px 25px rgb(88, 86, 86);
+}
 .docname {
     text-align: center;
     color: var(--blue);
-    margin: .5rem 0;
+    margin-bottom: .5rem;
 }
 form {
     padding: 1rem;
@@ -84,5 +121,12 @@ input.time-interval-class {
 @media only screen and (max-width:767px) {
     .appointment-form {
         width: 90%;
+    }
+    .appointment-doc-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .appointment-doc-img {
+        margin-top: 1rem;
     }
 }
