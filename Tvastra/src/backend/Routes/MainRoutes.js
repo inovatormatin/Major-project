@@ -30,7 +30,7 @@ router.route("/Liver").get(maincontroller.liver);
 router.route("/Cardiology").get(maincontroller.cardiology);
 router.route("/Heart").get(maincontroller.heart);
 router.route("/Orthopedic").get(maincontroller.orthopedic);
-
+router.route("/Treatment").get(maincontroller.dentistry)
 // Doctors Information 
 router.route('/Duke_Sanson').get(maincontroller.dukesanson);
 router.route('/Vrijuk_Sent').get(maincontroller.vrijuksent);

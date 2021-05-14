@@ -32,7 +32,7 @@ justify-content: space-between;
   margin-left: 4px;
   transition: 1.5s;
 }
-.nav-links a:hover i {
+.nav-links a:hover .tvastra-plus {
   color: var(--blue);
   transition: 1s;
   transform: rotate(360deg);
@@ -81,17 +81,21 @@ nav .dropdown {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  width: 10rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   z-index: 1;
   border-radius: 5px;
 }
-.user-dropdown-content a {
+#user-dropdown a {
   color: black;
-  padding: 12px 16px;
+  padding: 12px 20px;
   text-decoration: none;
   display: block;
   border-radius: 5px;
+}
+#user-dropdown a:hover {
+  background-color: var(--gray);
+  color: var(--blue);
 }
 .dropdown-user-div {
     display: grid;
@@ -131,15 +135,46 @@ nav .dropdown {
 .user-number {
   font-size: .7rem;
 }
-/* Change color of dropdown links on hover */
-.user-dropdown-content a:hover {
-  background-color: #ddd;
-  color: var(--blue);
-}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .user-show {display:block;}
 /* User dropdown navbar */
+
+/* Treatment Dropdown */
+.treatment-dropdown {
+  position: relative;
+}
+.treatment-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  z-index: 1;
+  border-radius: 5px;
+}
+.treatment-dropdown-content a {
+  color: var(--darkblue);
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+.treatment-dropdown-content a:hover {
+  background-color: var(--gray);
+}
+.treatment-dropdown:hover .treatment-dropdown-content {
+  display: block;
+}
+.treatment-icon {
+  margin: 0;
+  transition: 100ms;
+}
+.treatment-dropdown:hover .treatment-icon {
+  color: var(--blue);
+  transition: 100ms;
+} 
+
 /* Header and nav end */
 
 
@@ -331,9 +366,9 @@ box-sizing: border-box;
 }
 /* DocCard Images */
 .D1-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg); }
-.D2-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg); }
-.D3-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg); }
-.D4-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg); }
+.D2-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg); }
+.D3-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg); }
+.D4-img { background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg); }
 .D5-img { background-image: url(https://cerebralpalsynewstoday.com/wp-content/uploads/2017/06/shutterstock_52856165-921x480@2x.jpg); } 
 .D6-img { background-image: url(https://www.cdc.gov/diabetes/images/library/spotlights/Male-doctor-smiling-portrait-close-up-Med-Res-72991363.jpg); }
 .D7-img { background-image: url(https://post.medicalnewstoday.com/wp-content/uploads/2019/01/Male_Doctor_732x549-thumbnail.jpg); }
