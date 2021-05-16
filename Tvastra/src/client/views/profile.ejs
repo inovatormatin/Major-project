@@ -31,7 +31,7 @@
           <h3>Account</h3>
           <div class="right-section-div-1">
             <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
-              <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
+             
               <input type="file" id="profile-pic"></span>
             <span><label for="name">Name</label>
               <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
@@ -127,21 +127,32 @@
       <!-- Medical Records Content -->
       <div id="medical-content">
         <h3>Medical Records</h3>
+        <div style="margin: 1rem;">
+          <h4>No Data Available.....</h4>
+        </div>
     </div>
 
     <!-- Settings Content -->
     <div id="setting-content">
-      <form action="Update_Profile" method="POST">
+      <form action="Update_Profile" method="POST" enctype="multipart/form-data">
           <span class="setting-header"><h3>Settings</h3><button class="update-profile" type="submit">Confirm Changes</button></span>
           <hr style="margin: 20px 0;">
+
             <div class="right-section-div-1">
-              <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
+              <span>
+                <i class="fas fa-user-circle profile-pic fa-5x"></i>
                 <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
-                <input type="file" id="profile-pic"></span>
-              <span><label for="name">Name<i class="fas fa-pen"></i></label>
-                <input type="text" name="name" id="name" value=<%= user.name %> ></span>
+                <input type="file" id="profile-pic" name="profile_pic">
+              </span>
+
+              <span>
+                <label for="name">Name<i class="fas fa-pen"></i></label>
+                <input type="text" name="name" id="name" value=<%= user.name %> >
+              </span>
             </div> 
+
           <hr style="margin: 20px 0 30px;">
+
             <div class="right-section-div-2">
                 <span>
                   <label for="mobile">Mobile Number<i class="fas fa-pen"></i></label>

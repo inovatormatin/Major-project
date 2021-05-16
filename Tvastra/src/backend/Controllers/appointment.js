@@ -1,6 +1,6 @@
 const User = require("../Databases/Mongo");
 const passport = require("passport")
-
+const upload = require('./uploadfile');
 const appointment = (req,res) =>{
     const {doctorname} = req.body;
     let user = req.user;
@@ -11,7 +11,7 @@ const appointment = (req,res) =>{
 }
 
 const updateprofile = async (req,res) =>{
-    const {name,email,mobile,city,gender,state,date,country,bloodgroup} = req.body;
+    const {name,email,mobile,city,gender,state,date,country,bloodgroup,profile_pic} = req.body;
     let user = req.user;
     try {
         await User.updateOne({email:email},
@@ -22,7 +22,8 @@ const updateprofile = async (req,res) =>{
                 state,
                 date,
                 country,
-                blood:bloodgroup
+                blood:bloodgroup,
+                img:profile_pic,
             })
             .then((result) => {
                 if(result) {

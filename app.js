@@ -11,6 +11,8 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const passportlocal = require("passport-local");
 const flash =  require("connect-flash")
+const multer = require('multer')
+
 const app = express();
 
 // DB Config 
@@ -18,6 +20,7 @@ const db = require('./Tvastra/src/backend/config/keys').mongoURI;
 
 // Passport config
 require('./Tvastra/src/backend/config/passport')(passport);
+
 
 
 // connect to Mongo 
