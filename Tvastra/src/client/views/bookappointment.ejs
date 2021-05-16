@@ -21,6 +21,7 @@
     <div class="appointment-form">
         <h4>Book an Appointment</h4>
         <hr>
+<!-- Doctor Info -->
         <% docimg = ""; %>
         <% var exp ; %>
         <% var hospital = ""; %>
@@ -103,50 +104,47 @@
             <%  hospital = "AIIMS" %>
             <%  speciality = "Multi Organ Transplant" %>
         <% } %>
-
-
-        <div class="appointment-doc-info">
-            <div class="data">
-                <h2 class="docname">Dr. <%= doctorname %></h5>
-                <h5>Experience = <%= exp %> Years</h3>
-                <h5>Hospital = <%= hospital %></h5>
-                <h5>Speciality = <%= speciality %></h5>
+<!-- Doctor Info -->
+        
+        <form method="POST" action="Booked_Appointment" class="form">
+            <div class="appointment-doc-info">
+                <div class="doc-data">
+                    <span>
+                        <label for="doctorname">Dr.</label>
+                        <input type="text" id="doctorname" name="doctorname" value="<%= doctorname %>">
+                    </span>
+                    <span>
+                        <label for="experience">Experience -</label>
+                        <input type="text" id="experience"  name="Experience" value=" <%= exp %>"></span>
+                    <span>
+                        <label for="hospital">Hospital -</label>
+                        <input type="text" id="hospital" name="Hospital" value=" <%= hospital %>"></span>
+                    <span>
+                        <label for="speciality">Speciality -</label>
+                        <input type="text" id="speciality" name="Speciality" value="<%= speciality %>"></span>
+                </div>
+                <div class="appointment-doc-img">
+                    <img src=<%= docimg %> alt=""></a>
+                </div>
+                
             </div>
-            <div class="appointment-doc-img">
-                <img src=<%= docimg %> alt=""></a>
-            </div>
-            
-        </div>
-        <form method="POST" action="Book_Appointment" class="form">
             <label class="font-bold" for="appointment-date">Select Appointment Date*</label>
-            <input type="date" id="appointment-date">
-            <div class="time-interval-div">
-                <label class="font-bold" for="Time-Interval">Time Interval*</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="morning" value="Morning">
-                <label for="morning">Morning</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="afternoon" value="Afternoon">
-                <label for="afternoon">Afternoon</label><br>
-                <input type="radio" name="Time-Interval" class="time-interval-class" id="evening" value="Evening">
-                <label for="evening">Evening</label><br>
-            </div>
+            <input type="datetime-local" name="appointment_date" id="appointment-date" required>
             <div class="time-interval-div">
                 <label class="font-bold" for="routine">Appointment Status / Urgency*</label><br>
-                <input type="radio" name="Appointment Status" class="time-interval-class" id="routine" value="routine Check-Up">
+                <input type="radio" name="Appointment_Status" class="time-interval-class" id="routine" value="routine Check-Up" required>
                 <label for="routine">Routine Check-Up</label><br>
-                <input type="radio" name="Appointment Status" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check-up">
+                <input type="radio" name="Appointment_Status" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check-up">
                 <label for="non-urgent-checkup">Non Urgent Check-Up</label><br>
-                <input type="radio" name="Appointment Status" class="time-interval-class" id="urgent-checkup" value="Urgent Check Up">
+                <input type="radio" name="Appointment_Status" class="time-interval-class" id="urgent-checkup" value="Urgent Check Up">
                 <label for="urgent-checkup">Urgent Check-Up</label><br>
-                <input type="radio" name="Appointment Status" class="time-interval-class" id="surgical-appointment" value="Surgical Appointment">
+                <input type="radio" name="Appointment_Status" class="time-interval-class" id="surgical-appointment" value="Surgical Appointment">
                 <label for="surgical-appointment">Surgical Appointment</label><br>
             </div>
             <h3>Upload Previous Health Record</h3>
             <input type="file" class="file-button" id="file-button">
             <h3>Appointment Details</h3>
-            <div class="">
-
-            </div>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
+            <textarea name="more_info" id="" cols="30" rows="5" placeholder="Please Provide extra information, If any Or Tell us your condition!!" ></textarea>
             <button type="submit">BOOK APPOINTMENT</button>
         </form>
     </div>

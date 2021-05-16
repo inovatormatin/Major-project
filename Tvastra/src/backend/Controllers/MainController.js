@@ -203,6 +203,7 @@ function aboutus (req,res) {
         user:req.user||'hello'
     })
 }
+// Profile Section 
 function profile (req,res) {
     res.render('profile',{
         user:req.user ||'hello'
@@ -218,6 +219,17 @@ function setting (req,res) {
         user:req.user ||'hello'
     })
 }
+function setting (req,res) {
+    res.render('setting',{
+        user:req.user ||'hello'
+    })
+}
+function user_appointment (req,res) {
+    res.render('user_appointment',{
+        user:req.user ||'hello'
+    })
+}
+
 module.exports = {
     signin:signin,
     signup:signup,
@@ -230,9 +242,6 @@ module.exports = {
     hospitals:hospitals,
     doctors:doctors,
     aboutus:aboutus,
-    profile:profile,
-    userappointment:userappointment,
-    setting:setting,
     // Treatments  == 
     dentistry:dentistry,
     cancer:cancer,
@@ -265,5 +274,8 @@ module.exports = {
     manipal:manipal,
     rockland:rockland,
     northstar:northstar,
-    
+    profile:profile,
+    userappointment:userappointment,
+    setting:setting,
+    user_appointment:user_appointment,
 }

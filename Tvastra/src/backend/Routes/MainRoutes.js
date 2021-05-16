@@ -19,9 +19,12 @@ router.route("/Book_Appointment").get(ensureAuth.ensureAuth,maincontroller.appoi
 router.route("/Submit_Query").get(maincontroller.submitquery);
 router.route("/FAQs").get(maincontroller.faq);
 router.route("/logout").get(LoginController.logout);
-router.route("/Profile").get(maincontroller.profile);
-router.route("/User_Apoointment").get(maincontroller.userappointment);
-router.route("/Settings").get(ensureAuth.ensureAuth,maincontroller.setting);
+
+// Profile Section
+router.route("/Profile").get(ensureAuth.ensureAuth,maincontroller.profile);
+router.route("/User_Apoointment").get(ensureAuth.ensureAuth,maincontroller.userappointment);
+router.route("/Settings").get(ensureAuth.ensureAuth,ensureAuth.ensureAuth,maincontroller.setting);
+router.route("/User_Appointments").get(ensureAuth.ensureAuth,maincontroller.user_appointment);
 
 // Treatment Pages
 router.route("/Dentistry").get(maincontroller.dentistry);
@@ -61,8 +64,8 @@ router.route('/Primus_Super_Hospital').get(maincontroller.primussuper)
 router.route("/SignIn").post(LoginController.signin);
 router.route("/SignUp").post(LoginController.signup);
 router.route("/Book_Appointment").post(ensureAuth.ensureAuth,Appointment.appointment)
-
-
-
+router.route("/Booked_Appointment").post(ensureAuth.ensureAuth,Appointment.appointmentbooked)
+router.route("/Update_Profile").post(ensureAuth.ensureAuth,Appointment.updateprofile)
+router.route("/cancel_appointment").post(ensureAuth.ensureAuth,Appointment.cancel_appointment)
 
 module.exports = router;

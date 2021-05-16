@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/user_appointment.css">
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
+    <title>Tvastra | <%= user.name %></title>
+</head>
+<body>
+<!-- header -->
+<%- include("./partials/header") %>
+<!-- header -->
+<section class="profile-sec-1 container">
+      <div class="right-section">
+              <!-- Changing date format for better understanding -->
+                   <% let newdate = new Date (user.date)
+                      newdate = newdate.toDateString()
+                      newdate = newdate.split(' ')
+                      newdate = newdate.splice(1); %>
+        <!-- Appointment Content -->
+        <div id="appointment-content" style="display: block;">
+            <h3 class="appointment-main-heading">Appointments</h3>
+            <% let data = user.appointments %>
+            <% let appointments = user.appointments.length %>
+            <% if(appointments >0) { %>
+              <% for(let i=0;i<appointments;i++){ %>
+                    <div class="appointment-tab">
+                      <form class="appointment-tab-form" action="cancel_appointment" method="POST">
+                          <div class="appointment-tab-left">
+                          <span>
+                            <label for="appointment_id">Appointment ID</label>
+                            <input type="text" id="appointment_id" name="appointment_id" value="<%= data[i]._id %>" readonly>
+                          </span>
+                          <hr>
+                          <span>
+                            <label for="appoitment_date">Appointment Date</label>
+                            <input type="text" id="appointment_date" name="appointment_date" value="<%= data[i].appointment_date %>" readonly>
+                          </span>
+                          <hr>
+                          <span>
+                            <label for="appointment_status">Appointment Status</label>
+                            <input type="text" id="appointment_status" name="appointment_status" value="<%= data[i].appointment_status %>" readonly>
+                          </span>
+                          <hr>
+                          </div>
+                          <div class="appointment-tab-right">
+                            <span>
+                              <label for="Doctor">Doctor Name</label>
+                              <input type="text" id="Doctor" name="doctor" value="<%= data[i].appointment_doctor %>" readonly>
+                            </span>
+                            <hr>
+                          </div>
+                      <div id="appointment-buttons">
+                      <a href="appointment_update"><button>Update Appointment</button></a>
+                      <button type="submit">Cancel Appointment</button>
+                      </div>
+                    </form>
+                    </div>
+                  <% } %>
+            <% } %>
+            <% if(appointments == 0) { %>
+              <h3 style="color: var(--blue);"><%= "No Appointments Scheduled"  %></h3>
+           <% } %>
+        </div> 
+  </div>  
+  </section>
+<!-- footer -->
+<%- include("./partials/footer") %>
+<!-- fotter -->
+</body>
+<script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
+<script src="../Dom/script.js"></script>
+</html>

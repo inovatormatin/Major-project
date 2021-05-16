@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <a href="Profile">Profile</a>
-                            <a href="#">Appointments</a>
+                            <a href="User_Appointments">Appointments</a>
                             <a href="#">Settings</a>
                         </div>                    
                 </div>
@@ -52,14 +52,15 @@
             <a href="Doctors">Doctors</a>
             <a href="Hospitals">Hospitals</a>
             <a href="Dentistry">Treatments</a>
-            <a href="Tvastra_Plus">Other Services</a>
+            <a href="Tvastra_Plus">Tvastra Plus</a>
             <a href="About_Us">About</a>
             <% if(user == 'hello') { %>
                 <a href="SignIn">Login / Sign Up</a>
             <% } %>
             <% if(user.name) { %>
+                <hr>
                 <a href="Profile">Profile</a>
-                <a href="#">Appointments</a>
+                <a href="User_Appointments">Appointments</a>
                 <a href="#">Settings</a>
                 <a href="logout">LogOut</a>
             <% } %> 

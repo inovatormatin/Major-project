@@ -27,28 +27,28 @@
   </div>
     <div class="right-section">
       <!-- Profile Content -->
-      <div id="profile-content">
-        <h3>Account</h3>
-        <div class="right-section-div-1">
-          <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
-            <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
-            <input type="file" id="profile-pic"></span>
-          <span><label for="name">Name</label>
-            <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
-        </div> 
-        <hr>
-        <div class="right-section-div-2">
-            <span>
-              <label for="mobile">Mobile Number</label>
-              <input type="number" name="mobile" value=<%= user.mobile %> readonly>
-            </span>
-            <span>
-              <label for="email">Email</label>
-              <input type="email" name="email" value=<%= user.email %> readonly>
-            </span>             
-            <span>
-              <label for="gender">Gender</label>
-              <input type="text" name="gender" value=<%= user.gender %> readonly>
+       <div id="profile-content">
+          <h3>Account</h3>
+          <div class="right-section-div-1">
+            <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
+              <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
+              <input type="file" id="profile-pic"></span>
+            <span><label for="name">Name</label>
+              <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
+          </div> 
+        <hr style="margin: 20px 0 30px;">
+          <div class="right-section-div-2">
+              <span>
+                <label for="mobile">Mobile Number</label>
+                <input type="number" name="mobile" value=<%= user.mobile %> readonly>
+              </span>
+             <span>
+                <label for="email">Email</label>
+                <input type="email" name="email" value=<%= user.email %> readonly>
+             </span>             
+             <span>
+               <label for="gender">Gender</label>
+               <input type="text" name="gender" value=<%= user.gender %> readonly>
             </span>
             <!-- Changing date format for better understanding -->
                  <% let newdate = new Date (user.date)
@@ -75,12 +75,53 @@
               <label for="bloodgroup">Blood Group</label>
               <input type="text" name="bloodgroup" value="<%= user.blood %>" placeholder="No data available" readonly>
             </span>
-      </div>   
-      </div>
+          </div>   
+       </div>
 
       <!-- Appointment Content -->
       <div id="appointment-content">
           <h3>Appointments</h3>
+          <% let data = user.appointments %>
+          <% let appointments = user.appointments.length %>
+          <% if(appointments >0) { %>
+            <% for(let i=0;i<appointments;i++){ %>
+                  <div class="appointment-tab">
+                    <form class="appointment-tab-form" action="cancel_appointment" method="POST">
+                        <div class="appointment-tab-left">
+                        <span>
+                          <label for="appointment_id">Appointment ID</label>
+                          <input type="text" id="appointment_id" name="appointment_id" value="<%= data[i]._id %>" readonly>
+                        </span>
+                        <hr>
+                        <span>
+                          <label for="appoitment_date">Appointment Date</label>
+                          <input type="text" id="appointment_date" name="appointment_date" value="<%= data[i].appointment_date %>" readonly>
+                        </span>
+                        <hr>
+                        <span>
+                          <label for="appointment_status">Appointment Status</label>
+                          <input type="text" id="appointment_status" name="appointment_status" value="<%= data[i].appointment_status %>" readonly>
+                        </span>
+                        <hr>
+                        </div>
+                        <div class="appointment-tab-right">
+                          <span>
+                            <label for="Doctor">Doctor Name</label>
+                            <input type="text" id="Doctor" name="doctor" value="<%= data[i].appointment_doctor %>" readonly>
+                          </span>
+                          <hr>
+                        </div>
+                    <div id="appointment-buttons">
+                    <a href="appointment_update"><button>Update Appointment</button></a>
+                    <button type="submit">Cancel Appointment</button>
+                    </div>
+                  </form>
+                  </div>
+                <% } %>
+          <% } %>
+          <% if(appointments == 0) { %>
+            <h3 style="color: var(--blue);"><%= "No Appointments Scheduled"  %></h3>
+         <% } %>
       </div>
 
       <!-- Medical Records Content -->
@@ -90,9 +131,59 @@
 
     <!-- Settings Content -->
     <div id="setting-content">
-      <h3>Settings</h3>
-  </div>
+      <form action="Update_Profile" method="POST">
+          <span class="setting-header"><h3>Settings</h3><button class="update-profile" type="submit">Confirm Changes</button></span>
+          <hr style="margin: 20px 0;">
+            <div class="right-section-div-1">
+              <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
+                <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
+                <input type="file" id="profile-pic"></span>
+              <span><label for="name">Name<i class="fas fa-pen"></i></label>
+                <input type="text" name="name" id="name" value=<%= user.name %> ></span>
+            </div> 
+          <hr style="margin: 20px 0 30px;">
+            <div class="right-section-div-2">
+                <span>
+                  <label for="mobile">Mobile Number<i class="fas fa-pen"></i></label>
+                  <input type="number" name="mobile" value=<%= user.mobile %> >
+                </span>
+               <span>
+                  <label for="email">Email <i class="fas fa-lock" style="margin-left: .5rem;"></i></label>
+                  <input type="email" name="email" value=<%= user.email %> readonly>
+               </span>             
+               <span>
+                 <label for="gender">Gender<i class="fas fa-pen"></i></label>
+                 <input type="text" name="gender" value=<%= user.gender %> >
+              </span>
+              <!-- Changing date format for better understanding -->
+                   <% newdate = new Date (user.date)
+                      newdate = newdate.toDateString()
+                      newdate = newdate.split(' ')
+                      newdate = newdate.splice(1); %>
+              <span>
+                <label for="date">Date Of Birth<i class="fas fa-pen"></i></label>
+                <input type="text" name="date" value="<%= newdate %>" placeholder="mon-dd-yyyy" >
+              </span>
+              <span>
+                <label for="city">City<i class="fas fa-pen"></i></label>
+                <input type="text" name="city" value="<%= user.city %>" placeholder="No city selected" >
+              </span>
+              <span>
+                <label for="state">State<i class="fas fa-pen"></i></label>
+                <input type="text" name="state" value="<%= user.state %>"  placeholder="No state selected" >
+              </span>
+              <span>
+                <label for="country">Country<i class="fas fa-pen"></i></label>
+                <input type="text" name="country" value="<%= user.country %>" placeholder="No country selected" >
+              </span>
+              <span>
+                <label for="bloodgroup">Blood Group<i class="fas fa-pen"></i></label>
+                <input type="text" name="bloodgroup" value="<%= user.blood %>" placeholder="No data available" >
+              </span>
+            </div> 
+          </form>
     </div>
+</div>
     
 </section>
 <!-- footer -->

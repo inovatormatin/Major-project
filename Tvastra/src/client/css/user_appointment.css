@@ -11,88 +11,17 @@ input {
     width: 17rem;
     box-sizing: border-box;
 }
-.profile-sec-1 {
-    display: grid;
-    grid-template-columns: 25% auto;
-    grid-template-areas:"left right";
-    padding: 2rem 1rem;
-    background-color: white;
-    margin: 30px auto;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px 0px var(--gray);
+.appointment-content {
+    height: 80vh;
 }
-.left-section h3 {
-    padding: 0 0 1rem;
-}
-.right-section h3 {
-    padding: 0 1rem 1rem;
-}
-/* Left section  */
-.left-section {
-    grid-area: left;
-    border-right: 2px solid var(--gray);
-    padding-right: .4rem;
-}
-.left-section li {
-    padding: .8rem .4rem;
-    margin: 0;
-}
-.left-section i {
-    color: var(--darkgray);
-    margin-right: 5px;
-}
-.left-section li:hover {
-    cursor: pointer;
-    background-color: var(--bggray);
-}
-.active i {
-    color: var(--blue);
-}
-.setting-header {
-    display: flex;
-    width: 80%;
-    margin-bottom: 1rem;
-}
-.update-profile {
-    margin: auto;
-    color: var(--darkblue);
-    margin-left: .5rem;
-    transition: 300ms;
-}
-.update-profile:hover {
-    background-image: linear-gradient(to left,var(--blue),var(--darkblue));
-    color: white;
-    transition: 300ms;
-}
-.active{
-    cursor: pointer;
-    font-weight: 900;
-    background-image: linear-gradient(to right,white,var(--bgblue));
-    border-left: 3px solid var(--blue);
+.appointment-main-heading {
+    margin: 1rem 1rem 1rem 1.3rem;
+    font-size: 1.5rem;
 }
 /* right section */
 .right-section {
     grid-area: right;
     position: relative;
-}
-#appointment-content,#medical-content,#setting-content {
-    display: none;
-}
-/* right section table 1  */
-.profile-pic {
-    color: var(--blue);
-}
-#profile-pic {
-    display: none;
-}
-.profile-pic-button {
-  background-color:var(--blue);
-  color: white;
-  padding: 0.6rem;
-  font-family: sans-serif;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  margin: 0 0 0 2rem;
 }
 /* Right section div 1 */
 .right-section-div-1 {
@@ -165,6 +94,8 @@ input {
     font-family: "Nexa-Bold";
     color: var(--blue);
     letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .appointment-tab-left label,.appointment-tab-right label {
     margin: 0;
@@ -180,53 +111,14 @@ input {
     grid-area: buttons;
     margin: 0 0 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* settings section */
-.fa-pen {
-    margin-left: .4rem;
-     color: var(--blue);
-     font-size: .8rem;
+#appointment-buttons button {
+    float: right;
 }
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
-    .profile-sec-1 {
-        grid-template-columns: 30% auto;
-    }
-    .profile-pic-button {
-        font-size: .8rem;
-    }
-   .right-section-div-1,.right-section-div-2 {
-       grid-template-columns: 50% auto;
-       justify-content: center;
-   }
-   input {
-    width: 12rem;
-   }
+   
 }
 @media only screen and (max-width:767px) {
-    .left-section {
-        display: none;
-    }
-    .profile-sec-1 {
-        grid-template-columns: 1fr;
-        grid-template-areas: "right";
-    }
-    .right-section-div-1,.right-section-div-2 {
-        grid-template-columns: 1fr;
-    }
-    input {
-        width: 100%;
-    }
     .appointment-tab-form {
         display: grid;
         grid-template-columns: 100%;
@@ -240,4 +132,6 @@ input {
         flex-direction: column;
         align-items: center;
     }
+    
+    
 }

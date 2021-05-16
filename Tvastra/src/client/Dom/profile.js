@@ -16,6 +16,9 @@ function showprofile() {
     settings.classList.remove('active');
     // Displaying Content
     profile_content.style.display = 'block';
+    appointment_content.style.display = 'none';
+    medical_content.style.display = "none";
+    setting_content.style.display = "none";
 }
 
 // Appointment Section

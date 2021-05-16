@@ -36,7 +36,17 @@ const UserSchema = new mongoose.Schema({
     country:{
         type:String,
         required:false
-    }
+    },
+    blood:{
+        type:String,
+        required:false
+    },
+    appointments:[{
+        appointment_date:String,
+        appointment_status:String,
+        appointment_doctor:String,
+    }]
+        
 })
 
 const User = mongoose.model('User', UserSchema);
