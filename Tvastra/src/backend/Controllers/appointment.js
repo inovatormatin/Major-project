@@ -1,6 +1,5 @@
 const User = require("../Databases/Mongo");
 const passport = require("passport")
-const upload = require('./uploadfile');
 const appointment = (req,res) =>{
     const {doctorname} = req.body;
     let user = req.user;
@@ -10,31 +9,35 @@ const appointment = (req,res) =>{
    }) 
 }
 
-const updateprofile = async (req,res) =>{
-    const {name,email,mobile,city,gender,state,date,country,bloodgroup,profile_pic} = req.body;
-    let user = req.user;
+const updateprofile = (req,res) =>{
+    const {name,email,mobile,city,gender,state,date,country,bloodgroup} = req.body;
+    let user = req.user; 
+   console.log(name,email,mobile,city,gender,state,date,country,bloodgroup)
     try {
-        await User.updateOne({email:email},
-            {   name,
+        User.updateOne({email:email},
+            {
+                name,
                 mobile,
-                city,
                 gender,
-                state,
                 date,
+                city,
+                state,
                 country,
-                blood:bloodgroup,
-                img:profile_pic,
+                blood:bloodgroup
             })
-            .then((result) => {
-                if(result) {
+            .then(result=>{
+                if(result){
+                    req.flash('success_msg','Profile Updated.');
                     res.redirect('Profile')
                 }
-            }).catch((err) => {
-                res.redirect('Profile')
-            });
+                else {
+                    req.flash('success_msg','Profile Not Updated');
+                    res.redirect('Settings')
+                }
+            })
     } catch (error) {
-        res.json({message:error.message})
-    } 
+        throw error
+    }
 }
 
 
@@ -47,14 +50,18 @@ const appointmentbooked = async (req,res) =>{
                 {
                     appointment_date:appointment_date,
                     appointment_status:Appointment_Status,
-                    appointment_doctor:doctorname
+                    appointment_doctor:doctorname,
+                    doctor:doctorname,
+                    experience:Experience,
+                    hospital:Hospital,
+                    speciality:Speciality
                 }
             }     
         })
         .then(result=>{
             if(result){
+                req.flash('success_msg','Appointment Booked !!');
                 res.redirect('/')
-                req.flash('Appointment Booked');
             }
         })
     } catch (error) {
@@ -63,22 +70,18 @@ const appointmentbooked = async (req,res) =>{
 }
 
 const cancel_appointment = (req,res) =>{
-    const {doctor,appointment_id,appointment_date,appointment_status} = req.body;
+    const {appointment_id} = req.body;
     try {
         User.updateOne({"appointments._id":appointment_id},
         {
             $pull:{ "appointments":{'_id':appointment_id} }   
         })
-        .then(users=>{
-        if(users){
-            console.log("Appointment Cancelled");
-            res.render("index",{
-                user:req.user||'hello',
-                msg:"Appointment Cancelled",
-            })
-        }
-        else console.log("Not working")
-         })
+        .then(result=>{
+            if(result){
+                req.flash('success_msg','Appointment Cancelled!!');
+                res.redirect('User_Appointments')
+            }
+        })
         .catch(err=>{
         throw err;
     })

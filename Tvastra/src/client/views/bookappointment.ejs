@@ -99,7 +99,7 @@
             <%  speciality = "Multi Organ Transplant" %>
         <% } %>
         <% if(doctorname == "Symphony Lec") { %>
-            <%  docimg = "https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg"; %>
+            <%  docimg = "https://webcomicms.net/sites/default/files/clipart/174399/picture-doctor-174399-2506358.jpg"; %>
             <%  exp = 30 %>
             <%  hospital = "AIIMS" %>
             <%  speciality = "Multi Organ Transplant" %>
@@ -111,17 +111,17 @@
                 <div class="doc-data">
                     <span>
                         <label for="doctorname">Dr.</label>
-                        <input type="text" id="doctorname" name="doctorname" value="<%= doctorname %>">
+                        <input type="text" id="doctorname" name="doctorname" value="<%= doctorname %>" readonly>
                     </span>
                     <span>
                         <label for="experience">Experience -</label>
-                        <input type="text" id="experience"  name="Experience" value=" <%= exp %>"></span>
+                        <input type="text" id="experience"  name="Experience" value="<%= exp %>" readonly></span>
                     <span>
                         <label for="hospital">Hospital -</label>
-                        <input type="text" id="hospital" name="Hospital" value=" <%= hospital %>"></span>
+                        <input type="text" id="hospital" name="Hospital" value="<%= hospital %>" readonly></span>
                     <span>
                         <label for="speciality">Speciality -</label>
-                        <input type="text" id="speciality" name="Speciality" value="<%= speciality %>"></span>
+                        <input type="text" id="speciality" name="Speciality" value="<%= speciality %>" readonly></span>
                 </div>
                 <div class="appointment-doc-img">
                     <img src=<%= docimg %> alt=""></a>
@@ -132,9 +132,9 @@
             <input type="datetime-local" name="appointment_date" id="appointment-date" required>
             <div class="time-interval-div">
                 <label class="font-bold" for="routine">Appointment Status / Urgency*</label><br>
-                <input type="radio" name="Appointment_Status" class="time-interval-class" id="routine" value="routine Check-Up" required>
+                <input type="radio" name="Appointment_Status" class="time-interval-class" id="routine" value="Routine Check Up" required>
                 <label for="routine">Routine Check-Up</label><br>
-                <input type="radio" name="Appointment_Status" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check-up">
+                <input type="radio" name="Appointment_Status" class="time-interval-class" id="non-urgent-checkup" value="Non Urgent Check up">
                 <label for="non-urgent-checkup">Non Urgent Check-Up</label><br>
                 <input type="radio" name="Appointment_Status" class="time-interval-class" id="urgent-checkup" value="Urgent Check Up">
                 <label for="urgent-checkup">Urgent Check-Up</label><br>

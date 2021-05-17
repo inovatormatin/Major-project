@@ -1,10 +1,16 @@
 
 .container {
-  width: 90%;
+  width: 90% !important;
   margin: 0px auto;
   box-sizing: border-box;
 }
 
+button {
+  line-height: normal;
+}
+a {
+  text-decoration: none !important;
+}
 /* Header and Nav */
 nav {
 display: flex;
@@ -25,6 +31,7 @@ justify-content: space-between;
 }
 .nav-links a {
   margin: 0px 0.5rem;
+  text-decoration: none;
 }
 .nav-links i {
   font-size: .8rem;
@@ -186,6 +193,7 @@ nav .dropdown {
   background-position: center; 
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .sec-1 h1 {
@@ -226,15 +234,16 @@ nav .dropdown {
   color: var(--lightgray);
 }
 .search-bar-with-suggestion {
-  width: 30%;
+  width: 32%;
+  position: relative;
 }
 .sec-1-search .search-bar {
-  width: -webkit-fill-available;
+  width: 100%;
 }
 .search-bar-suggestion-list {
   position: absolute;
   background-color: #f0f0f0de;
-  width: 26.89%;
+  width: 100%;
   padding: 0.5rem 0px;
   visibility: hidden;
 }
@@ -708,6 +717,7 @@ nav .dropdown {
 }
 .search-bar-with-suggestion {
   width: 92%;
+  position: relative;
 }
 /* section-1 ends */
 
@@ -905,7 +915,7 @@ nav .dropdown {
   width: 100%;
 }
 .search-bar-suggestion-list {
-  width: 89.89%;
+  width: 100%;
 }
 .search-bar-suggestion-list {
   margin-top: -7px;
@@ -1072,6 +1082,7 @@ nav .dropdown {
 .footer-links a {
   margin: 10px auto;
   color: #cccccc;
+  text-decoration: none;
 }
 .footer .socialmedia-icons i{
   width: auto;

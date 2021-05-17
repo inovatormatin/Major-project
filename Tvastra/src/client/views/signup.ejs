@@ -45,14 +45,14 @@
             </div> <!-- Content for tablet view Only till here -->
         </nav>
 </header> <!-- Header Nav ends Here -->
-
+ <!-- Messages to flash  -->
+ <%- include("./partials/messages")  %>
+ <!-- Messages to flash  -->
 <section>
     <div class="signup-form">
         <h2>Sign Up</h2>
         <hr>
-        <!-- Messages to flash  -->
-            <%- include("./partials/messages")  %>
-        <!-- Messages to flash  -->
+       
         <form action="SignUp" class="form" method="POST">
             <input type="text" class="name" name="name" placeholder="Enter Name" value="<%= typeof name != 'undefined' ? name : '' %>" required>
             <input type="email" class="Email" name="email" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>" required>

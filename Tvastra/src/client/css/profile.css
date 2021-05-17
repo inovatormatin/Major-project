@@ -95,23 +95,16 @@ input {
   margin: 0 0 0 2rem;
 }
 /* Right section div 1 */
-.right-section-div-1 {
+.right-section-div-1,.right-section-div-2 {
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
 }
-.right-section-div-1 span:nth-child(1) {
-   display: flex;
-   align-items: center;
+.right-section-div-1 {
+    justify-content: start;
 }
 
-.right-section-div-2 {
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-gap: 25px;
-}
 /* Appointment tab  */
 .appointment-tab {
     position: relative;
@@ -181,16 +174,6 @@ input {
     margin: 0 0 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* settings section */
 .fa-pen {
     margin-left: .4rem;
@@ -205,8 +188,8 @@ input {
     .profile-pic-button {
         font-size: .8rem;
     }
-   .right-section-div-1,.right-section-div-2 {
-       grid-template-columns: 50% auto;
+        .right-section-div-2 {
+       grid-template-columns: 1fr 1fr;
        justify-content: center;
    }
    input {

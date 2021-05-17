@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Flash Messages linking -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/theme.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/messages.css">
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
     <title>Tvastra | <%= user.name %></title>
@@ -15,6 +19,8 @@
 <!-- header -->
 <%- include("./partials/header") %>
 <!-- header -->
+<!-- Flash Message -->
+<%- include("./partials/messages") %>
 <section class="profile-sec-1 container">
   <div class="left-section">
     <h3>Dashboard</h3>
@@ -30,9 +36,6 @@
        <div id="profile-content">
           <h3>Account</h3>
           <div class="right-section-div-1">
-            <span><i class="fas fa-user-circle profile-pic fa-5x"></i>
-             
-              <input type="file" id="profile-pic"></span>
             <span><label for="name">Name</label>
               <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
           </div> 
@@ -110,6 +113,16 @@
                             <input type="text" id="Doctor" name="doctor" value="<%= data[i].appointment_doctor %>" readonly>
                           </span>
                           <hr>
+                          <span>
+                            <label for="Doctor">Hospital Name</label>
+                            <input type="text" id="hospital" name="hospital" value="<%= data[i].hospital %>" readonly>
+                          </span>
+                          <hr>
+                          <span>
+                            <label for="Doctor">Doctor's Speciality</label>
+                            <input type="text" id="Speciality" name="Speciality" value="<%= data[i].speciality %>" readonly>
+                          </span>
+                          <hr>
                         </div>
                     <div id="appointment-buttons">
                     <a href="appointment_update"><button>Update Appointment</button></a>
@@ -120,14 +133,14 @@
                 <% } %>
           <% } %>
           <% if(appointments == 0) { %>
-            <h3 style="color: var(--blue);"><%= "No Appointments Scheduled"  %></h3>
+            <h3 style="color: var(--blue);height: 60vh"><%= "No Appointments Scheduled"  %></h3>
          <% } %>
       </div>
 
       <!-- Medical Records Content -->
       <div id="medical-content">
         <h3>Medical Records</h3>
-        <div style="margin: 1rem;">
+        <div style="margin: 1rem; height: 50vh;">
           <h4>No Data Available.....</h4>
         </div>
     </div>
@@ -139,13 +152,7 @@
           <hr style="margin: 20px 0;">
 
             <div class="right-section-div-1">
-              <span>
-                <i class="fas fa-user-circle profile-pic fa-5x"></i>
-                <label class="profile-pic-button" for="profile-pic">Choose a Photo</label>
-                <input type="file" id="profile-pic" name="profile_pic">
-              </span>
-
-              <span>
+             <span>
                 <label for="name">Name<i class="fas fa-pen"></i></label>
                 <input type="text" name="name" id="name" value=<%= user.name %> >
               </span>
@@ -201,6 +208,21 @@
 <%- include("./partials/footer") %>
 <!-- fotter -->
 </body>
+<script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
 <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
 <script src="../Dom/script.js"></script>
 <script src="../Dom/profile.js"></script>

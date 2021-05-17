@@ -1,0 +1,68 @@
+body {
+    background-color: var(--bggray);
+}
+label {
+    display: block;
+    font-family: "Nexa-Bold";
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+}
+input {
+    width: 17rem;
+    box-sizing: border-box;
+}
+.profile-sec-1 {
+    padding: 1rem;
+}
+#setting-content {
+    padding: 1rem 1rem 2rem;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.update-profile {
+    margin: auto;
+    color: var(--darkblue);
+    margin-left: .5rem;
+    transition: 300ms;
+}
+.update-profile:hover {
+    background-image: linear-gradient(to left,var(--blue),var(--darkblue));
+    color: white;
+    transition: 300ms;
+}
+
+.main-header {
+    display: flex;
+}
+.setting-main-heading {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.update-profile {
+    margin: 0 5rem 0 auto;
+}
+.right-section-div-1,.right-section-div-2 {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+.fa-pen {
+    margin-left: .5rem;
+    color:var(--blue)
+}
+
+@media only screen and (max-width:767px) {
+    .right-section-div-1,.right-section-div-2 {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    input {
+        width: 100%;
+    }
+    .update-profile {
+        margin: auto;
+    }
+}

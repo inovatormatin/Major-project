@@ -5,9 +5,6 @@ const UserSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    img:{
-        type:String,
-    },
     email:{
         type:String,
         required:true
@@ -48,6 +45,10 @@ const UserSchema = new mongoose.Schema({
         appointment_date:String,
         appointment_status:String,
         appointment_doctor:String,
+        doctor:String,
+        experience:String,
+        hospital:String,
+        speciality:String
     }],        
 })
 

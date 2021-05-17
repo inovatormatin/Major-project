@@ -2,7 +2,6 @@ const express = require("express")
 const maincontroller = require("../Controllers/MainController");
 const LoginController = require("../Controllers/LoginController");
 const Appointment = require("../Controllers/appointment");
-const uploadfile = require('../Controllers/uploadfile')
 const ensureAuth = require('../config/auth');
 const router = express.Router();
 
@@ -23,7 +22,6 @@ router.route("/logout").get(LoginController.logout);
 
 // Profile Section
 router.route("/Profile").get(ensureAuth.ensureAuth,maincontroller.profile);
-router.route("/User_Apoointment").get(ensureAuth.ensureAuth,maincontroller.userappointment);
 router.route("/Settings").get(ensureAuth.ensureAuth,ensureAuth.ensureAuth,maincontroller.setting);
 router.route("/User_Appointments").get(ensureAuth.ensureAuth,maincontroller.user_appointment);
 
@@ -66,7 +64,7 @@ router.route("/SignIn").post(LoginController.signin);
 router.route("/SignUp").post(LoginController.signup);
 router.route("/Book_Appointment").post(ensureAuth.ensureAuth,Appointment.appointment)
 router.route("/Booked_Appointment").post(ensureAuth.ensureAuth,Appointment.appointmentbooked)
-router.route("/Update_Profile").post(ensureAuth.ensureAuth,uploadfile.upload,Appointment.updateprofile)
+router.route("/Update_Profile").post(ensureAuth.ensureAuth,Appointment.updateprofile)
 router.route("/cancel_appointment").post(ensureAuth.ensureAuth,Appointment.cancel_appointment)
 
 module.exports = router;

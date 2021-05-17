@@ -209,18 +209,8 @@ function profile (req,res) {
         user:req.user ||'hello'
     })
 }
-function userappointment (req,res) {
-    res.render('userappointment',{
-        user:req.user ||'hello'
-    })
-}
 function setting (req,res) {
-    res.render('setting',{
-        user:req.user ||'hello'
-    })
-}
-function setting (req,res) {
-    res.render('setting',{
+    res.render('user_settings',{
         user:req.user ||'hello'
     })
 }
@@ -275,7 +265,6 @@ module.exports = {
     rockland:rockland,
     northstar:northstar,
     profile:profile,
-    userappointment:userappointment,
     setting:setting,
     user_appointment:user_appointment,
 }
