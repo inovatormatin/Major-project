@@ -123,26 +123,26 @@
     height: auto;
     width: 100%;
 }
-.more-services-container {
+.more-services-container1 {
     width: 90%;
     margin: 0px auto;
     padding: 2% 0px;
 }
-.more-services-container-text {
+.more-services-container1-text {
     position: absolute;
 }
-.more-services-container-text i {
+.more-services-container1-text i {
     margin: 0px 5px;
     color: white;
 }
-.more-services-container h1 {
+.more-services-container1 h1 {
     font-size: 25px;
     font-family: "Nexa-bold";
     color: white;
     letter-spacing: 1px;
     padding: 20px 0px;
 }
-.more-services-container-img {
+.more-services-container1-img {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(3 , 1fr);
@@ -151,7 +151,7 @@
     border-radius: 10px;
     padding: 0px 0px 20px;
 }
-.more-services-container-text i:hover {
+.more-services-container1-text i:hover {
     color: gainsboro;
 }
 .services-img {
@@ -248,11 +248,11 @@
         grid-gap: 15px 0px;
     }
 
-    .more-services-container-text {
+    .more-services-container1-text {
         flex-direction: column;
         margin-bottom: 20px;
     }
-    .more-services-container-img {
+    .more-services-container1-img {
         grid-template-columns: 1fr;
     }
 }

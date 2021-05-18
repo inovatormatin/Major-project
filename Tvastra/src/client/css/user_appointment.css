@@ -79,8 +79,9 @@ input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left right"
-    "buttons buttons";
+    "button1 button2";
     grid-gap: 0 20px;
+    position: relative;
 }
 .appointment-tab-left {
     grid-area: left;
@@ -109,9 +110,31 @@ input {
     grid-area: right;
     width: auto;
 }
-#appointment-buttons {
-    grid-area: buttons;
-    margin: 0 0 5px;
+.button1,.button2 {
+    background-color: var(--darkblue);
+    color: white;
+    margin-top: .5rem;
+    transition: 100ms;
+}
+.button1 {
+    grid-area: button1;
+    width: fit-content;
+}
+.button1:hover {
+    background-color: red;
+    transition: 100ms;
+    border-color:red ;
+}
+.button2 {
+    position: absolute;
+    bottom: 1rem;
+    right: 5rem;
+    grid-area: button2;
+}
+.button2:hover{
+    background-color: var(--blue);
+    border-color: var(--blue);
+    transition: 100ms;
 }
 #appointment-buttons button {
     float: right;
@@ -121,14 +144,16 @@ input {
     .appointment-tab {
         padding: 1rem 3rem;
     }
+    .button2 {
+        right: 3rem;
+    }
 }
 @media only screen and (max-width:767px) {
     .appointment-tab-form {
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas: "left"
-        "right"
-        "buttons";
+        "right";
         grid-gap: 0 20px;
     }
     #appointment-buttons {

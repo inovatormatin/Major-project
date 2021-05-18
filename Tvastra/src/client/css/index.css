@@ -1,5 +1,5 @@
 
-.container {
+.container1 {
   width: 90% !important;
   margin: 0px auto;
   box-sizing: border-box;
@@ -143,7 +143,7 @@ nav .dropdown {
   font-size: .7rem;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container1 when the user clicks on the dropdown button) */
 .user-show {display:block;}
 /* User dropdown navbar */
 
@@ -569,7 +569,7 @@ border-radius: 5px;
   padding: 50px 0px;
 }
 
-.need-help .container {
+.need-help .container1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -600,7 +600,7 @@ border-radius: 5px;
   padding: 30px 0px;
   background-color: white;
 }
-.footer .container {
+.footer .container1 {
   position: relative;
   height: 4rem;
   display: flex;
@@ -807,7 +807,7 @@ nav .dropdown {
 }
 /* Section 4 ends here */
 /* section 5 starts here */
-.section-5 .container h1 {
+.section-5 .container1 h1 {
   text-align: center;
 }
 .sec-5-icons {
@@ -822,7 +822,7 @@ nav .dropdown {
 /* Section 5 ends here */
 
 /* Need Help section  */
-.need-help .container {
+.need-help .container1 {
   flex-direction: column;
 }
 .need-help-text {
@@ -965,7 +965,7 @@ nav .dropdown {
 /* section 2 ends */
 
 /* section 3 starts */
-.section-3 .container h1 , .section-3 .container p {
+.section-3 .container1 h1 , .section-3 .container1 p {
   text-align: center;
 }
 .DocCard {
@@ -1062,7 +1062,7 @@ nav .dropdown {
   background-color: var(--darkblue);
   color: #cccccc;
 }
-.footer .container {
+.footer .container1 {
   position: relative;
   height: auto;
   align-items: center;

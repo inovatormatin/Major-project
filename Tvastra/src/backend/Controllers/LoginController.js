@@ -96,10 +96,10 @@ const signup = (req,res) =>{
         // Authentication Failed Message
         failureFlash:true
     })(req,res,next);
+    req.flash('success_msg',`You are logged In !!`);
  };
 
 // LogOut
-
 const logout = (req,res)=>{
     req.logout();
     req.flash('success_msg','You are logged out');

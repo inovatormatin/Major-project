@@ -1,3 +1,5 @@
+const { update } = require("../Databases/Mongo");
+
 function signin(req,res) {
     res.render("signin")
 }
@@ -219,6 +221,11 @@ function user_appointment (req,res) {
         user:req.user ||'hello'
     })
 }
+function update_appointment (req,res) {
+    res.render('update_appointment',{
+        user:req.user || 'hello'
+    })
+}
 
 module.exports = {
     signin:signin,
@@ -264,7 +271,9 @@ module.exports = {
     manipal:manipal,
     rockland:rockland,
     northstar:northstar,
+    // Profile
     profile:profile,
     setting:setting,
     user_appointment:user_appointment,
+    update_appointment:update_appointment,
 }

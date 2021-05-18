@@ -24,6 +24,7 @@ router.route("/logout").get(LoginController.logout);
 router.route("/Profile").get(ensureAuth.ensureAuth,maincontroller.profile);
 router.route("/Settings").get(ensureAuth.ensureAuth,ensureAuth.ensureAuth,maincontroller.setting);
 router.route("/User_Appointments").get(ensureAuth.ensureAuth,maincontroller.user_appointment);
+router.route("/Update_Appointment").get(ensureAuth.ensureAuth,maincontroller.update_appointment);
 
 // Treatment Pages
 router.route("/Dentistry").get(maincontroller.dentistry);
@@ -66,5 +67,6 @@ router.route("/Book_Appointment").post(ensureAuth.ensureAuth,Appointment.appoint
 router.route("/Booked_Appointment").post(ensureAuth.ensureAuth,Appointment.appointmentbooked)
 router.route("/Update_Profile").post(ensureAuth.ensureAuth,Appointment.updateprofile)
 router.route("/cancel_appointment").post(ensureAuth.ensureAuth,Appointment.cancel_appointment)
+router.route("/Update_Appointment").post(ensureAuth.ensureAuth,Appointment.update_appointment)
 
 module.exports = router;

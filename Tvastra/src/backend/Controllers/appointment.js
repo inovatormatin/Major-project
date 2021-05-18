@@ -1,5 +1,7 @@
 const User = require("../Databases/Mongo");
-const passport = require("passport")
+const passport = require("passport");
+
+
 const appointment = (req,res) =>{
     const {doctorname} = req.body;
     let user = req.user;
@@ -90,10 +92,16 @@ const cancel_appointment = (req,res) =>{
     }
 }
 
+const update_appointment = (req,res) => {
+    const {update_appoint} = req.body;
+    
+}
+
 
 module.exports = {
     appointment:appointment,
     updateprofile:updateprofile,
     appointmentbooked:appointmentbooked,
     cancel_appointment:cancel_appointment,
+    update_appointment:update_appointment
 }

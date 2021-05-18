@@ -21,7 +21,7 @@
 <!-- header -->
 <!-- Flash Message -->
 <%- include("./partials/messages") %>
-<section class="profile-sec-1 container">
+<section class="profile-sec-1 container1">
   <div class="left-section">
     <h3>Dashboard</h3>
     <ul>
@@ -37,21 +37,21 @@
           <h3>Account</h3>
           <div class="right-section-div-1">
             <span><label for="name">Name</label>
-              <input type="text" name="name" id="name" value=<%= user.name %> readonly></span>
+              <input type="text" name="name" id="name" value="<%= user.name %>" readonly></span>
           </div> 
         <hr style="margin: 20px 0 30px;">
           <div class="right-section-div-2">
               <span>
                 <label for="mobile">Mobile Number</label>
-                <input type="number" name="mobile" value=<%= user.mobile %> readonly>
+                <input type="number" name="mobile" value="<%= user.mobile %>" readonly>
               </span>
              <span>
                 <label for="email">Email</label>
-                <input type="email" name="email" value=<%= user.email %> readonly>
+                <input type="email" name="email" value="<%= user.email %>" readonly>
              </span>             
              <span>
                <label for="gender">Gender</label>
-               <input type="text" name="gender" value=<%= user.gender %> readonly>
+               <input type="text" name="gender" value="<%= user.gender %>" readonly>
             </span>
             <!-- Changing date format for better understanding -->
                  <% let newdate = new Date (user.date)
@@ -154,7 +154,7 @@
             <div class="right-section-div-1">
              <span>
                 <label for="name">Name<i class="fas fa-pen"></i></label>
-                <input type="text" name="name" id="name" value=<%= user.name %> >
+                <input type="text" name="name" id="name" value="<%= user.name %>" >
               </span>
             </div> 
 
@@ -163,15 +163,15 @@
             <div class="right-section-div-2">
                 <span>
                   <label for="mobile">Mobile Number<i class="fas fa-pen"></i></label>
-                  <input type="number" name="mobile" value=<%= user.mobile %> >
+                  <input type="number" name="mobile" value="<%= user.mobile %>" >
                 </span>
                <span>
                   <label for="email">Email <i class="fas fa-lock" style="margin-left: .5rem;"></i></label>
-                  <input type="email" name="email" value=<%= user.email %> readonly>
+                  <input type="email" name="email" value="<%= user.email %>" readonly>
                </span>             
                <span>
                  <label for="gender">Gender<i class="fas fa-pen"></i></label>
-                 <input type="text" name="gender" value=<%= user.gender %> >
+                 <input type="text" name="gender" value="<%= user.gender %>" >
               </span>
               <!-- Changing date format for better understanding -->
                    <% newdate = new Date (user.date)

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/user_appointment.css">
     <link rel="stylesheet" href="">
     <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
-    <title>Tvastra | <%= user.name %></title>
+    <title>Tvastra | Appointments</title>
 </head>
 <body>
 <!-- header -->
@@ -21,7 +21,7 @@
 <!-- header -->
 <%- include("./partials/messages") %>
 
-<section class="profile-sec-1 container">
+<section class="profile-sec-1 container1">
       <div class="right-section">
               <!-- Changing date format for better understanding -->
                    <% let newdate = new Date (user.date)
@@ -71,11 +71,11 @@
                             </span>
                             <hr>
                           </div>
-                      <div id="appointment-buttons">
-                      <a href="appointment_update"><button>Update Appointment</button></a>
-                      <button type="submit">Cancel Appointment</button>
-                      </div>
+                        <button class="button1" type="submit">Cancel Appointment</button>
                     </form>
+                    <form action="Update_Appointment" method="post">
+                      <button class="button2" type="submit" name="update_appoint" value="<%= data[i]._id %>">Update Appointment</button>
+                  </form>
                     </div>
                   <% } %>
             <% } %>
