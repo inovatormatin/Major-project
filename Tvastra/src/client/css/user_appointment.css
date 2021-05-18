@@ -153,8 +153,17 @@ input {
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas: "left"
-        "right";
+         "right"
+        "button1" "button2";
         grid-gap: 0 20px;
+    }
+    .button1 {
+        margin: .2rem auto;
+    }
+    .button2 {
+        position: relative;
+        bottom: 0;
+        right: 0;
     }
     #appointment-buttons {
         display: flex;

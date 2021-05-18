@@ -68,5 +68,6 @@ router.route("/Booked_Appointment").post(ensureAuth.ensureAuth,Appointment.appoi
 router.route("/Update_Profile").post(ensureAuth.ensureAuth,Appointment.updateprofile)
 router.route("/cancel_appointment").post(ensureAuth.ensureAuth,Appointment.cancel_appointment)
 router.route("/Update_Appointment").post(ensureAuth.ensureAuth,Appointment.update_appointment)
+router.route("/Updated_Appointment").post(ensureAuth.ensureAuth,Appointment.updated_appointment)
 
 module.exports = router;

@@ -94,14 +94,42 @@ const cancel_appointment = (req,res) =>{
 
 const update_appointment = (req,res) => {
     const {update_appoint} = req.body;
-    
+    let user = req.user;
+    res.render("update_appointment",{
+        user,
+        update_appoint
+    })
 }
 
+const updated_appointment = (req,res) =>{
+    const {appointment_date,appointment_id} = req.body;
+    console.log(appointment_date);
+    User.findOneAndUpdate({"appointments._id":appointment_id},
+        {$set: 
+            {
+            "appointments.$.appointment_date":appointment_date
+        }
+    })
+    .then(users =>{
+        if(users) {
+            req.flash('success_msg','Appointment rescheduled!!');
+            res.redirect('User_Appointments') 
+        }
+        else{
+            req.flash('success_msg','Some Error Occured!!');
+            res.redirect('User_Appointments') 
+        }
+    })
+    .catch(err => {
+        throw err
+    })
+}
 
 module.exports = {
     appointment:appointment,
     updateprofile:updateprofile,
     appointmentbooked:appointmentbooked,
     cancel_appointment:cancel_appointment,
-    update_appointment:update_appointment
+    update_appointment:update_appointment,
+    updated_appointment:updated_appointment
 }

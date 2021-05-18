@@ -28,8 +28,8 @@
                       newdate = newdate.toDateString()
                       newdate = newdate.split(' ')
                       newdate = newdate.splice(1); %>
-        <!-- Appointment Content -->
-        <div id="appointment-content" style="display: block;">
+          <!-- Appointment Content -->
+          <div id="appointment-content" style="display: block;">
             <h3 class="appointment-main-heading">Appointments</h3>
             <% let data = user.appointments %>
             <% let appointments = user.appointments.length %>
@@ -82,8 +82,8 @@
             <% if(appointments == 0) { %>
               <h3 style="color: var(--blue);margin-left: 1rem; height: 60vh;"><%= "No Appointments Scheduled"  %></h3>
            <% } %>
-        </div> 
-  </div>  
+          </div> 
+      </div>  
 </section>
 <!-- footer -->
 <%- include("./partials/footer") %>

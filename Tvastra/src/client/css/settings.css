@@ -65,4 +65,7 @@ input {
     .update-profile {
         margin: auto;
     }
+    .profile-sec-1 {
+        padding: 1rem 0;
+    }
 }

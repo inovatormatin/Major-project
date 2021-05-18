@@ -83,59 +83,59 @@
 
       <!-- Appointment Content -->
       <div id="appointment-content">
-          <h3>Appointments</h3>
-          <% let data = user.appointments %>
-          <% let appointments = user.appointments.length %>
-          <% if(appointments >0) { %>
-            <% for(let i=0;i<appointments;i++){ %>
-                  <div class="appointment-tab">
-                    <form class="appointment-tab-form" action="cancel_appointment" method="POST">
-                        <div class="appointment-tab-left">
+        <h3 class="appointment-main-heading">Appointments</h3>
+        <% let data = user.appointments %>
+        <% let appointments = user.appointments.length %>
+        <% if(appointments >0) { %>
+          <% for(let i=0;i<appointments;i++){ %>
+                <div class="appointment-tab">
+                  <form class="appointment-tab-form" action="cancel_appointment" method="POST">
+                      <div class="appointment-tab-left">
+                      <span>
+                        <label for="appointment_id">Appointment ID</label>
+                        <input type="text" id="appointment_id" name="appointment_id" value="<%= data[i]._id %>" readonly>
+                      </span>
+                      <hr>
+                      <span>
+                        <label for="appoitment_date">Appointment Date</label>
+                        <input type="text" id="appointment_date" name="appointment_date" value="<%= data[i].appointment_date %>" readonly>
+                      </span>
+                      <hr>
+                      <span>
+                        <label for="appointment_status">Appointment Status</label>
+                        <input type="text" id="appointment_status" name="appointment_status" value="<%= data[i].appointment_status %>" readonly>
+                      </span>
+                      <hr>
+                      </div>
+                      <div class="appointment-tab-right">
                         <span>
-                          <label for="appointment_id">Appointment ID</label>
-                          <input type="text" id="appointment_id" name="appointment_id" value="<%= data[i]._id %>" readonly>
+                          <label for="Doctor">Doctor Name</label>
+                          <input type="text" id="Doctor" name="doctor" value="<%= data[i].appointment_doctor %>" readonly>
                         </span>
                         <hr>
                         <span>
-                          <label for="appoitment_date">Appointment Date</label>
-                          <input type="text" id="appointment_date" name="appointment_date" value="<%= data[i].appointment_date %>" readonly>
+                          <label for="Doctor">Hospital Name</label>
+                          <input type="text" id="hospital" name="hospital" value="<%= data[i].hospital %>" readonly>
                         </span>
                         <hr>
                         <span>
-                          <label for="appointment_status">Appointment Status</label>
-                          <input type="text" id="appointment_status" name="appointment_status" value="<%= data[i].appointment_status %>" readonly>
+                          <label for="Doctor">Doctor's Speciality</label>
+                          <input type="text" id="Speciality" name="Speciality" value="<%= data[i].speciality %>" readonly>
                         </span>
                         <hr>
-                        </div>
-                        <div class="appointment-tab-right">
-                          <span>
-                            <label for="Doctor">Doctor Name</label>
-                            <input type="text" id="Doctor" name="doctor" value="<%= data[i].appointment_doctor %>" readonly>
-                          </span>
-                          <hr>
-                          <span>
-                            <label for="Doctor">Hospital Name</label>
-                            <input type="text" id="hospital" name="hospital" value="<%= data[i].hospital %>" readonly>
-                          </span>
-                          <hr>
-                          <span>
-                            <label for="Doctor">Doctor's Speciality</label>
-                            <input type="text" id="Speciality" name="Speciality" value="<%= data[i].speciality %>" readonly>
-                          </span>
-                          <hr>
-                        </div>
-                    <div id="appointment-buttons">
-                    <a href="appointment_update"><button>Update Appointment</button></a>
-                    <button type="submit">Cancel Appointment</button>
-                    </div>
-                  </form>
-                  </div>
-                <% } %>
-          <% } %>
-          <% if(appointments == 0) { %>
-            <h3 style="color: var(--blue);height: 60vh"><%= "No Appointments Scheduled"  %></h3>
-         <% } %>
-      </div>
+                      </div>
+                    <button class="button1" type="submit">Cancel Appointment</button>
+                </form>
+                <form action="Update_Appointment" method="post">
+                  <button class="button2" type="submit" name="update_appoint" value="<%= data[i]._id %>">Update Appointment</button>
+              </form>
+                </div>
+              <% } %>
+        <% } %>
+        <% if(appointments == 0) { %>
+          <h3 style="color: var(--blue);margin-left: 1rem; height: 60vh;"><%= "No Appointments Scheduled"  %></h3>
+       <% } %>
+      </div> 
 
       <!-- Medical Records Content -->
       <div id="medical-content">

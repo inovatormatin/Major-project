@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/messages.css">
     <link rel="stylesheet" href="../css/user_appointment.css">
+    <link rel="stylesheet" href="../css/update_appointment.css">
     <link rel="stylesheet" href="">
     <link rel="icon" type="image/x-icon" href="../images/weblogo.png">
     <title>Tvastra | <%= user.name %></title>
@@ -20,6 +21,53 @@
 <%- include("./partials/header") %>
 <!-- header -->
 <%- include("./partials/messages") %>
+
+  <% let arr = user.appointments %>
+   <% let result = arr.filter((e)=>{ %>
+     <% return e._id == update_appoint; %>
+   <% }) %>
+   <% result = result[0] %>
+<section class="update-main-section">
+  <div class="appointment-tab">
+    <form class="appointment-tab-form" action="Updated_Appointment" method="POST">
+        <div class="appointment-tab-left">
+        <span>
+          <label for="appointment_id">Appointment ID</label>
+          <input type="text" id="appointment_id" name="appointment_id" value="<%= result._id %>" readonly>
+        </span>
+        <hr>
+        <span>
+          <label for="appoitment_date">Appointment Date <i class="fas fa-pen" style="color: var(--blue);" ></i></label>
+          <input type="text" id="appointment_date" name="appointment_date" value="<%= result.appointment_date  %>" style="color: red;">
+        </span>
+        <hr>
+        <span>
+          <label for="appointment_status">Appointment Status</label>
+          <input type="text"  id="appointment_status" name="appointment_status" value="<%= result.appointment_status %>" readonly>
+        </span>
+        <hr>
+        </div>
+        <div class="appointment-tab-right">
+          <span>
+            <label for="Doctor">Doctor Name</label>
+            <input type="text" id="Doctor" name="doctor" value="<%= result.doctor %>" readonly>
+          </span>
+          <hr>
+          <span>
+            <label for="Doctor">Hospital Name</label>
+            <input type="text" id="hospital" name="hospital" value="<%= result.hospital %>" readonly>
+          </span>
+          <hr>
+          <span>
+            <label for="Doctor">Doctor's Speciality</label>
+            <input type="text" id="Speciality" name="Speciality" value="<%= result.speciality %>" readonly>
+          </span>
+          <hr>
+        </div>
+        <button type="submit">Update Changes</button>
+  </form>
+  </div>
+</section>
 
 
 <!-- footer -->
@@ -43,4 +91,5 @@
     ></script>
 <script src="https://kit.fontawesome.com/43ab3e4e97.js" crossorigin="anonymous"></script>
 <script src="../Dom/script.js"></script>
+</script>
 </html>

@@ -1,0 +1,36 @@
+.update-main-section {
+    height: 60vh;
+}
+.appointment-tab input {
+    margin: 1rem 0;
+}
+.appointment-tab i {
+    margin-left: .5rem;
+   
+}
+.appointment-tab {
+    width: 90%;
+    margin: 2rem auto;
+}
+.appointment-tab button {
+    width: fit-content;
+    color: white;
+    background-color:var(--darkblue);
+}
+
+@media only screen and (max-width:1024px) {
+    .appointment-tab button {
+        margin: .7rem 0;
+        padding: .8rem 1rem;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .update-main-section {
+        height: auto;
+    }
+    .appointment-tab button {
+        margin: .4rem auto;
+        padding: .8rem 1rem;
+    }
+}
